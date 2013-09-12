@@ -25,7 +25,7 @@ Radius = 10
 Spacing = 0.2
 
 
-XCFunctional = hgga_xc_sce_1d
+XCFunctional = hgga_hxc_sce_1d
 
 TheoryLevel = independent_particles
 
