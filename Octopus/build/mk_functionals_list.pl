@@ -95,6 +95,8 @@ print OUT <<EOF;
 !% Half-Hartree exchange for two electrons (supports complex scaling)
 !%Option rdmft_xc_m               601
 !% RDMFT Mueller functional
+!%Option hgga_xc_sce_1d           666
+!% One dimensional strictly correlated electrons functional  
 !%Option none                       0
 !% Exchange and correlation set to zero.
 !%End

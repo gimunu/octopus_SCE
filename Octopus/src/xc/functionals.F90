@@ -45,7 +45,8 @@ module xc_functl_m
     XC_HALF_HARTREE = 917,      &  !< half-Hartree exchange for two electrons (supports complex scaling)
     XC_RDMFT_XC_M = 601,        &  !< RDMFT Mueller functional
     XC_FAMILY_KS_INVERSION = 64,&
-    XC_FAMILY_RDMFT = 128          !< family for RDMFT functionals
+    XC_FAMILY_RDMFT = 128,      &  !< family for RDMFT functionals
+    XC_SCE_1D = 666                !< Strictly correlated electrons 1D 
 
   type xc_functl_t
     integer         :: family            !< LDA, GGA, etc.
