@@ -1,0 +1,12 @@
+# Ignored dirs
+serial/
+parallel/
+autom4te.cache/
+build-aux/
+
+
+# Ignored files
+Makefile
+Makefile.in
+config*
+aclocal.m4
