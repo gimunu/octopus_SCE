@@ -1,0 +1,1 @@
+ifort -o kssce.exe slda_pw92.f mglobvars.f90 mio.f90 malloc.f90 mgrid.f90 mdens.f90 mpot.f90 mnumerov.f90 menrg.f90 kssce.f90 -ldislin_d -I/usr/local/dislin/gf/real64

@@ -1,0 +1,207 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5738,        198]
+NotebookOptionsPosition[      5041,        175]
+NotebookOutlinePosition[      5478,        192]
+CellTagsIndexPosition[      5435,        189]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["we substitute", "Text",
+ CellChangeTimes->{{3.577006843612327*^9, 3.577006868122904*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"r", 
+    RowBox[{"(", "x", ")"}]}], "=", 
+   FractionBox[
+    RowBox[{"exp", 
+     RowBox[{"(", "x", ")"}]}], "Z"]}], ",", " ", 
+  RowBox[{"x", "=", 
+   RowBox[{"Ln", 
+    RowBox[{"(", "Zr", ")"}]}]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.577006884685122*^9, 3.577006929878378*^9}, {
+  3.5770073631194553`*^9, 3.577007363552229*^9}, {3.577437432088512*^9, 
+  3.577437443737363*^9}}],
+
+Cell["and", "Text",
+ CellChangeTimes->{{3.577437052917226*^9, 3.577437055303965*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Chi]", 
+   RowBox[{"(", 
+    RowBox[{"r", 
+     RowBox[{"(", "x", ")"}]}], ")"}]}], "=", 
+  RowBox[{
+   SqrtBox[
+    RowBox[{"r", 
+     RowBox[{"(", "x", ")"}]}]], "y", 
+   RowBox[{"(", "x", ")"}]}]}]], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.577006884685122*^9, 3.577006929878378*^9}, {
+  3.577007326703746*^9, 3.577007376913129*^9}}],
+
+Cell[TextData[{
+ "we are interested in ",
+ Cell[BoxData[
+  FormBox[
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["d", "2"], 
+     RowBox[{"\[Chi]", "(", 
+      RowBox[{"r", "(", "x", ")"}], ")"}]}], 
+    RowBox[{"d", " ", 
+     SuperscriptBox["r", "2"]}]], TraditionalForm]]]
+}], "Text",
+ CellChangeTimes->{{3.577010942221067*^9, 3.577010975617201*^9}, {
+  3.577437061873399*^9, 3.577437082885714*^9}}],
+
+Cell["first derivative", "Text",
+ CellChangeTimes->{{3.57743708974402*^9, 3.577437096189867*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  FractionBox[
+   RowBox[{"d", " ", "\[Chi]", 
+    RowBox[{"(", 
+     RowBox[{"r", 
+      RowBox[{"(", "x", ")"}]}], ")"}]}], "dr"], "=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], 
+    SuperscriptBox["r", 
+     RowBox[{"-", 
+      FractionBox["1", "2"]}]], "y", 
+    RowBox[{"(", "x", ")"}]}], "+", 
+   RowBox[{
+    SuperscriptBox["r", 
+     FractionBox["1", "2"]], 
+    FractionBox[
+     RowBox[{"d", " ", "y", 
+      RowBox[{"(", "x", ")"}]}], "dx"], 
+    FractionBox[
+     RowBox[{"d", " ", "x"}], "dr"]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"=", 
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], 
+    SuperscriptBox["r", 
+     RowBox[{"-", 
+      FractionBox["1", "2"]}]], "y", 
+    RowBox[{"(", "x", ")"}]}], "+", 
+   RowBox[{
+    SuperscriptBox["r", 
+     RowBox[{"-", 
+      FractionBox["1", "2"]}]], " ", 
+    RowBox[{"y", "'"}], 
+    RowBox[{"(", "x", ")"}]}]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.577006884685122*^9, 3.577006929878378*^9}, {
+  3.5770073631194553`*^9, 3.577007363552229*^9}, {3.5774371304891853`*^9, 
+  3.5774372751985207`*^9}, {3.577437335091641*^9, 3.577437338955041*^9}, {
+  3.5774374228918943`*^9, 3.5774374241282597`*^9}, {3.577437511205143*^9, 
+  3.577437512397436*^9}}],
+
+Cell["second derivative", "Text",
+ CellChangeTimes->{{3.5774372833595123`*^9, 3.577437285742543*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  FractionBox[
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"d", " "}], "2"], "\[Chi]", 
+    RowBox[{"(", 
+     RowBox[{"r", 
+      RowBox[{"(", "x", ")"}]}], ")"}]}], 
+   SuperscriptBox["dr", "2"]], "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox["1", "4"]}], 
+    SuperscriptBox["r", 
+     RowBox[{"-", 
+      FractionBox["3", "2"]}]], "y", 
+    RowBox[{"(", "x", ")"}]}], "+", 
+   RowBox[{
+    FractionBox["1", "2"], 
+    SuperscriptBox["r", 
+     RowBox[{"-", 
+      FractionBox["3", "2"]}]], 
+    RowBox[{"y", "'"}], 
+    RowBox[{"(", "x", ")"}]}], "-", 
+   RowBox[{
+    FractionBox["1", "2"], 
+    SuperscriptBox["r", 
+     RowBox[{"-", 
+      FractionBox["3", "2"]}]], " ", 
+    RowBox[{"y", "'"}], 
+    RowBox[{"(", "x", ")"}]}], "+", 
+   RowBox[{
+    SuperscriptBox["r", 
+     RowBox[{"-", 
+      FractionBox["3", "2"]}]], " ", 
+    RowBox[{"y", "''"}], 
+    RowBox[{"(", "x", ")"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{"=", 
+  RowBox[{
+   SuperscriptBox["r", 
+    RowBox[{"-", 
+     FractionBox["3", "2"]}]], 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", 
+       FractionBox["1", "4"]}], "y", 
+      RowBox[{"(", "x", ")"}]}], "+", " ", 
+     RowBox[{
+      RowBox[{"y", "''"}], 
+      RowBox[{"(", "x", ")"}]}]}], ")"}]}]}]}], "DisplayFormulaNumbered",
+ CellChangeTimes->{{3.577006884685122*^9, 3.577006929878378*^9}, {
+  3.5770073631194553`*^9, 3.577007363552229*^9}, {3.5774371304891853`*^9, 
+  3.5774373788442783`*^9}, {3.577437520239894*^9, 3.57743752275145*^9}, {
+  3.5774375538227367`*^9, 3.5774376115541143`*^9}}]
+},
+WindowSize->{818, 873},
+WindowMargins->{{Automatic, 509}, {Automatic, 0}},
+Magnification:>FEPrivate`If[
+  FEPrivate`Equal[FEPrivate`$VersionNumber, 6.], 1.25, 1.25 Inherited],
+FrontEndVersion->"8.0 for Linux x86 (64-bit) (October 10, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 95, 1, 35, "Text"],
+Cell[655, 23, 443, 13, 45, "DisplayFormulaNumbered"],
+Cell[1101, 38, 85, 1, 35, "Text"],
+Cell[1189, 41, 380, 12, 31, "DisplayFormulaNumbered"],
+Cell[1572, 55, 406, 13, 54, "Text"],
+Cell[1981, 70, 97, 1, 35, "Text"],
+Cell[2081, 73, 1256, 40, 89, "DisplayFormulaNumbered"],
+Cell[3340, 115, 101, 1, 35, "Text"],
+Cell[3444, 118, 1593, 55, 93, "DisplayFormulaNumbered"]
+}
+]
+*)
+
+(* End of internal cache information *)

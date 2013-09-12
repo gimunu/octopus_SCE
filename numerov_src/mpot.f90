@@ -1,0 +1,1144 @@
+module mpot
+
+  use mglobvars
+  use malloc
+
+  implicit none
+
+  integer, private :: ipt, i, j
+  double precision :: shftne
+
+contains
+
+  subroutine calc_pot
+
+    if ( lsce) then 
+
+       call calc_vSCE
+       pottab = vexttab + vscetab
+
+    elseif ( lhf) then
+
+       if ( npart .gt. 2.0d0) then
+       
+          write(*,*)
+          write(*,*) '================================================='
+          write(*,*) '====  Hartree-Fock exchange not implemented  ===='
+          write(*,*) '====            for npart > 2.0              ===='
+          write(*,*) '====                                     ===='
+          write(*,*) '====              terminating            ===='
+          write(*,*) '============================================='
+          call dealloc_vars
+          stop
+          
+       elseif ( npart .gt. 1.0d0) then
+
+          call calc_vhart
+          vhfxtab = - 1.0d0 / npart * vhtab
+          pottab = vexttab + vhtab + vhfxtab
+          
+       else
+
+          vhtab = 0.0d0
+          vhfxtab = 0.0d0
+          pottab = vexttab
+
+       endif
+
+    elseif ( llda) then 
+
+       call calc_vhart
+       call calc_vLDA
+       pottab = vexttab + vhtab + vxctab
+
+    elseif( lscelda .or. lsceldasic) then
+
+       call calc_vsce
+       call calc_vLDA
+       pottab = vexttab + vscetab 
+       if ( lscelda) pottab = pottab + vxctab + vslctab
+       if ( lsceldasic) pottab = pottab + vslsitab
+
+    elseif ( npart .gt. 1.0d0) then
+
+       write(*,*)
+       write(*,*) '============================================='
+       write(*,*) '====  no correlation potential selected  ===='
+       write(*,*) '====                                     ===='
+       write(*,*) '====              terminating            ===='
+       write(*,*) '============================================='
+       call dealloc_vars
+       stop
+
+    else
+
+       pottab = vexttab
+
+    end if
+
+    return
+
+  end subroutine calc_pot
+
+  subroutine calc_vext
+
+    double precision :: x_at, dummy
+
+    if (readpot) then
+
+       open(9,file=trim(fname_pot))
+       write(*,*) 'reading potential from ', fname_pot
+       read(9,*)
+
+       do ipt = 0, npnts - 1
+          read(9,*) dummy, pottab(ipt)
+       end do
+
+       close(9)
+
+    elseif ( hpot .or. hooke) then
+
+       do ipt = 0, npnts
+          vexttab(ipt) = omg * omg * xtab(ipt) * xtab(ipt) * 0.5d0
+       end do
+
+    elseif ( cpot) then
+
+       do ipt = 0, npnts
+          vexttab (ipt) = - zeta / xtab(ipt)
+       end do
+
+    elseif ( apot ) then
+
+       do ipt = 0, npnts 
+          do i = 1, n_at
+             x_at = 0.5d0 * d * ( -n_at - 1 + 2 * i)
+             vexttab (ipt) = vexttab (ipt) - (( abs( xtab(ipt) - x_at))**2 + &
+                  & asoftc * asoftc)**(-0.5)    
+          enddo
+       enddo
+
+    else
+
+       write(*,*)
+       write(*,*) '======== no external potential selected ========'
+       write(*,*)
+       write(*,*) '=============      terminating     ============='
+       write(*,*) 
+       call dealloc_vars
+       stop
+
+    end if
+
+    return
+
+  end subroutine calc_vext
+
+  subroutine calc_Ne
+  
+    double precision :: incr, tol
+
+    !calculate cumulant
+    ne = 0.0d0
+    shftne = 0.0d0
+
+    if ( loggrid) then
+
+       tol = .1d-12
+       ne(0) = density(0) * x2dxtab(0)
+
+       do ipt = 1, npnts
+
+          incr = density(ipt) * x2dxtab(ipt)
+
+          if ( incr .lt. tol) then 
+             ne(ipt) = ne(ipt-1) + tol
+             shftne = shftne + .1d-12
+          else
+             ne(ipt) = ne(ipt-1) + incr
+          end if
+
+       end do
+
+    else
+
+       do ipt = 1, npnts
+
+          ne(ipt) = ne(ipt-1) + ( density(ipt-1) + density(ipt)) * dx * 0.5d0
+
+          if ((( density(ipt-1) + density(ipt)) * dx * 0.5d0) .lt. .1d-12) then 
+             ne(ipt) = ne(ipt) + .1d-12
+             shftne = shftne + .1d-12
+          end if
+
+       end do
+
+    end if
+
+    if ((sigma .gt. frac_tol) .and. (sigma .lt. shftne)) then
+
+       write(*,*)
+       write(*,*) '============       warning      ============'
+       write(*,*)
+       write(*,*) '=====          shftne > sigma          ====='
+       write(*,*) '=====  SCE potential shift unreliable  ====='
+       write(*,*)
+
+    end if
+
+    return
+
+  end subroutine calc_Ne
+
+  subroutine calc_vsce
+
+    integer :: j, sgn
+    double precision :: tm, tm2, oot, rcfac, ircfac, howb, &
+         & vbprim, signvbprim, diff_vsce, t, delt, tbound, &
+         & vsoftcprim, signvsoftcprim, vcprim, signvcprim
+
+    vscetab = 0.0d0
+    if ( npart .le. 1.0d0) return
+
+    call calc_Ne
+
+    !calculate comotion functions
+    !initialize spline 2nd derivative for Ne^-1 interpolation
+    call spline(ne, xtab, npnts+1, 1.d31, 1.d31, sply2tab)
+
+    !calculate shell boundaries
+    do i = 1, ncomf, 1
+       tm = float(i)
+       call splint(ne,xtab,sply2tab,npnts+1,tm,shai(i))
+    end do
+
+    do i = ncomf, 1, -2
+       call splint(ne,xtab,sply2tab,npnts+1,float(i)-sigma+shftne,shas(i))
+    end do
+
+    do i = ncomf-2, 0, -2
+       call splint(ne,xtab,sply2tab,npnts+1,i+sigma,shas(i+1))
+    end do
+
+!!$    write(*,*) 'shas(ncomf):', shas(ncomf)
+!!$    write(*,*) 'shas(ncomf-1):', shas(ncomf-1)
+!!$    write(*,*) 'ne(npnts):', ne(npnts)
+!!$    write(*,*) 'shftne:', shftne
+
+
+    comf = 1.0d23
+    tm2 = float( 2 * ncomf) + 2.0d0 * shftne
+
+    do i = 1, ncomf
+
+       tm = float( 2 * i) + shftne
+
+       do ipt = 0, npnts
+
+          if ( abs( tm - ne(ipt)) .lt. npart) then
+
+             call splint(ne,xtab,sply2tab,npnts+1, &
+                  & abs(tm-ne(ipt)),comf(ipt,i))
+             if ( tm - ne(ipt) .gt. 0) &
+                  & comf(ipt,i) = ( - 1.0d0) * comf(ipt,i)
+
+          elseif( tm2 - tm + 2 + ne(ipt) .lt. npart) then
+
+             call splint(ne,xtab,sply2tab,npnts+1, &
+                  & tm2-tm+2+ne(ipt),comf(ipt,i))             
+
+          end if
+
+       end do
+    end do
+
+    !calculate SCE potential
+    if ( lrencoul) then
+
+       rcfac = 1.0d0 / ( 2.0d0 * wireb * wireb)
+       howb = 0.5d0 / wireb
+       ircfac = sqrt( pi)
+       tbound = 15.0d0
+
+       do ipt = 1, npnts
+
+          signvbprim = 0.0d0
+
+          do j = 1, ncomf
+
+             t = abs( xtab(ipt) - comf(ipt,j)) * howb
+             delt = 1.0d0 / abs( xtab(ipt) - comf(ipt,j))
+             oot = 1.0d0 / t
+
+             if (t .le. tbound) then
+                vbprim = rcfac * ( -1.0d0 + &
+                     & ircfac * exp( t * t) * t * erfc( t))
+             else
+                vbprim = -1.0d0 * delt * delt + &
+                     & 6 * wireb * wireb * delt**4 - &
+                     & 60 * wireb**4 * delt**6
+             endif
+
+             sgn = sign( 1, nint(xtab(ipt) - comf(ipt,j) + 0.5d0))
+             signvbprim = signvbprim + sgn * vbprim
+
+          enddo
+
+          vscetab(ipt) = vscetab(ipt-1) + signvbprim * dx
+
+       end do
+
+    elseif ( lsoftcoul) then
+
+       do ipt = 1, npnts
+
+          signvsoftcprim = 0.0d0
+
+          do j = 1, ncomf
+
+             t = abs( xtab(ipt) - comf(ipt,j)) 
+             vsoftcprim = -t*(t*t + asoftc*asoftc)**(-1.5)
+             sgn = sign( 1, nint(xtab(ipt) - comf(ipt,j) + 0.5d0))
+             signvsoftcprim = signvsoftcprim + sgn * vsoftcprim
+
+          enddo
+
+          vscetab(ipt) = vscetab(ipt-1) + signvsoftcprim * dx
+
+       end do
+
+    elseif ( lcoul) then
+
+       if ( loggrid) then
+          
+          signvcprim = 0.0d0
+
+          do j = 1, ncomf
+
+             t = xtab(0) - comf(0,j) 
+             vcprim = - abs(t)**( -2)
+             sgn = sign( 1, nint( t  + 0.5d0))
+             signvcprim = signvcprim + sgn * vcprim
+             
+          enddo
+
+          vscetab(0) = signvcprim * xtab(0)
+
+          do ipt = 1, npnts
+
+             signvcprim = 0.0d0
+
+             do j = 1, ncomf
+
+                t = abs( xtab(ipt) - comf(ipt,j)) 
+                vcprim = - t**( -2)
+                sgn = sign( 1, nint(xtab(ipt) - comf(ipt,j) + 0.5d0))
+                signvcprim = signvcprim + sgn * vcprim
+
+             enddo
+
+             vscetab(ipt) = vscetab(ipt-1) + signvcprim * ( xtab(ipt) - xtab(ipt-1))
+
+          end do          
+
+       else
+
+          do ipt = 0, npnts
+
+             signvcprim = 0.0d0
+
+             do j = 1, ncomf
+
+                t = abs( xtab(ipt) - comf(ipt,j)) 
+                vcprim = - t**( -2)
+                sgn = sign( 1, nint(xtab(ipt) - comf(ipt,j) + 0.5d0))
+                signvcprim = signvcprim + sgn * vcprim
+
+             enddo
+
+             vscetab(ipt) = vscetab(ipt-1) + signvcprim * dx
+
+          end do
+
+       end if
+
+    else
+
+       write(*,*)
+       write(*,*) '====== no particle interaction selected ======'
+       write(*,*)
+       write(*,*) '============      terminating     ============'
+       write(*,*)
+       call dealloc_vars
+       stop
+
+    end if
+
+    !vsce has to go to 0 like (N-1)/x for large x. 
+    !we calculate the shifting constant                             
+    if ( ncomf .gt. 1) then
+       !       diff_vsce = float( ncomf) / xtab(npnts)  - vscetab(npnts)
+       diff_vsce = float( ncomf - 1) / xtab(npnts) + &
+            & 1.0d0 / ( xtab(npnts) + shas(ncomf)) - vscetab(npnts)
+    else
+       diff_vsce = 1.0d0 / ( xtab(npnts) + shas(ncomf)) - vscetab(npnts)
+!       diff_vsce = 1.0d0 / ( xtab(npnts)) - vscetab(npnts)
+    end if
+
+    vscetab = vscetab + diff_vsce 
+
+    return
+
+  end subroutine calc_vsce
+
+  !Interpolation soubroutines
+  !initialize second derivative
+  subroutine splint(xa,ya,y2a,n,x,y)
+
+    implicit double precision(a-h,o-z)
+
+    integer n
+    double precision x,y,xa(n),y2a(n),ya(n)
+    integer k,khi,klo
+    double precision a,b,h
+
+    klo=1
+    khi=n
+
+1   if (khi-klo.gt.1) then
+       k=(khi+klo)/2
+       if(xa(k).gt.x)then
+          khi=k
+       else
+          klo=k
+       endif
+       goto 1
+    endif
+
+    h=xa(khi)-xa(klo)
+    if (h.eq.0.) stop 
+    a=(xa(khi)-x)/h
+    b=(x-xa(klo))/h
+    y=a*ya(klo)+b*ya(khi)+((a**3-a)*y2a(klo)+ &
+         & (b**3-b)*y2a(khi))*(h**2)/6.d0
+
+    return
+
+  end subroutine splint
+
+  !interpolation
+  subroutine spline(x,y,n,yp1,ypn,y2)
+
+    implicit double precision(a-h,o-z)
+
+    integer n!,NMAX
+    double precision yp1,ypn,x(n),y(n),y2(n)
+    !    parameter (NMAX=8500)
+    integer i,k
+    double precision p,qn,sig,un!,u(NMAX) => now a global variable
+
+    if (yp1.gt..99d30) then
+       y2(1)=0.d0
+       u(1)=0.d0
+    else
+       y2(1)=-0.5d0
+       u(1)=(3.d0/(x(2)-x(1)))*((y(2)-y(1))/(x(2)-x(1))-yp1)
+    endif
+
+    do i=2,n-1
+       sig=(x(i)-x(i-1))/(x(i+1)-x(i-1))
+       p=sig*y2(i-1)+2.d0
+       y2(i)=(sig-1.d0)/p
+       u(i)=(6.d0*((y(i+1)-y(i))/(x(i+1)-x(i))- &
+            & (y(i)-y(i-1))/(x(i)-x(i-1)))/(x(i+1)- &
+            & x(i-1))-sig*u(i-1))/p
+    end do
+
+    if (ypn.gt..99d30) then
+       qn=0.d0
+       un=0.d0
+    else
+       qn=0.5d0
+       un=(3.d0/(x(n)-x(n-1)))*(ypn-(y(n)-y(n-1))/(x(n)-x(n-1)))
+    endif
+    y2(n)=(un-qn*u(n-1))/(qn*y2(n-1)+1.d0)
+
+    do k=n-1,1,-1
+       y2(k)=y2(k)*y2(k+1)+u(k)
+    end do
+
+    return
+
+  end subroutine spline
+
+  subroutine calc_vhart
+
+    integer :: j, ibound, jpt
+    double precision :: delt, oodelt, howb, t, hsqrtpi, xipt, &
+         & fh, densityipt, vhtabipt
+
+    vhtab = 0.0d0
+
+    if ( lrencoul) then
+
+       hsqrtpi =  0.5d0 * sqrt( pi)
+       howb = 0.5d0 / wireb
+
+!!$       do ipt = 0, npnts
+!!$
+!!$          xipt = xtab(ipt)
+!!$
+!!$          do j = 1, npnts
+!!$
+!!$             delt = ( xipt + xtab(j))
+!!$             t = delt * howb
+!!$
+!!$             if ( t .le. 15.0d0) then        
+!!$                vhtab(ipt) = vhtab(ipt) + density(j) * &
+!!$                     & hsqrtpi * howb * exp( t * t) * erfc( t)
+!!$             elseif (t .gt. 15.0d0) then
+!!$                oodelt = 1.0d0 / delt
+!!$                vhtab(ipt) = vhtab(ipt) + density(j) * 0.5d0 * &
+!!$                     & (oodelt - 2.0d0 * wireb * wireb * &
+!!$                     & oodelt**3 + 12.0d0 * wireb**4 * oodelt**5 &
+!!$                     & - 120.0d0 * wireb**6 * oodelt**7)
+!!$             endif
+!!$          end do
+!!$
+!!$          do j = 0, npnts
+!!$
+!!$             delt = abs( xipt - xtab(j))
+!!$             t = delt * howb
+!!$
+!!$             if ( t .le. 15.0d0) then        
+!!$                vhtab(ipt) = vhtab(ipt) + density(j) * &
+!!$                     & hsqrtpi * howb * exp( t * t) * erfc( t)
+!!$             elseif (t .gt. 15.0d0) then
+!!$                oodelt = 1.0d0 / delt
+!!$                vhtab(ipt) = vhtab(ipt) + density(j) * 0.5d0 * &
+!!$                     & (oodelt - 2.0d0 * wireb * wireb * &
+!!$                     & oodelt**3 + 12.0d0 * wireb**4 * oodelt**5 &
+!!$                     & - 120.0d0 * wireb**6 * oodelt**7)
+!!$             endif
+!!$          end do
+!!$       end do
+
+       ibound = int( 15.0d0 / ( howb * dx))
+
+       do ipt = 0, npnts
+
+          xipt = xtab(ipt)
+          vhtabipt = 0.0d0
+
+          do j = 1, ibound - ipt
+
+             delt = xipt + xtab(j)
+             t = delt * howb
+             vhtabipt = vhtabipt + density(j) * &
+                  & hsqrtpi * howb * exp( t * t) * erfc( t)
+
+          end do
+
+          do j = max( ibound - ipt + 1, 1), npnts
+
+             delt = xipt + xtab(j)
+             oodelt = 1.0d0 / delt
+             vhtabipt = vhtabipt + density(j) * 0.5d0 * &
+                  & (oodelt - 2.0d0 * wireb * wireb * &
+                  & oodelt**3 + 12.0d0 * wireb**4 * oodelt**5 &
+                  & - 120.0d0 * wireb**6 * oodelt**7)
+
+          end do
+
+          do j = 0, ipt - ibound
+
+             delt = abs( xipt - xtab(j))
+             t = delt * howb
+             oodelt = 1.0d0 / delt
+             vhtabipt = vhtabipt + density(j) * 0.5d0 * &
+                  & (oodelt - 2.0d0 * wireb * wireb * &
+                  & oodelt**3 + 12.0d0 * wireb**4 * oodelt**5 &
+                  & - 120.0d0 * wireb**6 * oodelt**7)
+
+          end do
+
+          do j = max( ipt - ibound, 0), ipt
+
+             delt = xipt - xtab(j)
+             t = delt * howb
+             vhtabipt = vhtabipt + density(j) * &
+                  & hsqrtpi * howb * exp( t * t) * erfc( t)
+
+          end do
+
+          do j = ipt + 1, min( ipt + ibound, npnts)
+
+             delt = xtab(j) - xipt
+             t = delt * howb
+             vhtabipt = vhtabipt + density(j) * &
+                  & hsqrtpi * howb * exp( t * t) * erfc( t)
+
+          end do
+
+          do j = ipt + ibound + 1, npnts
+
+             delt = xtab(j) - xipt
+             t = delt * howb
+             oodelt = 1.0d0 / delt
+             vhtabipt = vhtabipt + density(j) * 0.5d0 * &
+                  & (oodelt - 2.0d0 * wireb * wireb * &
+                  & oodelt**3 + 12.0d0 * wireb**4 * oodelt**5 &
+                  & - 120.0d0 * wireb**6 * oodelt**7)
+
+          end do
+
+          vhtab(ipt) = vhtab(ipt) + vhtabipt
+
+       end do
+
+!!$       ibound = int( 15.0d0 / ( howb * dx))
+!!$
+!!$       do ipt = 0, npnts
+!!$
+!!$          densityipt = density(ipt)
+!!$          xipt = xtab(ipt)
+!!$!          vhtabipt = vhtabipt + densityipt * hsqrtpi * howb
+!!$
+!!$          do j = ipt, ibound - ipt
+!!$
+!!$             delt = ( xipt + xtab(j))
+!!$             t = delt * howb
+!!$             fh = hsqrtpi * howb * exp( t * t) * erfc( t)
+!!$             vhtabipt = vhtabipt + density(j) * fh
+!!$             vhtab(j) = vhtab(j) + densityipt * fh
+!!$
+!!$          end do
+!!$
+!!$          do j = max( ibound - ipt + 1, ipt), npnts
+!!$
+!!$             delt = ( xipt + xtab(j))
+!!$             oodelt = 1.0d0 / delt
+!!$             fh = 0.5d0 * (oodelt - 2.0d0 * wireb * wireb * &
+!!$                  & oodelt**3 + 12.0d0 * wireb**4 * oodelt**5 &
+!!$                  & - 120.0d0 * wireb**6 * oodelt**7)
+!!$             vhtabipt = vhtabipt + density(j) * fh
+!!$             vhtab(j) = vhtab(j) + densityipt * fh
+!!$
+!!$          end do
+!!$
+!!$          do j = ipt, min( ipt + ibound, npnts)
+!!$
+!!$             delt = xtab(j) - xipt
+!!$             t = delt * howb
+!!$             fh = hsqrtpi * howb * exp( t * t) * erfc( t)
+!!$             vhtabipt = vhtabipt + density(j) * fh
+!!$             vhtab(j) = vhtab(j) + densityipt * fh
+!!$
+!!$          end do
+!!$
+!!$          do j = ipt + ibound + 1, npnts
+!!$
+!!$             delt = xtab(j) - xipt
+!!$             oodelt = 1.0d0 / delt
+!!$             fh = 0.5d0 * (oodelt - 2.0d0 * wireb * wireb * &
+!!$                  & oodelt**3 + 12.0d0 * wireb**4 * oodelt**5 &
+!!$                  & - 120.0d0 * wireb**6 * oodelt**7)
+!!$             vhtabipt = vhtabipt + density(j) * fh
+!!$             vhtab(j) = vhtab(j) + densityipt * fh
+!!$
+!!$          end do
+!!$
+!!$          vhtab(ipt) = vhtab(ipt) + vhtabipt
+!!$          vhtab(ipt) = vhtab(ipt) - 3 * density(ipt) * hsqrtpi * howb
+!!$
+!!$       end do
+
+       vhtab = vhtab * dx
+
+    elseif ( lsoftcoul ) then
+
+       do ipt = 0, npnts 
+          do jpt = -npnts,npnts  
+
+             if(jpt.lt.0) delt = xtab(ipt) + xtab(-jpt) 
+             if(jpt.ge.0) delt = abs(xtab(ipt) - xtab(jpt))
+             vhtab(ipt) = vhtab(ipt) + density(abs(jpt))*(delt**2 + asoftc**2)**(-0.5d0)
+
+          enddo
+       enddo
+
+       vhtab = vhtab * 0.5d0 * dx 
+
+    elseif ( lcoul) then
+
+       !v_Hartree = Ne(r) / r + 4 * pi * int_r^rmax x * rho(x) dx
+       call calc_Ne
+
+       !calculate 2nd contribution to v_Hartree
+       if ( loggrid) then
+
+          vh2c = 0.0d0
+          vh2c(npnts) = density(npnts) * x2dxtab(npnts) / xtab(npnts)
+
+          do ipt = npnts - 1, 0, -1
+
+             vh2c(ipt) = vh2c(ipt+1) + density(ipt) * x2dxtab(ipt) / xtab(ipt)
+             vhtab(ipt) = ne(ipt) / xtab(ipt) + vh2c(ipt)
+
+          end do
+
+       else
+
+          vh2c = 0.0d0
+          vh2c(npnts) = density(npnts) / xtab(npnts)
+
+          do ipt = npnts - 1, 0, -1
+
+             vh2c(ipt) = vh2c(ipt+1) + density(ipt) / xtab(ipt) * dx
+             vhtab(ipt) = ne(ipt) / xtab(ipt) + vh2c(ipt)
+
+          end do
+
+          if ( hooke) vhtab(0) = vhtab(1)
+
+       end if
+    
+    else
+
+       write(*,*)
+       write(*,*) '==========================================='
+       write(*,*) '====  no Hartree potential for this    ===='
+       write(*,*) '====   interaction type implemented    ===='
+       write(*,*) '====                                   ===='
+       write(*,*) '====             terminating           ===='
+       write(*,*) '==========================================='
+       call dealloc_vars
+       stop
+
+    end if
+
+    return
+
+  end subroutine calc_vhart
+
+  subroutine calc_vLDA
+
+    double precision :: argg, g, dg, partial_ex_rs, partial_ec_rs, &
+         & dummy, ooth, madc, int1, int2
+
+    ooth = 1.0d0 / 3.0d0
+
+    !Definition of rs
+    if (hpot .or. apot) then
+
+       do ipt = 0, npnts
+
+          if ( density(ipt) .lt. 1.d-32) then
+             rstab(ipt)= 1.0d32
+          else             
+             rstab(ipt)= 1.0d0 / density(ipt)
+          end if
+       end do
+       
+    elseif( hooke .or. cpot) then
+
+       if ( hooke) densorsq = density / ( xtab * xtab)
+       if ( cpot) densorsq = density / xtab
+       densorsq = densorsq / 4.0d0 / pi
+
+       do ipt = 0, npnts
+
+          if ( densorsq(ipt) .lt. 1.d-32) then
+             rstab(ipt)= 1.0d32
+          else             
+             rstab(ipt)= ( 3.0d0 / ( 4.0d0 * pi * densorsq(ipt)))**ooth
+          end if
+
+       end do
+       
+    end if
+
+    if ( lrencoul) then
+
+       do ipt = 0, npnts
+
+          !exchange term
+          argg = wireb * pi / ( 2.0d0 * rstab(ipt)) 
+          call gcalc_rc( argg, g, dg)
+          extab(ipt) = -1.0 / ( 4.0 * rstab(ipt)) * g
+
+          !partial derivative with respect to rs
+          partial_ex_rs = -1.0d0 / rstab(ipt) * extab(ipt) + &
+               & 1.0 / ( 4.0 * rstab(ipt)**2) * ( dg * argg)
+
+          !exchange contribution to vxc
+          vxtab(ipt) = extab(ipt) - rstab(ipt) * partial_ex_rs
+
+          !Correlation term (in Hartree units)
+
+          ectab(ipt) = - 0.5d0 * ( ( rstab(ipt) * Log( 1.0 + xD * rstab(ipt) + & 
+               & xE * rstab(ipt)**xgp)) / ( xA + xC * rstab(ipt)**2 + &
+               & xB * rstab(ipt)**xg))
+
+          !partial derivative with respect to rs
+          partial_ec_rs = -0.5d0*( &
+               & ( ( rstab(ipt) * ( xD + xE * xgp * rstab(ipt)**( -1.0 + xgp))) / &
+               & ( ( xA + xC * rstab(ipt)**2 + xB * rstab(ipt)**xg) * &
+               & ( 1.0d0 + xD * rstab(ipt) + xE * rstab(ipt)**xgp))) + &
+               & ( rstab(ipt) * ( 2 * xC * rstab(ipt) + xB * xg * rstab(ipt)**( -1.0 + xg)) * &
+               & Log( 1.0 + xD * rstab(ipt) + xE * rstab(ipt)**xgp)) / &
+               & ( xA + xC * rstab(ipt)**2 + xB * rstab(ipt)**xg)**2 - &
+               & Log( 1.0 + xD * rstab(ipt) + xE * rstab(ipt)**xgp) / &
+               & ( xA + xC * rstab(ipt)**2 + xB * rstab(ipt)**xg))
+
+          !correlation contribution to vxc 
+          vctab(ipt) = ectab(ipt) - rstab(ipt) * partial_ec_rs
+
+       enddo
+
+    elseif ( lsoftcoul) then
+
+       do ipt = 0, npnts
+
+          !exchange term
+          argg = asoftc * pi / ( 2.0d0 * rstab(ipt))
+          call gcalc_sc( argg, g, dg)
+          extab(ipt) = -1.0 / ( 4.0 * rstab(ipt)) * g
+
+          !partial derivative with respect to rs
+          partial_ex_rs = -1.0d0 / rstab(ipt) * extab(ipt) + &
+               & 1.0 / ( 4.0 * rstab(ipt)**2) * ( dg * argg)
+
+          !exchange contribution to vxc
+          vxtab(ipt) = extab(ipt) - rstab(ipt) * partial_ex_rs
+
+          !Correlation term (in Hartree units)
+          ectab(ipt) = -((rstab(ipt) + xE*rstab(ipt)**2)* &
+               &  Log(1.0d0 + xalpha*rstab(ipt) + xbeta*rstab(ipt)**xm))/ &
+               &  (2.*(xA + xB*rstab(ipt) + xC*rstab(ipt)**2 + xD*rstab(ipt)**3))
+
+          !partial derivative with respect to rs        
+          partial_ec_rs = -((rstab(ipt) + xE*rstab(ipt)**2)* &
+               &  (xalpha + xm*xbeta*rstab(ipt)**(-1.0d0 + xm)))/ &
+               &  (2.0d0*(xA + xB*rstab(ipt) + xC*rstab(ipt)**2 + xD*rstab(ipt)**3)* &
+               &  (1.0d0 + xalpha*rstab(ipt) + xbeta*rstab(ipt)**xm)) + & 
+               &  ((xB + 2*xC*rstab(ipt) + 3*xD*rstab(ipt)**2)* &
+               &  (rstab(ipt) + xE*rstab(ipt)**2)* &
+               &  Log(1.0d0 + xalpha*rstab(ipt) + xbeta*rstab(ipt)**xm))/ &
+               &  (2.*(xA + xB*rstab(ipt) + xC*rstab(ipt)**2 + xD*rstab(ipt)**3)**2) &
+               &  - ((1.0d0 + 2*xE*rstab(ipt))* &
+               &  Log(1.0d0 + xalpha*rstab(ipt) + xbeta*rstab(ipt)**xm))/ &
+               &  (2.*(xA + xB*rstab(ipt) + xC*rstab(ipt)**2 + xD*rstab(ipt)**3))
+
+          !correlation contribution to vxc 
+          vctab(ipt) = ectab(ipt) - rstab(ipt) * partial_ec_rs
+
+       enddo
+       
+    elseif ( lcoul) then
+
+       !3D LDA PW92
+       !exchange energy density and potential
+       vxtab = - ( 3.0d0 / pi)**ooth * densorsq**ooth
+       extab = - 0.75d0 * ( 3.0d0 / pi)**ooth * densorsq**ooth
+       !the derivative is multiplied by the density
+       partial_extab = - 0.25d0 * ( 3.0d0 / pi)**ooth * densorsq**ooth
+
+       !correlation energy density potential
+       do ipt = 0, npnts
+          
+          call ecPW( rstab(ipt),0.0d0, ectab(ipt), partial_ec_rs, dummy)
+          vctab(ipt) = ectab(ipt) - rstab(ipt) / 3.0d0 * partial_ec_rs
+          !the derivative is multiplied by the density
+          partial_ectab(ipt) = - rstab(ipt) / 3.0d0 * partial_ec_rs
+
+       end do
+
+       if (hooke) vxtab(0) = vxtab(1)
+       if (hooke) vctab(0) = vctab(1)
+
+    else
+
+       write(*,*)
+       write(*,*) '==========================================='
+       write(*,*) '====    no LDA potential for this      ===='
+       write(*,*) '====   interaction type implemented    ===='
+       write(*,*) '====                                   ===='
+       write(*,*) '====             terminating           ===='
+       write(*,*) '==========================================='
+       call dealloc_vars
+       stop
+
+    end if
+
+    !exchange-correlation potential
+    vxctab = vxtab + vctab
+
+    !madc = 0.8917d0
+    madc = 0.89593d0 !from PW92
+
+    !LDA correction to SCE potential
+    if ( lscelda .and. ( hooke .or. cpot)) then
+
+       dummy = madc * ( 4.0d0 * pi / 3.0d0)**ooth
+       eslctab = dummy * densorsq**ooth
+       dummy = madc * ( 4.0d0 * pi / 3.0d0)**ooth * 4.0d0 / 3.0d0
+       vslctab = dummy * densorsq**ooth
+       if ( hooke) eslctab(0) = eslctab(1)
+       if ( hooke) vslctab(0) = vslctab(1)
+       
+    end if
+
+    !LDA+SI correction to SCE potential
+    if ( lsceldasic .and. ( hooke .or. cpot)) then
+
+       vslsitab = 0.0d0
+       eslsitab = 0.0d0
+
+!       write(*,*) 'here 0'
+       
+       if (( npart .le. 2.0d0) .and. (npart .gt. 1.0d0)) then
+
+          do ipt = 0, npnts
+             
+             int1 = 0.0d0
+
+!             write(*,*) 'here 1'
+
+             do j = ipt , npnts 
+
+                int1 = int1 + x2dxtab(j) * ( xtab(j) + .9d0 * rstab(j)) &
+                     & / ( xtab(j) + comf(j,1))**2 / comf(j,1)**2 / densorsq(indfr(j)) &
+                     & * densorsq(j) * ( extab(j) + ectab(j) + madc / rstab(j))
+
+             end do
+
+             stop
+!       write(*,*) 'here 2'
+
+             int2 = 0.0d0
+
+             do j = 0, indfr(ipt)
+
+                int2 = int2 + x2dxtab(j) * ( xtab(j) + .9d0 * rstab(j)) &
+                     & / ( xtab(j) + comf(j,1))**2 / comf(j,1)**2 / densorsq(indfr(j)) &
+                     & * densorsq(j) * ( extab(j) + ectab(j) + madc / rstab(j))
+
+             end do
+
+!       write(*,*) 'here 3'
+
+             vslsitab(ipt) = 0.9d0 / 3.0d0 / ( xtab(ipt) + abs(comf(ipt,1))) &
+                  & * rstab(ipt) * ( extab(ipt) + ectab(ipt) + madc / rstab(ipt)) &
+                  & + ( xtab(ipt) + .9d0 * rstab(ipt)) / ( xtab(ipt) + abs(comf(ipt,1))) &
+                  & * rstab(ipt) * ( extab(ipt) + ectab(ipt) + madc / rstab(ipt)) &
+                  & + ( xtab(ipt) + .9d0 * rstab(ipt)) / ( xtab(ipt) + abs(comf(ipt,1))) &
+                  & * ( partial_extab(ipt) + partial_ectab(ipt) ) &
+                  & + int1 + int2
+             vslsitab(ipt) = vslsitab(ipt) * xtab(ipt) * xtab(ipt)
+             eslsitab(ipt) = ( xtab(ipt) + .9d0 * rstab(ipt)) / ( xtab(ipt) + abs(comf(ipt,1))) &
+                  & * ( extab(ipt) + ectab(ipt) + madc / rstab(ipt))
+
+          end do
+       
+          vslsitab = vslsitab * 4.0d0 * pi
+
+       elseif ( npart .gt. 2.0d0) then
+
+          write(*,*)
+          write(*,*) '==============================================='
+          write(*,*) '====    no SIC for SCE+ LDA implemented    ===='
+          write(*,*) '====            for npart >2.0             ===='
+          write(*,*) '====                                       ===='
+          write(*,*) '====               terminating             ===='
+          write(*,*) '==============================================='
+          call dealloc_vars
+          stop
+
+       end if
+       
+       dummy = madc * ( 4.0d0 * pi / 3.0d0)**ooth
+       eslctab = dummy * densorsq**ooth
+       dummy = madc * ( 4.0d0 * pi / 3.0d0)**ooth * 4.0d0 / 3.0d0
+       vslctab = dummy * densorsq**ooth
+       if ( hooke) eslctab(0) = eslctab(1)
+       if ( hooke) vslctab(0) = vslctab(1)
+       
+    end if
+
+    return
+    
+  end subroutine calc_vLDA
+
+  !gives the grid point index of the comotion function  value f(r)
+  function indfr(ind)
+
+    integer, intent(in) :: ind
+    integer :: indfr, ind2, k
+    double precision :: min, diff
+
+    min = xtab(npnts)
+    ind2 = 0
+
+    if ( abs( comf(ind,1)) .lt. xtab(npnts)) then
+
+       do k = npnts, 0, -1
+
+          diff = abs( xtab(k) - abs(comf(ind,1)))
+
+          if ( diff .lt. min) then
+             min = diff
+             ind2 = k
+          end if
+
+       enddo
+
+       indfr = ind2
+
+    else
+
+       indfr = npnts
+
+    end if
+    
+!    write(*,*) 'here 1.2', indfr, npnts, xtab(indfr), comf(ind,1)
+    write(*,*) 'here 1.2', indfr, ind, comf(ind,1), xtab(ind)
+
+    return
+
+  end function indfr
+
+  !Subroutine to compute the function g(x) and its derivative dg(x), 
+  !needed to compute the LDA exchange in 1D 
+  subroutine gcalc_rc(x,g,dg)
+
+    implicit double precision (a-h,o-z)
+
+    !Point at which we can switch between the two series expansions
+    !(for small and large arguments)
+    x0=1.6854896277450042d0
+
+    if ( x .le. x0) then
+
+       g = 1.2113921675492336 + &
+            & 5.450898308041165e-8 * x**12 * &
+            & ( 303.7282684522468 - 280. * Log(x)) + &
+            & 7.71604938271605e-6 * x**8 * &
+            & ( 115.70039343924128 - 120. * Log(x)) + &
+            & 3.1565656565656566e-6 * x**10 * &
+            & ( 41.092050338333024 - 40. * Log(x)) + &
+            & 0.000248015873015873 * x**6 * &
+            & ( 21.501983449753048 - 24. * Log(x)) + &
+            & 0.002777777777777778 * x**4 * &
+            & ( 9.9367060105908 - 12. * Log(x)) + &
+            & 0.041666666666666664 * x**2 * &
+            & ( 3.1789020035302675 - 4. * Log(x)) - &
+            & 1. * Log(x) 
+
+       dg = -1. / x - 0.16666666666666666 * x - &
+            & 0.03333333333333333 * x**3 - &
+            & 0.005952380952380952 * x**5 - &
+            & 0.000925925925925926 * x**7 - &
+            & 0.00012626262626262626 * x**9 - &
+            & 0.000015262515262515263 * x**11 + & 
+            & 6.541077969649399e-7 * x**11 * &
+            & ( 303.7282684522468 - 280. * Log(x)) + &
+            & 0.0000617283950617284 * x**7 * &
+            & ( 115.70039343924128 - 120. * Log(x)) + &
+            & 0.000031565656565656566 * x**9 * &
+            & ( 41.092050338333024 - 40. * Log(x)) + &
+            & 0.001488095238095238 * x**5 * &
+            & ( 21.501983449753048 - 24. * Log(x)) + &
+            & 0.011111111111111112 * x**3 * &
+            & ( 9.9367060105908 - 12. * Log(x)) + &
+            & 0.08333333333333333 * x * &
+            & ( 3.1789020035302675 - 4. * Log(x)) 
+
+    else
+
+       g = 4.615384615384615 / x**14 - &
+            & 1.0909090909090908 / x**12 + &
+            & 0.3333333333333333 / x**10 - &
+            & 0.14285714285714285 / x**8 + 0.1 / x**6 - &
+            & 0.16666666666666666 / x**4 + &
+            & 2.7841639984158535 / x + &
+            & ( -1.2886078324507664 - 1. * Log(x)) / x**2
+
+       dg=-64.61538461538461/x**15 + &
+            & 13.090909090909092 / x**13 - &
+            & 3.3333333333333335 / x**11 + &
+            & 1.1428571428571428 / x**9 - 0.6 / x**7 + &
+            & 0.6666666666666666 / x**5 - 1. / x**3 - &
+            & 2.7841639984158535 / x**2 - & 
+            & ( 2. * (-1.2886078324507664 - 1. * Log(x))) / x**3
+
+    endif
+
+    return
+
+  end subroutine gcalc_rc
+
+  subroutine gcalc_sc(x,g,dg)
+
+    implicit double precision (a-h,o-z)
+
+    !x0 is the point at which we can switch between the two series 
+    !expansions (for small and large arguments)
+    x0=3.1636598630907398
+
+    if(x.le.x0) THEN
+
+       g=1.6159315156584124 + &
+            &      9.226780990173848d-8*x**6* &
+            &      (372.4764946306133 - 168.*Log(x)) + &
+            &      0.00006944444444444444*x**4* &
+            &      (29.738972734876185 - 15.*Log(x)) + &
+            &      0.003472222222222222*x**2* &
+            &      (20.391178187900948 - 12.*Log(x)) - &
+            &      1.*Log(x)
+
+
+       dg=-1./x - 0.041666666666666664*x - &
+            &     0.0010416666666666667*x**3 - &
+            &     0.000015500992063492063*x**5 + &
+            &     5.536068594104309d-7*x**5* &
+            &     (372.4764946306133 - 168.*Log(x)) + &
+            &     0.0002777777777777778*x**3* &
+            &     (29.738972734876185 - 15.*Log(x)) + &
+            &     0.006944444444444444*x* &
+            &     (20.391178187900948 - 12.*Log(x))
+
+    else
+
+
+       g=(2.5066282746310002*(1/x)**2.5 - &
+            &      2.8199568089598754*(1/x)**3.5 + &
+            &      6.756146521466368*(1/x)**4.5 - &
+            &      23.389485511815632*(1/x)**5.5 + &
+            &      104.89124014381879*(1/x)**6.5)/ &
+            &      2.718281828459045**(1.*x) - 2./x**2 + &
+            &      3.141592653589793/x
+
+
+       dg=(-1.*(2.5066282746310002*(1/x)**2.5 - &
+            &      2.8199568089598754*(1/x)**3.5 + &
+            &      6.756146521466368*(1/x)**4.5 - &
+            &      23.389485511815632*(1/x)**5.5 + &
+            &      104.89124014381879*(1/x)**6.5))/ &
+            &      2.718281828459045**(1.*x) + &
+            &      (-6.2665706865775*(1/x)**3.5 + &
+            &      9.869848831359564*(1/x)**4.5 - &
+            &      30.402659346598654*(1/x)**5.5 + &
+            &      128.64217031498598*(1/x)**6.5 - &
+            &      681.7930609348222*(1/x)**7.5)/ &
+            &      2.718281828459045**(1.*x) + 4./x**3 - &
+            &      3.141592653589793/x**2
+
+    endif
+
+    return
+
+  end subroutine gcalc_sc
+
+end module mpot
+
