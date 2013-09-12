@@ -4,6 +4,10 @@ parallel/
 autom4te.cache/
 build-aux/
 
+static/
+restart/
+exec/
+
 
 # Ignored files
 Makefile

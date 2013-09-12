@@ -1,0 +1,39 @@
+CalculationMode = gs
+
+Dimensions = 1
+
+FromScratch = YES
+
+ExperimentalFeatures = YES
+
+#############################
+# GS
+#############################
+
+%Coordinates
+"Harmonic1D" | 0.0
+%
+
+omega = 1.0
+
+%Species
+'Harmonic1D' | 1.00 | spec_user_defined | 1 | ' 0.5 * (omega*x)^2 '
+%
+
+BoxShape = sphere
+Radius = 10  
+Spacing = 0.2
+
+
+XCFunctional = hgga_xc_sce_1d
+
+TheoryLevel = independent_particles
+
+#############################
+# OUTPUT
+#############################
+
+Output = wfs + density + potential
+
+OutputHow = axis_x
+
