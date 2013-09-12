@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/11243/trunk/src/opt_control
+END
+opt_control_global.F90
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/11034/trunk/src/opt_control/opt_control_global.F90
+END
+propagation.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/11240/trunk/src/opt_control/propagation.F90
+END
+target_excited_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/10978/trunk/src/opt_control/target_excited_inc.F90
+END
+opt_control_iter.F90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/10978/trunk/src/opt_control/opt_control_iter.F90
+END
+filter.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11044/trunk/src/opt_control/filter.F90
+END
+check_input_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/11006/trunk/src/opt_control/check_input_inc.F90
+END
+controlfunction.F90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/11034/trunk/src/opt_control/controlfunction.F90
+END
+target.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11070/trunk/src/opt_control/target.F90
+END
+controlfunction_trans_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/11034/trunk/src/opt_control/controlfunction_trans_inc.F90
+END
+target_exclude_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/10978/trunk/src/opt_control/target_exclude_inc.F90
+END
+target_local_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/10978/trunk/src/opt_control/target_local_inc.F90
+END
+target_userdefined_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10978/trunk/src/opt_control/target_userdefined_inc.F90
+END
+target_classical_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/11243/trunk/src/opt_control/target_classical_inc.F90
+END
+opt_control_c_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/11243/trunk/src/opt_control/opt_control_c_inc.F90
+END
+target_velocity_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/11078/trunk/src/opt_control/target_velocity_inc.F90
+END
+target_groundstate_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10978/trunk/src/opt_control/target_groundstate_inc.F90
+END
+target_gstransformation_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/10978/trunk/src/opt_control/target_gstransformation_inc.F90
+END
+opt_control.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/11223/trunk/src/opt_control/opt_control.F90
+END
+opt_control_state.F90
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/11053/trunk/src/opt_control/opt_control_state.F90
+END
+target_hhg_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/11006/trunk/src/opt_control/target_hhg_inc.F90
+END
+initst.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11085/trunk/src/opt_control/initst.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11053/trunk/src/opt_control/Makefile.am
+END
+target_density_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/11039/trunk/src/opt_control/target_density_inc.F90
+END
+finalcheck_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/11040/trunk/src/opt_control/finalcheck_inc.F90
+END
+target_tdlocal_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/10978/trunk/src/opt_control/target_tdlocal_inc.F90
+END

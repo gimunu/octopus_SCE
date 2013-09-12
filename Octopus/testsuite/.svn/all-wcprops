@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/octopus/!svn/ver/11238/trunk/testsuite
+END
+TestGroups
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/9820/trunk/testsuite/TestGroups
+END
+oct-run_regression_test.pl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/11049/trunk/testsuite/oct-run_regression_test.pl
+END
+buildbot_query.pl
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10921/trunk/testsuite/buildbot_query.pl
+END
+fix_testsuite.py
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/9067/trunk/testsuite/fix_testsuite.py
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/testsuite/Makefile.am
+END
+oct-run_testsuite.sh.in
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/testsuite/oct-run_testsuite.sh.in
+END

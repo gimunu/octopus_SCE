@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/octopus/!svn/ver/11242/trunk/src/main
+END
+main.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/11024/trunk/src/main/main.F90
+END
+casida.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/11223/trunk/src/main/casida.F90
+END
+phonons_fd.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/main/phonons_fd.F90
+END
+pulpo.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/main/pulpo.F90
+END
+static_pol.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/main/static_pol.F90
+END
+run.F90
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/11129/trunk/src/main/run.F90
+END
+invert_ks.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/main/invert_ks.F90
+END
+gcm.F90
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/11091/trunk/src/main/gcm.F90
+END
+unocc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/11231/trunk/src/main/unocc.F90
+END
+memory.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/main/memory.F90
+END
+geom_opt.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11242/trunk/src/main/geom_opt.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11142/trunk/src/main/Makefile.am
+END
+casida_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11240/trunk/src/main/casida_inc.F90
+END
+one_shot.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/main/one_shot.F90
+END
+test.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/11024/trunk/src/main/test.F90
+END

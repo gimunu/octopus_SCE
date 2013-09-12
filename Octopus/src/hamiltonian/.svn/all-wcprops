@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/11228/trunk/src/hamiltonian
+END
+lasers_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/lasers_inc.F90
+END
+berry.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/berry.F90
+END
+kb_projector.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/kb_projector.F90
+END
+ob_lead.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/ob_lead.F90
+END
+hamiltonian_base_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/11228/trunk/src/hamiltonian/hamiltonian_base_inc.F90
+END
+hgh_projector_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/hgh_projector_inc.F90
+END
+scf_tol.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/scf_tol.F90
+END
+energy.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/energy.F90
+END
+lasers.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/lasers.F90
+END
+gauge_field.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/gauge_field.F90
+END
+projector_matrix.F90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/projector_matrix.F90
+END
+hamiltonian_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/11198/trunk/src/hamiltonian/hamiltonian_inc.F90
+END
+born_charges.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/born_charges.F90
+END
+hgh_projector.F90
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/hgh_projector.F90
+END
+hamiltonian_base.F90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/11169/trunk/src/hamiltonian/hamiltonian_base.F90
+END
+projector_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/projector_inc.F90
+END
+hamiltonian.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/11169/trunk/src/hamiltonian/hamiltonian.F90
+END
+rkb_projector.F90
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/rkb_projector.F90
+END
+projector.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/projector.F90
+END
+epot.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/epot.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/Makefile.am
+END
+kb_projector_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/kb_projector_inc.F90
+END
+species_pot.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/species_pot.F90
+END
+kick.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/hamiltonian/kick.F90
+END

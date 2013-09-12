@@ -1,0 +1,287 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/11244/trunk/src/system
+END
+eigen_evolution_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_evolution_inc.F90
+END
+system.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11216/trunk/src/system/system.F90
+END
+exponential.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/system/exponential.F90
+END
+magnetic.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/system/magnetic.F90
+END
+eigen_cg_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_cg_inc.F90
+END
+xc_kli_pauli_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/system/xc_kli_pauli_inc.F90
+END
+output_fio.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11148/trunk/src/system/output_fio.F90
+END
+subspace_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/system/subspace_inc.F90
+END
+output_h_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/system/output_h_inc.F90
+END
+eigen_cg.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_cg.F90
+END
+output_linear_response_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/10978/trunk/src/system/output_linear_response_inc.F90
+END
+eigen_arpack_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_arpack_inc.F90
+END
+v_ks.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/11195/trunk/src/system/v_ks.F90
+END
+xc_kli_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11185/trunk/src/system/xc_kli_inc.F90
+END
+xc_ks_inversion.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/11069/trunk/src/system/xc_ks_inversion.F90
+END
+eigen_mg_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_mg_inc.F90
+END
+xc_oep_sic_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/11126/trunk/src/system/xc_oep_sic_inc.F90
+END
+subspace.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/system/subspace.F90
+END
+eigen_arpack.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_arpack.F90
+END
+output_me_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/src/system/output_me_inc.F90
+END
+output_etsf_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/system/output_etsf_inc.F90
+END
+forces_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11244/trunk/src/system/forces_inc.F90
+END
+output_states_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/system/output_states_inc.F90
+END
+forces.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11244/trunk/src/system/forces.F90
+END
+output_me.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/system/output_me.F90
+END
+eigensolver.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11092/trunk/src/system/eigensolver.F90
+END
+output_modelmb_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/src/system/output_modelmb_inc.F90
+END
+eigen_plan_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_plan_inc.F90
+END
+xc_oep_x_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11198/trunk/src/system/xc_oep_x_inc.F90
+END
+linear_solver_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/system/linear_solver_inc.F90
+END
+output.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11206/trunk/src/system/output.F90
+END
+preconditioners_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/11175/trunk/src/system/preconditioners_inc.F90
+END
+pert_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/system/pert_inc.F90
+END
+linear_solver.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/src/system/linear_solver.F90
+END
+eigen_rmmdiis_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_rmmdiis_inc.F90
+END
+energy_calc_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/system/energy_calc_inc.F90
+END
+xc_oep_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11185/trunk/src/system/xc_oep_inc.F90
+END
+eigen_lobpcg_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_lobpcg_inc.F90
+END
+elf.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/system/elf.F90
+END
+preconditioners.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/system/preconditioners.F90
+END
+output_berkeleygw_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/11206/trunk/src/system/output_berkeleygw_inc.F90
+END
+pert.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/system/pert.F90
+END
+energy_calc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/system/energy_calc.F90
+END
+eigen_rmmdiis.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_rmmdiis.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11143/trunk/src/system/Makefile.am
+END
+eigen_lobpcg.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/system/eigen_lobpcg.F90
+END
+xc_oep.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11184/trunk/src/system/xc_oep.F90
+END

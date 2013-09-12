@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/10978/trunk/libxc/build
+END
+libxc.spec.in
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/6323/trunk/libxc/build/libxc.spec.in
+END
+libxc.pc.in
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/6323/trunk/libxc/build/libxc.pc.in
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/libxc/build/Makefile.am
+END

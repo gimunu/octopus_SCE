@@ -1,0 +1,14 @@
+K 10
+svn:ignore
+V 56
+Makefile.in
+Makefile
+*.o
+*.a
+*.mod
+.deps
+
+config_F90.h
+
+
+END

@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/octopus/!svn/ver/11025/trunk/m4
+END
+sparskit.m4
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/10666/trunk/m4/sparskit.m4
+END
+octopus_compilation_info.m4
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/11025/trunk/m4/octopus_compilation_info.m4
+END
+fcflags.m4
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/octopus/!svn/ver/10978/trunk/m4/fcflags.m4
+END
+builtin.m4
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/9263/trunk/m4/builtin.m4
+END
+fc_sizeof.m4
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/10978/trunk/m4/fc_sizeof.m4
+END
+pnfft.m4
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/10978/trunk/m4/pnfft.m4
+END
+arch.m4
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/10978/trunk/m4/arch.m4
+END
+parpack.m4
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/octopus/!svn/ver/10978/trunk/m4/parpack.m4
+END
+gdlib.m4
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/10241/trunk/m4/gdlib.m4
+END
+metis.m4
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/10978/trunk/m4/metis.m4
+END
+zdotc.m4
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/9308/trunk/m4/zdotc.m4
+END
+gsl.m4
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/octopus/!svn/ver/10438/trunk/m4/gsl.m4
+END
+etsf_io.m4
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/8539/trunk/m4/etsf_io.m4
+END
+papi.m4
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/10978/trunk/m4/papi.m4
+END
+fc_f2003_c_ptr.m4
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/m4/fc_f2003_c_ptr.m4
+END
+libfm.m4
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/10978/trunk/m4/libfm.m4
+END
+dune.m4
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/10559/trunk/m4/dune.m4
+END
+check_cl.m4
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/10858/trunk/m4/check_cl.m4
+END
+nfft.m4
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/10978/trunk/m4/nfft.m4
+END
+newuoa.m4
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/10761/trunk/m4/newuoa.m4
+END
+pfft.m4
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/10978/trunk/m4/pfft.m4
+END
+berkeleygw.m4
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/8697/trunk/m4/berkeleygw.m4
+END
+arpack.m4
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/10978/trunk/m4/arpack.m4
+END
+libxc.m4
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/10747/trunk/m4/libxc.m4
+END
+tls.m4
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/octopus/!svn/ver/10637/trunk/m4/tls.m4
+END
+netcdf.m4
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/7807/trunk/m4/netcdf.m4
+END
+fc_integer.m4
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/10978/trunk/m4/fc_integer.m4
+END
+ac_prog_sed.m4
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/8976/trunk/m4/ac_prog_sed.m4
+END
+fortran.m4
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/octopus/!svn/ver/10978/trunk/m4/fortran.m4
+END
+dune_check_lib.m4
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10559/trunk/m4/dune_check_lib.m4
+END
+fft.m4
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/octopus/!svn/ver/10978/trunk/m4/fft.m4
+END
+blas.m4
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/10672/trunk/m4/blas.m4
+END
+scalapack.m4
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/10672/trunk/m4/scalapack.m4
+END
+etsf_io_fortran.m4
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/7807/trunk/m4/etsf_io_fortran.m4
+END
+parmetis.m4
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/10978/trunk/m4/parmetis.m4
+END
+blacs.m4
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/10672/trunk/m4/blacs.m4
+END
+mpi.m4
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/octopus/!svn/ver/10670/trunk/m4/mpi.m4
+END
+pspio.m4
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/10978/trunk/m4/pspio.m4
+END
+lapack.m4
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/10672/trunk/m4/lapack.m4
+END
+f90_module_flag.m4
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/6722/trunk/m4/f90_module_flag.m4
+END
+fc_command_line.m4
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/m4/fc_command_line.m4
+END
+openmp.m4
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/10978/trunk/m4/openmp.m4
+END

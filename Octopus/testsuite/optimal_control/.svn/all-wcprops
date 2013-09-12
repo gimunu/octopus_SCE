@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control
+END
+02-sym_doublewell.02-unocc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/02-sym_doublewell.02-unocc.inp
+END
+04-box.02-oct_long.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/04-box.02-oct_long.inp
+END
+04-box.04-oct_long.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/04-box.04-oct_long.inp
+END
+08-velocities.02-oct.inp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/11034/trunk/testsuite/optimal_control/08-velocities.02-oct.inp
+END
+02-sym_doublewell.test
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/10920/trunk/testsuite/optimal_control/02-sym_doublewell.test
+END
+01-asym_doublewell.test
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/10947/trunk/testsuite/optimal_control/01-asym_doublewell.test
+END
+07-qoct+tddft.02-oct.inp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/11034/trunk/testsuite/optimal_control/07-qoct+tddft.02-oct.inp
+END
+04-box.06-oct_long.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/04-box.06-oct_long.inp
+END
+03-localtarget.05-oct-mp.inp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/10940/trunk/testsuite/optimal_control/03-localtarget.05-oct-mp.inp
+END
+04-box.08-oct_long.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/04-box.08-oct_long.inp
+END
+10-current.02-oct.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/10940/trunk/testsuite/optimal_control/10-current.02-oct.inp
+END
+06-zbr98.02-oct.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/7888/trunk/testsuite/optimal_control/06-zbr98.02-oct.inp
+END
+08-velocities.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/11034/trunk/testsuite/optimal_control/08-velocities.01-ground_state.inp
+END
+07-qoct+tddft.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/11034/trunk/testsuite/optimal_control/07-qoct+tddft.01-ground_state.inp
+END
+06-zbr98.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/10935/trunk/testsuite/optimal_control/06-zbr98.01-ground_state.inp
+END
+05-adw.02-filter_fixed.inp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/7841/trunk/testsuite/optimal_control/05-adw.02-filter_fixed.inp
+END
+05-adw.03-filter_indirect.inp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/7841/trunk/testsuite/optimal_control/05-adw.03-filter_indirect.inp
+END
+08-velocities.test
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/11006/trunk/testsuite/optimal_control/08-velocities.test
+END
+07-qoct+tddft.test
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/10935/trunk/testsuite/optimal_control/07-qoct+tddft.test
+END
+04-box.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/04-box.01-ground_state.inp
+END
+03-localtarget.04-gs-mp.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/10936/trunk/testsuite/optimal_control/03-localtarget.04-gs-mp.inp
+END
+03-localtarget.02-oct.inp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/10940/trunk/testsuite/optimal_control/03-localtarget.02-oct.inp
+END
+09-density+current.02-oct.inp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/octopus/!svn/ver/10940/trunk/testsuite/optimal_control/09-density+current.02-oct.inp
+END
+10-current.test
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/10935/trunk/testsuite/optimal_control/10-current.test
+END
+06-zbr98.test
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/10935/trunk/testsuite/optimal_control/06-zbr98.test
+END
+01-asym_doublewell.02-oct_run.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/7841/trunk/testsuite/optimal_control/01-asym_doublewell.02-oct_run.inp
+END
+04-box.03-oct_long.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/04-box.03-oct_long.inp
+END
+01-asym_doublewell.03-oct_run.inp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/10720/trunk/testsuite/optimal_control/01-asym_doublewell.03-oct_run.inp
+END
+09-density+current.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/09-density+current.01-ground_state.inp
+END
+01-asym_doublewell.04-oct_run.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/7841/trunk/testsuite/optimal_control/01-asym_doublewell.04-oct_run.inp
+END
+04-box.07-oct_long.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/04-box.07-oct_long.inp
+END
+04-box.test
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/10936/trunk/testsuite/optimal_control/04-box.test
+END
+08-velocities.03-movingions.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/11034/trunk/testsuite/optimal_control/08-velocities.03-movingions.inp
+END
+03-localtarget.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/03-localtarget.01-gs.inp
+END
+05-adw.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/05-adw.01-ground_state.inp
+END
+02-sym_doublewell.03-oct.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/7841/trunk/testsuite/optimal_control/02-sym_doublewell.03-oct.inp
+END
+03-localtarget.test
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/10936/trunk/testsuite/optimal_control/03-localtarget.test
+END
+10-current.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/10-current.01-ground_state.inp
+END
+09-density+current.test
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/10935/trunk/testsuite/optimal_control/09-density+current.test
+END
+03-localtarget.03-tdoct.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/11034/trunk/testsuite/optimal_control/03-localtarget.03-tdoct.inp
+END
+09-density+current.03-tdoct.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/11034/trunk/testsuite/optimal_control/09-density+current.03-tdoct.inp
+END
+01-asym_doublewell.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/01-asym_doublewell.01-ground_state.inp
+END
+02-sym_doublewell.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/octopus/!svn/ver/11113/trunk/testsuite/optimal_control/02-sym_doublewell.01-ground_state.inp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/11007/trunk/testsuite/optimal_control/Makefile.am
+END
+05-adw.test
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/10935/trunk/testsuite/optimal_control/05-adw.test
+END

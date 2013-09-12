@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/octopus/!svn/ver/11035/trunk/build
+END
+preprocess.pl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/8395/trunk/build/preprocess.pl
+END
+mk_functionals_list.pl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/build/mk_functionals_list.pl
+END
+true_compiler.sh
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11035/trunk/build/true_compiler.sh
+END
+mk_varinfo.pl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/build/mk_varinfo.pl
+END
+svn_release_number.sh
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11025/trunk/build/svn_release_number.sh
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/build/Makefile.am
+END
+var2html.pl
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/build/var2html.pl
+END
+octopus.spec.in
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/3692/trunk/build/octopus.spec.in
+END

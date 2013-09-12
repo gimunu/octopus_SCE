@@ -1,0 +1,617 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11112/trunk/testsuite/functionals
+END
+02-xc_2d.lda_prm.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10879/trunk/testsuite/functionals/02-xc_2d.lda_prm.inp
+END
+03-xc.gga_x_lb.inp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/7630/trunk/testsuite/functionals/03-xc.gga_x_lb.inp
+END
+01-xc_1d.oep_kli.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/7850/trunk/testsuite/functionals/01-xc_1d.oep_kli.inp
+END
+03-xc.lda_c_rpa.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_rpa.inp
+END
+03-xc.exx.inp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/7850/trunk/testsuite/functionals/03-xc.exx.inp
+END
+03-xc.gga_x_am05.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_am05.inp
+END
+02-xc_2d.gga_pbe.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6937/trunk/testsuite/functionals/02-xc_2d.gga_pbe.inp
+END
+03-xc.lda_xc_teter93.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_xc_teter93.inp
+END
+03-xc.gga_x_optb88_vdw.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_optb88_vdw.inp
+END
+03-xc.gga_xc_b97_d.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_b97_d.inp
+END
+03-xc.lda_c_wigner.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_wigner.inp
+END
+02-xc_2d.test
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/9819/trunk/testsuite/functionals/02-xc_2d.test
+END
+03-xc.gga_c_pbe_jrgx.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_c_pbe_jrgx.inp
+END
+03-xc.gga_x_mpw91.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_mpw91.inp
+END
+03-xc.gga_xc_b97_k.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_b97_k.inp
+END
+03-xc.lda_c_gl.inp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_gl.inp
+END
+03-xc.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.01-gs.inp
+END
+03-xc.sic_pz.inp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/9181/trunk/testsuite/functionals/03-xc.sic_pz.inp
+END
+03-xc.gga_c_lm.inp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_c_lm.inp
+END
+03-xc.lda_c_ob_pw.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_ob_pw.inp
+END
+01-xc_1d.oep_exx.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/7850/trunk/testsuite/functionals/01-xc_1d.oep_exx.inp
+END
+03-xc.gga_xc_hcth_147.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_hcth_147.inp
+END
+03-xc.gga_x_b86_mgc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_b86_mgc.inp
+END
+03-xc.lda_c_ob_pz.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_ob_pz.inp
+END
+03-xc.gga_x_optx.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_optx.inp
+END
+03-xc.gga_x_bayesian.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_bayesian.inp
+END
+03-xc.gga_x_xpbe.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_xpbe.inp
+END
+05-ks_inversion.01-target_density.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/7879/trunk/testsuite/functionals/05-ks_inversion.01-target_density.inp
+END
+03-xc.lda_c_pw_mod.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_pw_mod.inp
+END
+03-xc.gga_xc_b97.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_b97.inp
+END
+03-xc.gga_x_g96.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_g96.inp
+END
+02-xc_2d.lda_amgb.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/6937/trunk/testsuite/functionals/02-xc_2d.lda_amgb.inp
+END
+03-xc.lda_c_pz_mod.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_pz_mod.inp
+END
+04-oep.01-jellium-lsda.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/10055/trunk/testsuite/functionals/04-oep.01-jellium-lsda.inp
+END
+03-xc.gga_xc_pbelyp1w.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_pbelyp1w.inp
+END
+03-xc.gga_x_optpbe_vdw.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_optpbe_vdw.inp
+END
+03-xc.gga_c_pw91.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_c_pw91.inp
+END
+03-xc.gga_x_dk87_r1.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_dk87_r1.inp
+END
+03-xc.gga_x_dk87_r2.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_dk87_r2.inp
+END
+03-xc.lda_c_hl.inp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_hl.inp
+END
+02-xc_2d.gga_b86_mgc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6937/trunk/testsuite/functionals/02-xc_2d.gga_b86_mgc.inp
+END
+03-xc.test
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/11112/trunk/testsuite/functionals/03-xc.test
+END
+01-xc_1d.02-wfs-hf.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9083/trunk/testsuite/functionals/01-xc_1d.02-wfs-hf.inp
+END
+02-xc_2d.00-hartree.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9012/trunk/testsuite/functionals/02-xc_2d.00-hartree.inp
+END
+05-ks_inversion.test
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/9819/trunk/testsuite/functionals/05-ks_inversion.test
+END
+05-ks_inversion.02-inversion.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/8370/trunk/testsuite/functionals/05-ks_inversion.02-inversion.inp
+END
+03-xc.gga_c_p86.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_c_p86.inp
+END
+03-xc.lda_c_vwn_rpa.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_vwn_rpa.inp
+END
+03-xc.lda_c_vbh.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_vbh.inp
+END
+03-xc.gga_c_pbe_sol.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_c_pbe_sol.inp
+END
+03-xc.gga_xc_xlyp.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_xlyp.inp
+END
+04-oep.test
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/11106/trunk/testsuite/functionals/04-oep.test
+END
+03-xc.gga_x_b86.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_b86.inp
+END
+03-xc.gga_x_b88.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_b88.inp
+END
+03-xc.lda_c_pw.inp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_pw.inp
+END
+03-xc.gga_x_pw86.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_pw86.inp
+END
+03-xc.lda_c_pz.inp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_pz.inp
+END
+03-xc.gga_xc_sb98_1a.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_sb98_1a.inp
+END
+04-oep.03-jellium-full_exx.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/11106/trunk/testsuite/functionals/04-oep.03-jellium-full_exx.inp
+END
+03-xc.gga_xc_sb98_1b.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_sb98_1b.inp
+END
+03-xc.gga_xc_hcth_120.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_hcth_120.inp
+END
+03-xc.gga_xc_sb98_1c.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_sb98_1c.inp
+END
+03-xc.gga_c_am05.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_c_am05.inp
+END
+03-xc.gga_x_lg93.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_lg93.inp
+END
+03-xc.gga_c_lyp.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_c_lyp.inp
+END
+03-xc.gga_c_pbe.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_c_pbe.inp
+END
+03-xc.gga_xc_edf1.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_edf1.inp
+END
+03-xc.lda_x.inp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_x.inp
+END
+03-xc.gga_xc_hcth_407.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_hcth_407.inp
+END
+03-xc.gga_x_pbe_sol.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_pbe_sol.inp
+END
+03-xc.gga_xc_b97_1.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_b97_1.inp
+END
+03-xc.gga_xc_b97_2.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_b97_2.inp
+END
+04-oep.02-jellium-exx_kli.inp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/10055/trunk/testsuite/functionals/04-oep.02-jellium-exx_kli.inp
+END
+03-xc.gga_xc_b97_3.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_b97_3.inp
+END
+03-xc.gga_x_pbe_r.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_pbe_r.inp
+END
+03-xc.gga_x_rpbe.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_rpbe.inp
+END
+03-xc.lda_c_xalpha.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_xalpha.inp
+END
+02-xc_2d.gga_b86.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6937/trunk/testsuite/functionals/02-xc_2d.gga_b86.inp
+END
+02-xc_2d.gga_b88.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6937/trunk/testsuite/functionals/02-xc_2d.gga_b88.inp
+END
+03-xc.gga_x_pbe_jsjr.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_pbe_jsjr.inp
+END
+03-xc.gga_x_pw91.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_pw91.inp
+END
+03-xc.gga_xc_mpwlyp1w.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_mpwlyp1w.inp
+END
+03-xc.gga_xc_hcth_93.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_hcth_93.inp
+END
+01-xc_1d.lda_csc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6939/trunk/testsuite/functionals/01-xc_1d.lda_csc.inp
+END
+03-xc.gga_x_pbe.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_pbe.inp
+END
+01-xc_1d.test
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/9819/trunk/testsuite/functionals/01-xc_1d.test
+END
+03-xc.gga_x_pbea.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_pbea.inp
+END
+03-xc.gga_c_xpbe.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_c_xpbe.inp
+END
+03-xc.gga_x_wc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_wc.inp
+END
+03-xc.kli.inp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/7850/trunk/testsuite/functionals/03-xc.kli.inp
+END
+03-xc.gga_xc_sb98_2a.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_sb98_2a.inp
+END
+03-xc.gga_xc_sb98_2b.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_sb98_2b.inp
+END
+03-xc.gga_xc_sb98_2c.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_sb98_2c.inp
+END
+03-xc.gga_xc_pbe1w.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_xc_pbe1w.inp
+END
+03-xc.gga_x_pbek1_vdw.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_pbek1_vdw.inp
+END
+03-xc.gga_x_mpbe.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_mpbe.inp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/testsuite/functionals/Makefile.am
+END
+03-xc.lda_c_vwn.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6241/trunk/testsuite/functionals/03-xc.lda_c_vwn.inp
+END
+01-xc_1d.01-wfs-lda.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6939/trunk/testsuite/functionals/01-xc_1d.01-wfs-lda.inp
+END
+03-xc.gga_x_ft97_a.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_ft97_a.inp
+END
+02-xc_2d.01-hf.inp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/9012/trunk/testsuite/functionals/02-xc_2d.01-hf.inp
+END
+03-xc.gga_x_ft97_b.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/6242/trunk/testsuite/functionals/03-xc.gga_x_ft97_b.inp
+END

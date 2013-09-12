@@ -1,0 +1,1727 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/9960/trunk/libxc/testsuite/regression
+END
+gga_x_apbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_apbe.data.bz2
+END
+hyb_gga_xc_sb98_1a.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_sb98_1a.data.bz2
+END
+gga_k_fr_b88.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_fr_b88.data.bz2
+END
+gga_x_mpbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_mpbe.data.bz2
+END
+gga_x_pbe_sol.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_pbe_sol.data.bz2
+END
+gga_xc_b97_3.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_b97_3.data.bz2
+END
+gga_x_2d_b88.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_2d_b88.data.bz2
+END
+gga_x_hjs_pbe_sol.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/9090/trunk/libxc/testsuite/regression/gga_x_hjs_pbe_sol.data.bz2
+END
+gga_x_ft97_a.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_ft97_a.data.bz2
+END
+hyb_gga_xc_b3pw91.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/hyb_gga_xc_b3pw91.data.bz2
+END
+gga_k_baltin.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_baltin.data.bz2
+END
+gga_x_pw91.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_pw91.data.bz2
+END
+gga_k_ge2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_ge2.data.bz2
+END
+gga_xc_th3.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_xc_th3.data.bz2
+END
+mgga_c_m06_l.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_m06_l.data.bz2
+END
+gga_k_thakkar.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_thakkar.data.bz2
+END
+gga_c_am05.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_am05.data.bz2
+END
+hyb_gga_xc_bhandhlyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/hyb_gga_xc_bhandhlyp.data.bz2
+END
+mgga_x_m05.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_m05.data.bz2
+END
+hyb_mgga_xc_pw6b95.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9929/trunk/libxc/testsuite/regression/hyb_mgga_xc_pw6b95.data.bz2
+END
+mgga_c_tpss.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_tpss.data.bz2
+END
+gga_k_dk.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_dk.data.bz2
+END
+gga_xc_edf1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_xc_edf1.data.bz2
+END
+hyb_mgga_xc_mpwb1k.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_mpwb1k.data.bz2
+END
+gga_xc_hcth_147.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_hcth_147.data.bz2
+END
+mgga_x_m11_l.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9935/trunk/libxc/testsuite/regression/mgga_x_m11_l.data.bz2
+END
+gga_xc_th_fc.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_xc_th_fc.data.bz2
+END
+hyb_gga_xc_b97_1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_b97_1.data.bz2
+END
+mgga_x_tb09.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_tb09.data.bz2
+END
+gga_x_bayesian.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_bayesian.data.bz2
+END
+lda_k_lp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/lda_k_lp.data.bz2
+END
+mgga_c_m06_2x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_m06_2x.data.bz2
+END
+gga_c_spbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_c_spbe.data.bz2
+END
+mgga_x_mn12_sx.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9933/trunk/libxc/testsuite/regression/mgga_x_mn12_sx.data.bz2
+END
+lda_xc_teter93.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_xc_teter93.data.bz2
+END
+lda_x_1d.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/lda_x_1d.data.bz2
+END
+gga_xc_sb98_1b.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_sb98_1b.data.bz2
+END
+gga_x_mpw91.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9927/trunk/libxc/testsuite/regression/gga_x_mpw91.data.bz2
+END
+lda_c_1d_loos.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/lda_c_1d_loos.data.bz2
+END
+hyb_gga_xc_sb98_1c.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_sb98_1c.data.bz2
+END
+gga_x_lg93.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_lg93.data.bz2
+END
+gga_k_vw.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_vw.data.bz2
+END
+hyb_mgga_xc_mpw1b95.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_mpw1b95.data.bz2
+END
+gga_x_pbe_r.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_pbe_r.data.bz2
+END
+hyb_mgga_xc_xb1k.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_xb1k.data.bz2
+END
+mgga_x_m06_2x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9686/trunk/libxc/testsuite/regression/mgga_x_m06_2x.data.bz2
+END
+hyb_gga_x_sogga11_x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/8789/trunk/libxc/testsuite/regression/hyb_gga_x_sogga11_x.data.bz2
+END
+gga_k_absr2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_absr2.data.bz2
+END
+gga_xc_th_fl.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_xc_th_fl.data.bz2
+END
+gga_x_sogga.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/8123/trunk/libxc/testsuite/regression/gga_x_sogga.data.bz2
+END
+lda_c_vwn_1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9465/trunk/libxc/testsuite/regression/lda_c_vwn_1.data.bz2
+END
+gga_xc_sb98_2a.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_sb98_2a.data.bz2
+END
+gga_xc_th_fcfo.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_xc_th_fcfo.data.bz2
+END
+hyb_mgga_xc_pwb6k.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/9929/trunk/libxc/testsuite/regression/hyb_mgga_xc_pwb6k.data.bz2
+END
+hyb_gga_xc_sb98_2b.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_sb98_2b.data.bz2
+END
+gga_c_op_g96.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_c_op_g96.data.bz2
+END
+gga_c_lm.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_lm.data.bz2
+END
+lda_c_ob_pz.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_ob_pz.data.bz2
+END
+gga_c_op_xalpha.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_c_op_xalpha.data.bz2
+END
+hyb_gga_xc_b97_3.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_b97_3.data.bz2
+END
+mgga_c_bc95.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_bc95.data.bz2
+END
+hyb_mgga_xc_m05_2x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_m05_2x.data.bz2
+END
+gga_k_lieb.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_lieb.data.bz2
+END
+gga_x_kt1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_kt1.data.bz2
+END
+gga_x_b86.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_b86.data.bz2
+END
+gga_x_optb88_vdw.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_optb88_vdw.data.bz2
+END
+gga_x_pw86.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_pw86.data.bz2
+END
+lda_c_pz.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_pz.data.bz2
+END
+mgga_xc_tpsslyp1w.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/9930/trunk/libxc/testsuite/regression/mgga_xc_tpsslyp1w.data.bz2
+END
+hyb_gga_xc_b3p86.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/hyb_gga_xc_b3p86.data.bz2
+END
+gga_x_pbea.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_pbea.data.bz2
+END
+gga_x_wc.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_wc.data.bz2
+END
+gga_c_op_b88.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_c_op_b88.data.bz2
+END
+gga_x_herman.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_herman.data.bz2
+END
+gga_c_rge2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_rge2.data.bz2
+END
+mgga_x_ms0.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_x_ms0.data.bz2
+END
+gga_c_optc.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_c_optc.data.bz2
+END
+mgga_c_mn12_l.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9934/trunk/libxc/testsuite/regression/mgga_c_mn12_l.data.bz2
+END
+gga_x_dk87_r2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_dk87_r2.data.bz2
+END
+gga_c_n12_sx.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9933/trunk/libxc/testsuite/regression/gga_c_n12_sx.data.bz2
+END
+lda_c_xalpha.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/lda_c_xalpha.data.bz2
+END
+gga_k_golden.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_golden.data.bz2
+END
+mgga_c_m08_so.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9934/trunk/libxc/testsuite/regression/mgga_c_m08_so.data.bz2
+END
+gga_x_xpbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_xpbe.data.bz2
+END
+mgga_c_revtpss.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9927/trunk/libxc/testsuite/regression/mgga_c_revtpss.data.bz2
+END
+gga_k_tw2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_tw2.data.bz2
+END
+gga_x_sogga11.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/8789/trunk/libxc/testsuite/regression/gga_x_sogga11.data.bz2
+END
+hyb_gga_xc_mb3lyp_rc04.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/9459/trunk/libxc/testsuite/regression/hyb_gga_xc_mb3lyp_rc04.data.bz2
+END
+gga_xc_hcth_93.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_hcth_93.data.bz2
+END
+gga_x_g96.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_g96.data.bz2
+END
+mgga_x_mn12_l.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9933/trunk/libxc/testsuite/regression/mgga_x_mn12_l.data.bz2
+END
+lda_c_vwn_3.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9465/trunk/libxc/testsuite/regression/lda_c_vwn_3.data.bz2
+END
+gga_x_n12_sx.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9933/trunk/libxc/testsuite/regression/gga_x_n12_sx.data.bz2
+END
+gga_xc_mohlyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_xc_mohlyp.data.bz2
+END
+gga_xc_sb98_2c.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_sb98_2c.data.bz2
+END
+lda_c_hl.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_hl.data.bz2
+END
+mgga_x_m08_so.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9935/trunk/libxc/testsuite/regression/mgga_x_m08_so.data.bz2
+END
+mgga_c_m11.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9934/trunk/libxc/testsuite/regression/mgga_c_m11.data.bz2
+END
+gga_k_vsk.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_vsk.data.bz2
+END
+mgga_x_ms2h.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_x_ms2h.data.bz2
+END
+lda_c_vwn.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9465/trunk/libxc/testsuite/regression/lda_c_vwn.data.bz2
+END
+hyb_gga_xc_mpwlyp1m.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/9931/trunk/libxc/testsuite/regression/hyb_gga_xc_mpwlyp1m.data.bz2
+END
+gga_xc_xlyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_xc_xlyp.data.bz2
+END
+hyb_gga_xc_mpw1pw.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/9927/trunk/libxc/testsuite/regression/hyb_gga_xc_mpw1pw.data.bz2
+END
+mgga_c_m11_l.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9934/trunk/libxc/testsuite/regression/mgga_c_m11_l.data.bz2
+END
+gga_x_b88.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_b88.data.bz2
+END
+mgga_c_m05_2x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_m05_2x.data.bz2
+END
+hyb_gga_xc_hjs_b97x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/9091/trunk/libxc/testsuite/regression/hyb_gga_xc_hjs_b97x.data.bz2
+END
+gga_x_hjs_b88.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9090/trunk/libxc/testsuite/regression/gga_x_hjs_b88.data.bz2
+END
+hyb_gga_xc_b97.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_b97.data.bz2
+END
+lda_c_ml2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_ml2.data.bz2
+END
+gga_c_vpbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9927/trunk/libxc/testsuite/regression/gga_c_vpbe.data.bz2
+END
+hyb_mgga_x_m11.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9935/trunk/libxc/testsuite/regression/hyb_mgga_x_m11.data.bz2
+END
+gga_k_ol1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_ol1.data.bz2
+END
+mgga_x_ms2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_x_ms2.data.bz2
+END
+mgga_x_bj06.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_bj06.data.bz2
+END
+gga_x_c09x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8789/trunk/libxc/testsuite/regression/gga_x_c09x.data.bz2
+END
+gga_k_ernzerhof.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_ernzerhof.data.bz2
+END
+gga_x_rpw86.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_x_rpw86.data.bz2
+END
+mgga_x_m05_2x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_m05_2x.data.bz2
+END
+hyb_gga_xc_b1pw91.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/hyb_gga_xc_b1pw91.data.bz2
+END
+gga_x_ssb_d.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_x_ssb_d.data.bz2
+END
+gga_x_2d_pbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_2d_pbe.data.bz2
+END
+mgga_c_pkzb.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_pkzb.data.bz2
+END
+gga_k_tw4.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_tw4.data.bz2
+END
+lda_c_pw_mod.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_pw_mod.data.bz2
+END
+gga_xc_hcth_407p.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_hcth_407p.data.bz2
+END
+gga_xc_mpwlyp1w.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9927/trunk/libxc/testsuite/regression/gga_xc_mpwlyp1w.data.bz2
+END
+hyb_gga_xc_mpw1k.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9927/trunk/libxc/testsuite/regression/hyb_gga_xc_mpw1k.data.bz2
+END
+gga_c_ft97.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_c_ft97.data.bz2
+END
+gga_xc_b97.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_b97.data.bz2
+END
+gga_x_wpbeh.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_x_wpbeh.data.bz2
+END
+gga_x_2d_b86_mgc.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_2d_b86_mgc.data.bz2
+END
+hyb_gga_xc_pbeh.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/hyb_gga_xc_pbeh.data.bz2
+END
+gga_xc_b97_2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_b97_2.data.bz2
+END
+hyb_mgga_xc_x1b95.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_x1b95.data.bz2
+END
+mgga_c_m08_hx.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9934/trunk/libxc/testsuite/regression/mgga_c_m08_hx.data.bz2
+END
+hyb_gga_xc_b1lyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/hyb_gga_xc_b1lyp.data.bz2
+END
+hyb_gga_xc_hjs_pbe_sol.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/9091/trunk/libxc/testsuite/regression/hyb_gga_xc_hjs_pbe_sol.data.bz2
+END
+lda_k_tf.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/lda_k_tf.data.bz2
+END
+gga_xc_th2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_xc_th2.data.bz2
+END
+hyb_mgga_xc_b86b95.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_b86b95.data.bz2
+END
+gga_x_am05.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_x_am05.data.bz2
+END
+gga_x_lag.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_x_lag.data.bz2
+END
+gga_x_airy.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_airy.data.bz2
+END
+gga_xc_th_fco.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_xc_th_fco.data.bz2
+END
+mgga_x_tpss.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_tpss.data.bz2
+END
+gga_xc_pbelyp1w.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_xc_pbelyp1w.data.bz2
+END
+lda_c_wigner.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_wigner.data.bz2
+END
+gga_x_lbm.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_x_lbm.data.bz2
+END
+gga_k_fr_pw86.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_fr_pw86.data.bz2
+END
+gga_c_lyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_lyp.data.bz2
+END
+mgga_x_m08_hx.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9935/trunk/libxc/testsuite/regression/mgga_x_m08_hx.data.bz2
+END
+gga_xc_pbe1w.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_xc_pbe1w.data.bz2
+END
+lda_c_ob_pw.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_ob_pw.data.bz2
+END
+hyb_mgga_xc_m06.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_m06.data.bz2
+END
+gga_x_b86_mgc.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_b86_mgc.data.bz2
+END
+gga_x_optx.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_optx.data.bz2
+END
+mgga_c_m06.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_m06.data.bz2
+END
+gga_k_ludena.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_ludena.data.bz2
+END
+gga_x_ol2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_x_ol2.data.bz2
+END
+gga_c_wl.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_wl.data.bz2
+END
+gga_k_lc94.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_lc94.data.bz2
+END
+lda_c_pw.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_pw.data.bz2
+END
+hyb_mgga_xc_pw86b95.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_pw86b95.data.bz2
+END
+gga_xc_sb98_1a.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_sb98_1a.data.bz2
+END
+hyb_gga_xc_hjs_b88.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9091/trunk/libxc/testsuite/regression/hyb_gga_xc_hjs_b88.data.bz2
+END
+gga_x_bpccac.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_x_bpccac.data.bz2
+END
+hyb_gga_xc_o3lyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/hyb_gga_xc_o3lyp.data.bz2
+END
+hyb_gga_xc_sb98_1b.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_sb98_1b.data.bz2
+END
+gga_c_apbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_apbe.data.bz2
+END
+lda_c_vwn_rpa.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9465/trunk/libxc/testsuite/regression/lda_c_vwn_rpa.data.bz2
+END
+gga_k_apbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_apbe.data.bz2
+END
+gga_x_ft97_b.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_ft97_b.data.bz2
+END
+gga_k_absr1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_absr1.data.bz2
+END
+gga_xc_mohlyp2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_xc_mohlyp2.data.bz2
+END
+lda_c_2d_prm.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_2d_prm.data.bz2
+END
+hyb_gga_xc_b1wc.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/hyb_gga_xc_b1wc.data.bz2
+END
+mgga_x_br89.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9940/trunk/libxc/testsuite/regression/mgga_x_br89.data.bz2
+END
+hyb_mgga_xc_bb1k.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_bb1k.data.bz2
+END
+gga_xc_th4.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_xc_th4.data.bz2
+END
+gga_c_sogga11_x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_sogga11_x.data.bz2
+END
+gga_k_perdew.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_perdew.data.bz2
+END
+gga_c_pw91.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_pw91.data.bz2
+END
+hyb_gga_xc_sb98_2a.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_sb98_2a.data.bz2
+END
+hyb_gga_xc_tuned_cam_b3lyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/hyb_gga_xc_tuned_cam_b3lyp.data.bz2
+END
+gga_x_mb88.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_mb88.data.bz2
+END
+gga_xc_b97_k.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_b97_k.data.bz2
+END
+mgga_x_m06.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9686/trunk/libxc/testsuite/regression/mgga_x_m06.data.bz2
+END
+gga_c_op_pbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_c_op_pbe.data.bz2
+END
+gga_c_pbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_pbe.data.bz2
+END
+gga_x_pbek1_vdw.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_pbek1_vdw.data.bz2
+END
+mgga_x_revtpss.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_revtpss.data.bz2
+END
+gga_xc_hcth_407.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_hcth_407.data.bz2
+END
+lda_c_gombas.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8789/trunk/libxc/testsuite/regression/lda_c_gombas.data.bz2
+END
+hyb_gga_xc_b97_2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_b97_2.data.bz2
+END
+gga_xc_hcth_a.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_hcth_a.data.bz2
+END
+hyb_gga_xc_hse06.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9091/trunk/libxc/testsuite/regression/hyb_gga_xc_hse06.data.bz2
+END
+mgga_x_2d_prhg07_prp10.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_2d_prhg07_prp10.data.bz2
+END
+gga_c_pbe_sol.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_pbe_sol.data.bz2
+END
+gga_x_pbe_jsjr.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_pbe_jsjr.data.bz2
+END
+gga_x_rge2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_rge2.data.bz2
+END
+hyb_mgga_xc_m06_hf.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_m06_hf.data.bz2
+END
+gga_k_gp85.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_gp85.data.bz2
+END
+gga_xc_b97_d.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_b97_d.data.bz2
+END
+gga_xc_sb98_1c.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_sb98_1c.data.bz2
+END
+gga_x_dk87_r1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_dk87_r1.data.bz2
+END
+lda_c_gl.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_gl.data.bz2
+END
+mgga_x_rpp09.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_rpp09.data.bz2
+END
+hyb_gga_xc_bhandh.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/hyb_gga_xc_bhandh.data.bz2
+END
+gga_k_yt65.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_yt65.data.bz2
+END
+gga_k_tw1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_tw1.data.bz2
+END
+gga_c_revtca.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9459/trunk/libxc/testsuite/regression/gga_c_revtca.data.bz2
+END
+hyb_gga_xc_mpw3pw.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/9927/trunk/libxc/testsuite/regression/hyb_gga_xc_mpw3pw.data.bz2
+END
+gga_x_pbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_pbe.data.bz2
+END
+lda_x_2d.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_x_2d.data.bz2
+END
+lda_c_vwn_2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9465/trunk/libxc/testsuite/regression/lda_c_vwn_2.data.bz2
+END
+mgga_x_2d_prhg07.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_2d_prhg07.data.bz2
+END
+lda_c_1d_csc.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8662/trunk/libxc/testsuite/regression/lda_c_1d_csc.data.bz2
+END
+gga_x_hjs_pbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9090/trunk/libxc/testsuite/regression/gga_x_hjs_pbe.data.bz2
+END
+gga_c_n12.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9933/trunk/libxc/testsuite/regression/gga_c_n12.data.bz2
+END
+gga_xc_sb98_2b.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_sb98_2b.data.bz2
+END
+mgga_c_vsxc.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_vsxc.data.bz2
+END
+mgga_x_tau_hcth.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_tau_hcth.data.bz2
+END
+hyb_gga_xc_sb98_2c.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_sb98_2c.data.bz2
+END
+hyb_gga_xc_cam_b3lyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/hyb_gga_xc_cam_b3lyp.data.bz2
+END
+mgga_c_mn12_sx.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9934/trunk/libxc/testsuite/regression/mgga_c_mn12_sx.data.bz2
+END
+gga_c_tca.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9459/trunk/libxc/testsuite/regression/gga_c_tca.data.bz2
+END
+gga_x_ssb.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_x_ssb.data.bz2
+END
+gga_c_p86.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_p86.data.bz2
+END
+gga_x_rpbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8091/trunk/libxc/testsuite/regression/gga_x_rpbe.data.bz2
+END
+mgga_x_m06_l.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_m06_l.data.bz2
+END
+lda_c_vbh.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_vbh.data.bz2
+END
+gga_x_lb.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_x_lb.data.bz2
+END
+gga_k_vjks.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_vjks.data.bz2
+END
+gga_xc_kt2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_xc_kt2.data.bz2
+END
+lda_c_pw_rpa.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_pw_rpa.data.bz2
+END
+lda_c_ml1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_ml1.data.bz2
+END
+mgga_c_m06_hf.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_m06_hf.data.bz2
+END
+lda_c_2d_amgb.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_2d_amgb.data.bz2
+END
+gga_c_pbe_jrgx.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_pbe_jrgx.data.bz2
+END
+mgga_x_ms1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_x_ms1.data.bz2
+END
+hyb_gga_xc_b97_k.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_gga_xc_b97_k.data.bz2
+END
+mgga_x_pkzb.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_pkzb.data.bz2
+END
+lda_c_rc04.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9459/trunk/libxc/testsuite/regression/lda_c_rc04.data.bz2
+END
+gga_xc_hcth_p76.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_hcth_p76.data.bz2
+END
+gga_c_wi.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_wi.data.bz2
+END
+mgga_x_m06_hf.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9686/trunk/libxc/testsuite/regression/mgga_x_m06_hf.data.bz2
+END
+gga_x_hjs_b97x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9090/trunk/libxc/testsuite/regression/gga_x_hjs_b97x.data.bz2
+END
+mgga_x_lta.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_lta.data.bz2
+END
+lda_c_rpa.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_rpa.data.bz2
+END
+gga_k_tw3.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_tw3.data.bz2
+END
+gga_x_n12.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9933/trunk/libxc/testsuite/regression/gga_x_n12.data.bz2
+END
+gga_xc_b97_gga1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_b97_gga1.data.bz2
+END
+lda_c_pz_mod.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/lda_c_pz_mod.data.bz2
+END
+gga_c_xpbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_xpbe.data.bz2
+END
+gga_x_optpbe_vdw.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/8091/trunk/libxc/testsuite/regression/gga_x_optpbe_vdw.data.bz2
+END
+lda_c_vwn_4.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9465/trunk/libxc/testsuite/regression/lda_c_vwn_4.data.bz2
+END
+gga_k_llp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_llp.data.bz2
+END
+gga_xc_hcth_120.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_hcth_120.data.bz2
+END
+gga_x_ityh.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_x_ityh.data.bz2
+END
+mgga_c_cc06.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9960/trunk/libxc/testsuite/regression/mgga_c_cc06.data.bz2
+END
+hyb_gga_xc_x3lyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/hyb_gga_xc_x3lyp.data.bz2
+END
+gga_x_2d_b86.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_2d_b86.data.bz2
+END
+gga_xc_b97_1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_b97_1.data.bz2
+END
+mgga_x_mk00b.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9940/trunk/libxc/testsuite/regression/mgga_x_mk00b.data.bz2
+END
+gga_k_gr.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_gr.data.bz2
+END
+gga_xc_th1.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9364/trunk/libxc/testsuite/regression/gga_xc_th1.data.bz2
+END
+gga_x_htbs.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/8076/trunk/libxc/testsuite/regression/gga_x_htbs.data.bz2
+END
+mgga_x_gvt4.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/mgga_x_gvt4.data.bz2
+END
+gga_c_wi0.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_wi0.data.bz2
+END
+gga_xc_hcth_p14.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/gga_xc_hcth_p14.data.bz2
+END
+gga_c_sogga11.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/gga_c_sogga11.data.bz2
+END
+hyb_gga_xc_hjs_pbe.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9091/trunk/libxc/testsuite/regression/hyb_gga_xc_hjs_pbe.data.bz2
+END
+gga_k_ol2.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_ol2.data.bz2
+END
+hyb_gga_xc_mpw3lyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9927/trunk/libxc/testsuite/regression/hyb_gga_xc_mpw3lyp.data.bz2
+END
+lda_x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/lda_x.data.bz2
+END
+hyb_mgga_xc_m05.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_m05.data.bz2
+END
+mgga_x_mk00.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9940/trunk/libxc/testsuite/regression/mgga_x_mk00.data.bz2
+END
+hyb_gga_xc_hse03.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9091/trunk/libxc/testsuite/regression/hyb_gga_xc_hse03.data.bz2
+END
+mgga_c_m05.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/mgga_c_m05.data.bz2
+END
+gga_k_pearson.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9365/trunk/libxc/testsuite/regression/gga_k_pearson.data.bz2
+END
+hyb_mgga_xc_m06_2x.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_m06_2x.data.bz2
+END
+mgga_c_cs.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9960/trunk/libxc/testsuite/regression/mgga_c_cs.data.bz2
+END
+hyb_gga_xc_b3lyp.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9088/trunk/libxc/testsuite/regression/hyb_gga_xc_b3lyp.data.bz2
+END
+gga_x_ssb_sw.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9683/trunk/libxc/testsuite/regression/gga_x_ssb_sw.data.bz2
+END
+hyb_mgga_xc_b88b95.data.bz2
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9877/trunk/libxc/testsuite/regression/hyb_mgga_xc_b88b95.data.bz2
+END

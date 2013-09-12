@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/octopus/!svn/ver/11245/trunk/share
+END
+logo
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/10978/trunk/share/logo
+END
+gdlib.png
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/10784/trunk/share/gdlib.png
+END
+filter_mask.data
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/4184/trunk/share/filter_mask.data
+END
+marching_cubes_edges.data
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10411/trunk/share/marching_cubes_edges.data
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/share/Makefile.am
+END
+marching_cubes_triangles.data
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/10411/trunk/share/marching_cubes_triangles.data
+END
+gequad.data
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/7309/trunk/share/gequad.data
+END

@@ -1,0 +1,27 @@
+K 10
+svn:ignore
+V 306
+*.o
+*.a
+*.mod
+Makefile
+Makefile.in
+*~
+.deps
+
+oct-casida_spectrum
+oct-center-geom
+oct-dielectric-function
+oct-harmonic-spectrum
+oct-help
+oct-oscillator-strength
+oct-propagation_spectrum
+oct-rotatory_strength
+oct-vibrational_spectrum
+oct-infrared_spectrum
+oct-xyz-anim
+oct-liquid
+oct-photoelectron_spectrum
+
+
+END

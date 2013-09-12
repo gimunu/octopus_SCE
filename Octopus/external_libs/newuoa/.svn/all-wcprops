@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/external_libs/newuoa
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/external_libs/newuoa/Makefile.am
+END
+newuoa_mod.f90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/10897/trunk/external_libs/newuoa/newuoa_mod.f90
+END

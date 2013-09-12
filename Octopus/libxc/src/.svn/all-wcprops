@@ -1,0 +1,803 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/octopus/!svn/ver/11248/trunk/libxc/src
+END
+gga_xc_1w.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_xc_1w.c
+END
+gga_k_pearson.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_k_pearson.c
+END
+mgga_x_m06l.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9686/trunk/libxc/src/mgga_x_m06l.c
+END
+gga_x_2d_pbe.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_2d_pbe.c
+END
+gga_x_lb.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_lb.c
+END
+work_mgga_x.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9940/trunk/libxc/src/work_mgga_x.c
+END
+lda_c_2d_prm.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10975/trunk/libxc/src/lda_c_2d_prm.c
+END
+get_funcs.pl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/8933/trunk/libxc/src/get_funcs.pl
+END
+gga_x_am05.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_am05.c
+END
+gga_x_g96.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_g96.c
+END
+gga_x_vmt.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10975/trunk/libxc/src/gga_x_vmt.c
+END
+gga_x_pbe.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11234/trunk/libxc/src/gga_x_pbe.c
+END
+lda_c_pz.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_pz.c
+END
+hyb_gga_xc_cam_b3lyp.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/hyb_gga_xc_cam_b3lyp.c
+END
+gga_k_dk.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_k_dk.c
+END
+hyb_gga_xc_pbeh.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/hyb_gga_xc_pbeh.c
+END
+hyb_mgga_xc_m05.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/hyb_mgga_xc_m05.c
+END
+gga_x_2d_b86.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_2d_b86.c
+END
+lda_c_rc04.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_rc04.c
+END
+gga_x_lv_rpw86.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11246/trunk/libxc/src/gga_x_lv_rpw86.c
+END
+gga_x_optx.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_optx.c
+END
+mgga_xc_otpss_d.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/mgga_xc_otpss_d.c
+END
+gga_xc_oblyp_d.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_xc_oblyp_d.c
+END
+mgga_x_lta.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/9650/trunk/libxc/src/mgga_x_lta.c
+END
+xc_config.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/9596/trunk/libxc/src/xc_config.h
+END
+gga_x_b86.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_b86.c
+END
+hyb_gga_xc_b1wc.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/hyb_gga_xc_b1wc.c
+END
+mgga_x_br89.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9650/trunk/libxc/src/mgga_x_br89.c
+END
+xc_unconfig.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11066/trunk/libxc/src/xc_unconfig.h
+END
+gga_c_ft97.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_ft97.c
+END
+gga_xc_b97.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_xc_b97.c
+END
+lda_c_ml1.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_ml1.c
+END
+gga_x_pbea.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11105/trunk/libxc/src/gga_x_pbea.c
+END
+lda_x_2d.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_x_2d.c
+END
+test.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/9832/trunk/libxc/src/test.c
+END
+integrate.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/7471/trunk/libxc/src/integrate.c
+END
+gga_x_ityh.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11246/trunk/libxc/src/gga_x_ityh.c
+END
+gga_x_kt.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10975/trunk/libxc/src/gga_x_kt.c
+END
+gga_c_pbe.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11064/trunk/libxc/src/gga_c_pbe.c
+END
+gga_xc_edf1.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_xc_edf1.c
+END
+gga_x_mpbe.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_mpbe.c
+END
+mgga_x_mk00.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9940/trunk/libxc/src/mgga_x_mk00.c
+END
+stoll.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/9676/trunk/libxc/src/stoll.c
+END
+lda.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/9090/trunk/libxc/src/lda.c
+END
+lda_c_pw.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_pw.c
+END
+gga_x_airy.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_airy.c
+END
+gga_x_wpbeh.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_wpbeh.c
+END
+hyb_gga_xc_b97.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/hyb_gga_xc_b97.c
+END
+hyb_gga_xc_o3lyp.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/hyb_gga_xc_o3lyp.c
+END
+gga_x_bpccac.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/11153/trunk/libxc/src/gga_x_bpccac.c
+END
+gga_c_sogga11.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_sogga11.c
+END
+gga_k_ol1.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_k_ol1.c
+END
+functionals.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9881/trunk/libxc/src/functionals.c
+END
+gga_c_optc.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_optc.c
+END
+lda_c_vwn.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_vwn.c
+END
+gga_c_p86.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_p86.c
+END
+gga_x_rpbe.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_rpbe.c
+END
+gga_x_bayesian.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_bayesian.c
+END
+mgga_x_ms.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/9832/trunk/libxc/src/mgga_x_ms.c
+END
+mgga_c_cs.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/9960/trunk/libxc/src/mgga_c_cs.c
+END
+mgga_c_pkzb.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10975/trunk/libxc/src/mgga_c_pkzb.c
+END
+lda_c_rpa.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_rpa.c
+END
+mgga.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/9679/trunk/libxc/src/mgga.c
+END
+lda_c_2d_amgb.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_2d_amgb.c
+END
+lda_c_1d_csc.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_1d_csc.c
+END
+mgga_x_2d_prhg07.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/9650/trunk/libxc/src/mgga_x_2d_prhg07.c
+END
+gga_x_wc.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_wc.c
+END
+gga_c_pw91.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_pw91.c
+END
+gga_x_dk87.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_dk87.c
+END
+lda_c_hl.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_hl.c
+END
+mgga_x_m08.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/9935/trunk/libxc/src/mgga_x_m08.c
+END
+libxc_master.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/libxc/src/libxc_master.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11246/trunk/libxc/src/Makefile.am
+END
+gga_x_b86_mgc.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_b86_mgc.c
+END
+gga_c_op.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_op.c
+END
+mgga_c_bc95.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9928/trunk/libxc/src/mgga_c_bc95.c
+END
+gga_c_wl.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_wl.c
+END
+hyb_gga_xc_b3lyp.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/hyb_gga_xc_b3lyp.c
+END
+lda_k_tf.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_k_tf.c
+END
+gga_k_tflw.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_k_tflw.c
+END
+gga_x_n12.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11248/trunk/libxc/src/gga_x_n12.c
+END
+lda_xc_teter93.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11010/trunk/libxc/src/lda_xc_teter93.c
+END
+mgga_x_tpss.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10846/trunk/libxc/src/mgga_x_tpss.c
+END
+bessel.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/9069/trunk/libxc/src/bessel.c
+END
+util.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/10929/trunk/libxc/src/util.c
+END
+gga_x_herman.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_herman.c
+END
+xc_f.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/11066/trunk/libxc/src/xc_f.c
+END
+util.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/11246/trunk/libxc/src/util.h
+END
+gga_c_am05.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_am05.c
+END
+gga_xc_th.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_xc_th.c
+END
+gga_k_ol2.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_k_ol2.c
+END
+gga_c_tca.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_tca.c
+END
+gga_c_lm.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_lm.c
+END
+gga_x_hjs.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_hjs.c
+END
+gga_x_2d_b88.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_2d_b88.c
+END
+expint_e1.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/9596/trunk/libxc/src/expint_e1.c
+END
+gga_x_ft97.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_ft97.c
+END
+mgga_x_mn12.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9933/trunk/libxc/src/mgga_x_mn12.c
+END
+mgga_c_m08.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/9934/trunk/libxc/src/mgga_c_m08.c
+END
+work_gga_c.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/9471/trunk/libxc/src/work_gga_c.c
+END
+work_lda.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/9650/trunk/libxc/src/work_lda.c
+END
+gga_x_htbs.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_htbs.c
+END
+gga_x_b88.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_b88.c
+END
+gga_x_sogga11.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11151/trunk/libxc/src/gga_x_sogga11.c
+END
+special_functions.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/9314/trunk/libxc/src/special_functions.c
+END
+work_mgga_c.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9650/trunk/libxc/src/work_mgga_c.c
+END
+mgga_c_vsxc.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9879/trunk/libxc/src/mgga_c_vsxc.c
+END
+lda_c_1d_loos.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_1d_loos.c
+END
+mgga_x_m05.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/9686/trunk/libxc/src/mgga_x_m05.c
+END
+gga_c_lyp.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_lyp.c
+END
+version.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/9690/trunk/libxc/src/version.c
+END
+lda_c_gombas.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_gombas.c
+END
+gga_c_wi.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_c_wi.c
+END
+gga_x_ssb_sw.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10975/trunk/libxc/src/gga_x_ssb_sw.c
+END
+mgga_x_gvt4.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9650/trunk/libxc/src/mgga_x_gvt4.c
+END
+mix_func.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/9679/trunk/libxc/src/mix_func.c
+END
+gga_x_pw86.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11246/trunk/libxc/src/gga_x_pw86.c
+END
+lda_x_1d.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_x_1d.c
+END
+lda_c_wigner.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_c_wigner.c
+END
+mgga_x_tau_hcth.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/9650/trunk/libxc/src/mgga_x_tau_hcth.c
+END
+gga_x_lg93.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_lg93.c
+END
+mgga_x_pkzb.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10975/trunk/libxc/src/mgga_x_pkzb.c
+END
+gga.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/9679/trunk/libxc/src/gga.c
+END
+xc_s.h
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/5257/trunk/libxc/src/xc_s.h
+END
+gga_x_pw91.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_pw91.c
+END
+xc.h
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/11066/trunk/libxc/src/xc.h
+END
+gga_x_2d_b86_mgc.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_2d_b86_mgc.c
+END
+string_f.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/libxc/src/string_f.h
+END
+work_gga_x.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/9876/trunk/libxc/src/work_gga_x.c
+END
+lda_x.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/lda_x.c
+END
+gga_x_c09x.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/gga_x_c09x.c
+END
+mgga_c_cc06.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9960/trunk/libxc/src/mgga_c_cc06.c
+END
+hyb_gga_xc_hse.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10973/trunk/libxc/src/hyb_gga_xc_hse.c
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/octopus/!svn/ver/11248/trunk/libxc
+END
+configure.ac
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/libxc/configure.ac
+END
+PACKAGING
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/10957/trunk/libxc/PACKAGING
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/8924/trunk/libxc/AUTHORS
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/11247/trunk/libxc/TODO
+END
+INSTALL
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/8642/trunk/libxc/INSTALL
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/9874/trunk/libxc/ChangeLog
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/3371/trunk/libxc/COPYING
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/libxc/Makefile.am
+END
+xc_version.h.in
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/9690/trunk/libxc/xc_version.h.in
+END
+NEWS
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/10957/trunk/libxc/NEWS
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/9041/trunk/libxc/README
+END

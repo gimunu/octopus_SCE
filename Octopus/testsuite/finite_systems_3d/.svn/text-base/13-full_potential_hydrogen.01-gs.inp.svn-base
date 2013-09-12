@@ -1,0 +1,43 @@
+# -*- coding: utf-8 mode: shell-script -*-
+# $Id$
+
+%Coordinates
+ 'H_f' | 0 | 0 | 0
+%
+%Species 
+ 'H_f' | 1.00794 | spec_full_gaussian | 1 
+%
+
+Radius = 8.0
+Spacing = 0.4
+fromScratch = yes
+DebugLevel = 1
+
+TheoryLevel = independent_particles
+
+EigenSolverMaxIter = 300
+
+ExtraStates = 1
+%Occupations
+0 | 1
+%
+
+%StaticMagneticField
+0.0 | 0.0 | 0.5
+%
+
+%CurrentThroughPlane
+0 | 0 | 0
+0 | 1 | 0
+0 | 0 | 1
+0.15
+0 | 130
+-130 | 130
+%
+
+CalculateSelfInducedMagneticField = yes
+
+Output = matrix_elements + potential
+OutputHow = axis_y
+OutputMatrixElements = momentum + ang_momentum
+# + one_body + two_body + ks_multipoles

@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/11225/trunk/src/species
+END
+ps.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps.F90
+END
+ps_pspio_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps_pspio_inc.F90
+END
+ps_psf_file.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps_psf_file.F90
+END
+ps_psf.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps_psf.F90
+END
+species.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11225/trunk/src/species/species.F90
+END
+ps_upf.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11224/trunk/src/species/ps_upf.F90
+END
+periodic_table.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/species/periodic_table.F90
+END
+ps_fhi_file.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps_fhi_file.F90
+END
+ps_hgh.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps_hgh.F90
+END
+ps_fhi.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps_fhi.F90
+END
+ps_cpi_file.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps_cpi_file.F90
+END
+atomic.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11182/trunk/src/species/atomic.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/species/Makefile.am
+END
+ps_in_grid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps_in_grid.F90
+END
+ps_cpi.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/species/ps_cpi.F90
+END
+logrid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/species/logrid.F90
+END

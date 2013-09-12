@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/octopus/!svn/ver/11245/trunk/share/opencl
+END
+trsm.cl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/trsm.cl
+END
+subarray.cl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/subarray.cl
+END
+set_zero.cl
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/set_zero.cl
+END
+boundaries.cl
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/boundaries.cl
+END
+mesh_to_cube.cl
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/mesh_to_cube.cl
+END
+mesh_batch.cl
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/mesh_batch.cl
+END
+mul.cl
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/mul.cl
+END
+rotate.cl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/rotate.cl
+END
+operate.cl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/operate.cl
+END
+phase.cl
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/phase.cl
+END
+cl_global.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/cl_global.h
+END
+projector.cl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/projector.cl
+END
+copy.cl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/copy.cl
+END
+cl_rtype.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11244/trunk/share/opencl/cl_rtype.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/11244/trunk/share/opencl/Makefile.am
+END
+points.cl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/points.cl
+END
+cl_complex.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11244/trunk/share/opencl/cl_complex.h
+END
+pack.cl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/pack.cl
+END
+density.cl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/density.cl
+END
+convert.cl
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/convert.cl
+END
+vpsi.cl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/vpsi.cl
+END
+axpy.cl
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/share/opencl/axpy.cl
+END
+forces.cl
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11245/trunk/share/opencl/forces.cl
+END

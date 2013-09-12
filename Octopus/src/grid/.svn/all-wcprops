@@ -1,0 +1,389 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/octopus/!svn/ver/11250/trunk/src/grid
+END
+cube_function.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/grid/cube_function.F90
+END
+operate.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/grid/operate.c
+END
+derivatives.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/grid/derivatives.F90
+END
+symmetrizer.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/grid/symmetrizer.F90
+END
+stencil_starplus.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/10978/trunk/src/grid/stencil_starplus.F90
+END
+stencil.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/grid/stencil.F90
+END
+batch_ops.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/grid/batch_ops.F90
+END
+operate_f.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/grid/operate_f.F90
+END
+io_function_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/11019/trunk/src/grid/io_function_inc.F90
+END
+submesh.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/grid/submesh.F90
+END
+partition.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11250/trunk/src/grid/partition.F90
+END
+nl_operator_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/src/grid/nl_operator_inc.F90
+END
+hilbert.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/grid/hilbert.c
+END
+basins.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/grid/basins.F90
+END
+mesh_init.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11200/trunk/src/grid/mesh_init.F90
+END
+grid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/grid/grid.F90
+END
+hypercube.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/grid/hypercube.F90
+END
+fourier_space.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/grid/fourier_space.F90
+END
+subarray.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/grid/subarray.F90
+END
+stencil_variational.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/grid/stencil_variational.F90
+END
+stencil_star.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/grid/stencil_star.F90
+END
+boundaries.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/grid/boundaries.F90
+END
+mesh_batch.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11178/trunk/src/grid/mesh_batch.F90
+END
+multigrid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/grid/multigrid.F90
+END
+mesh_function.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/grid/mesh_function.F90
+END
+partition_transfer_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/10978/trunk/src/grid/partition_transfer_inc.F90
+END
+index.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/grid/index.F90
+END
+par_vec_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/grid/par_vec_inc.F90
+END
+batch_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/grid/batch_inc.F90
+END
+cube_function_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/grid/cube_function_inc.F90
+END
+derivatives_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/11037/trunk/src/grid/derivatives_inc.F90
+END
+double_grid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/grid/double_grid.F90
+END
+symmetrizer_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/src/grid/symmetrizer_inc.F90
+END
+mesh_partition.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11200/trunk/src/grid/mesh_partition.F90
+END
+mesh_cube_map.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/grid/mesh_cube_map.F90
+END
+batch_ops_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/grid/batch_ops_inc.F90
+END
+submesh_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/grid/submesh_inc.F90
+END
+fourier_shell.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11038/trunk/src/grid/fourier_shell.F90
+END
+ob_grid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/grid/ob_grid.F90
+END
+curv_modine.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/grid/curv_modine.F90
+END
+io_function.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/11140/trunk/src/grid/io_function.F90
+END
+double_grid_apply_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/10978/trunk/src/grid/double_grid_apply_inc.F90
+END
+fourier_space_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/grid/fourier_space_inc.F90
+END
+ob_interface.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/grid/ob_interface.F90
+END
+subarray_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/grid/subarray_inc.F90
+END
+curvilinear.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/grid/curvilinear.F90
+END
+nl_operator.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/11111/trunk/src/grid/nl_operator.F90
+END
+boundaries_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/grid/boundaries_inc.F90
+END
+modelmb_1part.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/grid/modelmb_1part.F90
+END
+mesh_batch_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11181/trunk/src/grid/mesh_batch_inc.F90
+END
+multigrid_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/grid/multigrid_inc.F90
+END
+mesh_function_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/11008/trunk/src/grid/mesh_function_inc.F90
+END
+transfer_table.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/grid/transfer_table.F90
+END
+mesh.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/grid/mesh.F90
+END
+curv_gygi.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/grid/curv_gygi.F90
+END
+stencil_cube.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/grid/stencil_cube.F90
+END
+mesh_cube_parallel_map.F90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/11110/trunk/src/grid/mesh_cube_parallel_map.F90
+END
+operate_inc.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/grid/operate_inc.c
+END
+curv_briggs.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/grid/curv_briggs.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11123/trunk/src/grid/Makefile.am
+END
+partition_transfer.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/grid/partition_transfer.F90
+END
+cube.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/11094/trunk/src/grid/cube.F90
+END
+par_vec.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11172/trunk/src/grid/par_vec.F90
+END
+batch.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/grid/batch.F90
+END

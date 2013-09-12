@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11212/trunk/external_libs/fortrancl
+END
+cl_device_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/9132/trunk/external_libs/fortrancl/cl_device_low.c
+END
+cl_types.f90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/8707/trunk/external_libs/fortrancl/cl_types.f90
+END
+clamdblas.f90
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/10089/trunk/external_libs/fortrancl/clamdblas.f90
+END
+utils.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/9132/trunk/external_libs/fortrancl/utils.c
+END
+clamdfft_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/9954/trunk/external_libs/fortrancl/clamdfft_low.c
+END
+cl_program.f90
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/9131/trunk/external_libs/fortrancl/cl_program.f90
+END
+clamdblas_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/10089/trunk/external_libs/fortrancl/clamdblas_low.c
+END
+cl_buffer.f90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/9131/trunk/external_libs/fortrancl/cl_buffer.f90
+END
+cl_program_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/9131/trunk/external_libs/fortrancl/cl_program_low.c
+END
+cl_constants.f90
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/8972/trunk/external_libs/fortrancl/cl_constants.f90
+END
+cl_buffer_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/9131/trunk/external_libs/fortrancl/cl_buffer_low.c
+END
+cl_kernel.f90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/9131/trunk/external_libs/fortrancl/cl_kernel.f90
+END
+cl.f90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/9130/trunk/external_libs/fortrancl/cl.f90
+END
+cl_event.f90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/9132/trunk/external_libs/fortrancl/cl_event.f90
+END
+cl_command_queue.f90
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9132/trunk/external_libs/fortrancl/cl_command_queue.f90
+END
+cl_platform.f90
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/11212/trunk/external_libs/fortrancl/cl_platform.f90
+END
+cl_context.f90
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/9132/trunk/external_libs/fortrancl/cl_context.f90
+END
+localcl.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/8958/trunk/external_libs/fortrancl/localcl.h
+END
+cl_kernel_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/11210/trunk/external_libs/fortrancl/cl_kernel_low.c
+END
+string_f.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/10978/trunk/external_libs/fortrancl/string_f.h
+END
+cl_event_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/9132/trunk/external_libs/fortrancl/cl_event_low.c
+END
+cl_command_queue_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9132/trunk/external_libs/fortrancl/cl_command_queue_low.c
+END
+cl_platform_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/9132/trunk/external_libs/fortrancl/cl_platform_low.c
+END
+cl_context_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/9131/trunk/external_libs/fortrancl/cl_context_low.c
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/10978/trunk/external_libs/fortrancl/Makefile.am
+END
+cl_device.f90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/9132/trunk/external_libs/fortrancl/cl_device.f90
+END
+clamdfft.f90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/9954/trunk/external_libs/fortrancl/clamdfft.f90
+END

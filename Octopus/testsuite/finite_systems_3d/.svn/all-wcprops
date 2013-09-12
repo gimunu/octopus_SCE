@@ -1,0 +1,467 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11029/trunk/testsuite/finite_systems_3d
+END
+25-multiresolution.test
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/25-multiresolution.test
+END
+09-spinors.03-rmmdiis_extra_states.inp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/octopus/!svn/ver/10327/trunk/testsuite/finite_systems_3d/09-spinors.03-rmmdiis_extra_states.inp
+END
+28-carbon_big_box.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/octopus/!svn/ver/9763/trunk/testsuite/finite_systems_3d/28-carbon_big_box.01-ground_state.inp
+END
+22-time_propagation.03-td_domains_states.inp
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/octopus/!svn/ver/6815/trunk/testsuite/finite_systems_3d/22-time_propagation.03-td_domains_states.inp
+END
+15-fullerene_stdlcao.test
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/11029/trunk/testsuite/finite_systems_3d/15-fullerene_stdlcao.test
+END
+20-eigensolver.04-plan.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/20-eigensolver.04-plan.inp
+END
+09-spinors.test
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/11005/trunk/testsuite/finite_systems_3d/09-spinors.test
+END
+01-carbon_atom.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/01-carbon_atom.01-ground_state.inp
+END
+06-restart.03-td_calc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/7839/trunk/testsuite/finite_systems_3d/06-restart.03-td_calc.inp
+END
+21-lobpcg.01-spin_polarized.inp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/10794/trunk/testsuite/finite_systems_3d/21-lobpcg.01-spin_polarized.inp
+END
+03-magnetic.04-td-polarized.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/6815/trunk/testsuite/finite_systems_3d/03-magnetic.04-td-polarized.inp
+END
+12-forces.01-N2_gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/12-forces.01-N2_gs.inp
+END
+20-eigensolver.06-rmmdiis.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/10053/trunk/testsuite/finite_systems_3d/20-eigensolver.06-rmmdiis.inp
+END
+06-restart.02-restart_ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/octopus/!svn/ver/6532/trunk/testsuite/finite_systems_3d/06-restart.02-restart_ground_state.inp
+END
+12-forces.03-N2_gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/12-forces.03-N2_gs.inp
+END
+04-jellium.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/10055/trunk/testsuite/finite_systems_3d/04-jellium.01-ground_state.inp
+END
+23-go-na2.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10236/trunk/testsuite/finite_systems_3d/23-go-na2.test
+END
+06-restart.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/06-restart.test
+END
+20-eigensolver.05-evolution.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/20-eigensolver.05-evolution.inp
+END
+05-output.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/11020/trunk/testsuite/finite_systems_3d/05-output.01-gs.inp
+END
+01-carbon_atom.02-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/01-carbon_atom.02-ground_state.inp
+END
+21-lobpcg.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10843/trunk/testsuite/finite_systems_3d/21-lobpcg.test
+END
+20-eigensolver.03-cg_new.inp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/20-eigensolver.03-cg_new.inp
+END
+11-sic.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/11-sic.01-gs.inp
+END
+06-restart.04-restart_td_calc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/octopus/!svn/ver/7839/trunk/testsuite/finite_systems_3d/06-restart.04-restart_td_calc.inp
+END
+07-spin_orbit_coupling.test
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/07-spin_orbit_coupling.test
+END
+03-magnetic.02-td-unpolarized.inp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/octopus/!svn/ver/6815/trunk/testsuite/finite_systems_3d/03-magnetic.02-td-unpolarized.inp
+END
+26-nlcc.01-Fatom.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/7338/trunk/testsuite/finite_systems_3d/26-nlcc.01-Fatom.inp
+END
+03-magnetic.01-gs-unpolarized.inp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/octopus/!svn/ver/6425/trunk/testsuite/finite_systems_3d/03-magnetic.01-gs-unpolarized.inp
+END
+13-full_potential_hydrogen.test
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/10896/trunk/testsuite/finite_systems_3d/13-full_potential_hydrogen.test
+END
+12-forces.test
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/12-forces.test
+END
+01-carbon_atom.test
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/01-carbon_atom.test
+END
+26-nlcc.test
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/26-nlcc.test
+END
+09-spinors.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/6532/trunk/testsuite/finite_systems_3d/09-spinors.01-ground_state.inp
+END
+03-magnetic.test
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/03-magnetic.test
+END
+24-o2-spin.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/6532/trunk/testsuite/finite_systems_3d/24-o2-spin.01-gs.inp
+END
+14-fullerene_packed.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/11029/trunk/testsuite/finite_systems_3d/14-fullerene_packed.01-gs.inp
+END
+21-lobpcg.02-spinors.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/10845/trunk/testsuite/finite_systems_3d/21-lobpcg.02-spinors.inp
+END
+08-spin_orbit_coupling_full.01-hgh.inp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/octopus/!svn/ver/6532/trunk/testsuite/finite_systems_3d/08-spin_orbit_coupling_full.01-hgh.inp
+END
+15-fullerene_stdlcao.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/11029/trunk/testsuite/finite_systems_3d/15-fullerene_stdlcao.01-gs.inp
+END
+09-spinors.02-rmmdiis.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/7695/trunk/testsuite/finite_systems_3d/09-spinors.02-rmmdiis.inp
+END
+22-time_propagation.05-td_fast_md.inp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/octopus/!svn/ver/6815/trunk/testsuite/finite_systems_3d/22-time_propagation.05-td_fast_md.inp
+END
+22-time_propagation.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/3545/trunk/testsuite/finite_systems_3d/22-time_propagation.01-gs.inp
+END
+04-jellium.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/04-jellium.test
+END
+05-output.test
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/05-output.test
+END
+08-spin_orbit_coupling_full.02-rkb.inp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/octopus/!svn/ver/7242/trunk/testsuite/finite_systems_3d/08-spin_orbit_coupling_full.02-rkb.inp
+END
+01-carbon_atom.03-ground_state_double_grid.inp
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/01-carbon_atom.03-ground_state_double_grid.inp
+END
+13-full_potential_hydrogen.02-gs-cg.inp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/octopus/!svn/ver/6661/trunk/testsuite/finite_systems_3d/13-full_potential_hydrogen.02-gs-cg.inp
+END
+07-spin_orbit_coupling.01-hgh.inp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/07-spin_orbit_coupling.01-hgh.inp
+END
+06-restart.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/7532/trunk/testsuite/finite_systems_3d/06-restart.01-ground_state.inp
+END
+02-curvilinear_coordinates.test
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/10863/trunk/testsuite/finite_systems_3d/02-curvilinear_coordinates.test
+END
+03-magnetic.03-gs-polarized.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/6425/trunk/testsuite/finite_systems_3d/03-magnetic.03-gs-polarized.inp
+END
+12-forces.02-N2_gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/12-forces.02-N2_gs.inp
+END
+07-spin_orbit_coupling.02-rkb.inp
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/07-spin_orbit_coupling.02-rkb.inp
+END
+22-time_propagation.04-td_md.inp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/6815/trunk/testsuite/finite_systems_3d/22-time_propagation.04-td_md.inp
+END
+20-eigensolver.test
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/10579/trunk/testsuite/finite_systems_3d/20-eigensolver.test
+END
+03-magnetic.06-td-spinors.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/6815/trunk/testsuite/finite_systems_3d/03-magnetic.06-td-spinors.inp
+END
+03-magnetic.05-gs-spinors.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/6425/trunk/testsuite/finite_systems_3d/03-magnetic.05-gs-spinors.inp
+END
+23-go-na2.01-steep.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/6532/trunk/testsuite/finite_systems_3d/23-go-na2.01-steep.inp
+END
+14-fullerene_packed.test
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/11029/trunk/testsuite/finite_systems_3d/14-fullerene_packed.test
+END
+24-o2-spin.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/24-o2-spin.test
+END
+23-go-na2.02-simplex.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/10236/trunk/testsuite/finite_systems_3d/23-go-na2.02-simplex.inp
+END
+08-spin_orbit_coupling_full.test
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/08-spin_orbit_coupling_full.test
+END
+20-eigensolver.02-cg.inp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_3d/20-eigensolver.02-cg.inp
+END
+02-curvilinear_coordinates.01-gygi.inp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/octopus/!svn/ver/10863/trunk/testsuite/finite_systems_3d/02-curvilinear_coordinates.01-gygi.inp
+END
+27-fine_mesh.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9626/trunk/testsuite/finite_systems_3d/27-fine_mesh.01-gs.inp
+END
+22-time_propagation.test
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/22-time_propagation.test
+END
+27-fine_mesh.test
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/10381/trunk/testsuite/finite_systems_3d/27-fine_mesh.test
+END
+28-carbon_big_box.test
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_3d/28-carbon_big_box.test
+END
+22-time_propagation.02-td_domains.inp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/octopus/!svn/ver/6815/trunk/testsuite/finite_systems_3d/22-time_propagation.02-td_domains.inp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/11029/trunk/testsuite/finite_systems_3d/Makefile.am
+END
+20-eigensolver.01-lobpcg.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/10794/trunk/testsuite/finite_systems_3d/20-eigensolver.01-lobpcg.inp
+END
+10-fullerene.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/8379/trunk/testsuite/finite_systems_3d/10-fullerene.01-gs.inp
+END
+11-sic.test
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/10613/trunk/testsuite/finite_systems_3d/11-sic.test
+END
+25-multiresolution.01-Hatom.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/7866/trunk/testsuite/finite_systems_3d/25-multiresolution.01-Hatom.inp
+END
+13-full_potential_hydrogen.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/octopus/!svn/ver/10891/trunk/testsuite/finite_systems_3d/13-full_potential_hydrogen.01-gs.inp
+END
+10-fullerene.test
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/11029/trunk/testsuite/finite_systems_3d/10-fullerene.test
+END

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/11019/trunk/share/util
+END
+mf.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/6303/trunk/share/util/mf.cfg
+END
+vf.net
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/1750/trunk/share/util/vf.net
+END
+oct-display_partitions
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/8933/trunk/share/util/oct-display_partitions
+END
+inp
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/octopus/!svn/ver/3546/trunk/share/util/inp
+END
+oct-atomic_occupations
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/8933/trunk/share/util/oct-atomic_occupations
+END
+mf.net
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/6303/trunk/share/util/mf.net
+END
+plot_profiling
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/8933/trunk/share/util/plot_profiling
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/share/util/Makefile.am
+END
+vf.cfg
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/1750/trunk/share/util/vf.cfg
+END
+oct-run_periodic_table
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/8933/trunk/share/util/oct-run_periodic_table
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/11019/trunk/share/util/README
+END
+display_mesh_index.gp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/4945/trunk/share/util/display_mesh_index.gp
+END

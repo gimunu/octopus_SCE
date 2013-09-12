@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11229/trunk/testsuite/finite_systems_2d
+END
+07-modelmb.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_2d/07-modelmb.test
+END
+01-quadratic_box.test
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/10785/trunk/testsuite/finite_systems_2d/01-quadratic_box.test
+END
+08-gdlib.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/10784/trunk/testsuite/finite_systems_2d/08-gdlib.01-gs.inp
+END
+02-fock-darwin.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_2d/02-fock-darwin.01-ground_state.inp
+END
+03-helium_atom.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_2d/03-helium_atom.01-ground_state.inp
+END
+08-gdlib.test
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/10791/trunk/testsuite/finite_systems_2d/08-gdlib.test
+END
+02-fock-darwin.02-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/octopus/!svn/ver/11169/trunk/testsuite/finite_systems_2d/02-fock-darwin.02-ground_state.inp
+END
+03-helium_atom.02-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_2d/03-helium_atom.02-ground_state.inp
+END
+02-fock-darwin.03-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/octopus/!svn/ver/11179/trunk/testsuite/finite_systems_2d/02-fock-darwin.03-ground_state.inp
+END
+05-spin_precession.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_2d/05-spin_precession.01-ground_state.inp
+END
+02-fock-darwin.04-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/octopus/!svn/ver/11229/trunk/testsuite/finite_systems_2d/02-fock-darwin.04-ground_state.inp
+END
+05-spin_precession.02-time_propagation.inp
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/octopus/!svn/ver/10985/trunk/testsuite/finite_systems_2d/05-spin_precession.02-time_propagation.inp
+END
+01-quadratic_box.04-spin_polarized.inp
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/octopus/!svn/ver/6937/trunk/testsuite/finite_systems_2d/01-quadratic_box.04-spin_polarized.inp
+END
+01-quadratic_box.02-hartree.inp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/10785/trunk/testsuite/finite_systems_2d/01-quadratic_box.02-hartree.inp
+END
+03-helium_atom.test
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_2d/03-helium_atom.test
+END
+02-fock-darwin.test
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/11228/trunk/testsuite/finite_systems_2d/02-fock-darwin.test
+END
+01-quadratic_box.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_2d/01-quadratic_box.01-ground_state.inp
+END
+05-spin_precession.test
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_2d/05-spin_precession.test
+END
+01-quadratic_box.03-hartree+xc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_2d/01-quadratic_box.03-hartree+xc.inp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/11228/trunk/testsuite/finite_systems_2d/Makefile.am
+END
+04-biot_savart.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/10707/trunk/testsuite/finite_systems_2d/04-biot_savart.01-gs.inp
+END
+04-biot_savart.test
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_2d/04-biot_savart.test
+END
+07-modelmb.02-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9072/trunk/testsuite/finite_systems_2d/07-modelmb.02-td.inp
+END
+07-modelmb.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9072/trunk/testsuite/finite_systems_2d/07-modelmb.01-gs.inp
+END

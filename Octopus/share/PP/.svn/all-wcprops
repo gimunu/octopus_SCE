@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/octopus/!svn/ver/10978/trunk/share/PP
+END
+defaults
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/8198/trunk/share/PP/defaults
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/share/PP/Makefile.am
+END

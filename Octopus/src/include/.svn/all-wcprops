@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/10978/trunk/src/include
+END
+real.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/include/real.F90
+END
+complex.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/include/complex.F90
+END
+fortran_types.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/include/fortran_types.h
+END
+global.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/include/global.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/include/Makefile.am
+END
+integer.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/include/integer.F90
+END
+vectors.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/include/vectors.h
+END
+undef.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/include/undef.F90
+END

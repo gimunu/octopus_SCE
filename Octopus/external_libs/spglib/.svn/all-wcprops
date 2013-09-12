@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10763/trunk/external_libs/spglib
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/COPYING
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/5026/trunk/external_libs/spglib/Makefile.am
+END

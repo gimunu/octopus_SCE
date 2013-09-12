@@ -1,0 +1,175 @@
+/*
+ Copyright (C) 2010 X. Andrade
+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2, or (at your option)
+ any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+ 02110-1301, USA.
+
+ $Id: vpsi.cl 2146 2006-05-23 17:36:00Z xavier $
+*/
+
+#include <cl_global.h>
+#include <cl_complex.h>
+
+__kernel void ddot_vector(const int np,
+			  const int npblock,
+			  const __global double * xx, const int ldxx,
+			  const __global double * yy, const int ldyy,
+			  __global double * dot,
+			  __local double * lsum){
+  
+  const int ist = get_global_id(0);
+  const int lip = get_local_id(1);
+  const int nlp = get_local_size(1);
+  const int startp = npblock*get_global_id(2);
+  const int endp = (startp + npblock < np)?startp + npblock:np;
+
+  double tmp;
+
+  tmp = 0.0;
+  for(int ip = lip + startp; ip < endp; ip += nlp){
+    tmp += xx[(ip<<ldxx) + ist]*yy[(ip<<ldyy) + ist];
+  }
+
+  lsum[(lip<<ldyy) + ist] = tmp;
+
+  barrier(CLK_LOCAL_MEM_FENCE);
+
+  if(lip == 0){
+    tmp = 0.0;
+    for(int ip = 0; ip < nlp; ip++) tmp += lsum[(ip<<ldyy) + ist];
+    dot[ist + (get_global_id(2)<<ldyy)] = tmp;
+  }
+}
+
+__kernel void zdot_vector(const int np,
+			  const int npblock,
+			  const __global double2 * xx, const int ldxx,
+			  const __global double2 * yy, const int ldyy,
+			  __global double2 * dot,
+			  __local double2 * lsum){
+  
+  const int ist = get_global_id(0);
+  const int lip = get_local_id(1);
+  const int nlp = get_local_size(1);
+  const int startp = npblock*get_global_id(2);
+  const int endp = (startp + npblock < np)?startp + npblock:np;
+
+  double2 tmp;
+
+  tmp = 0.0;
+  for(int ip = lip + startp; ip < endp; ip += nlp){
+    tmp += complex_mul(complex_conj(xx[(ip<<ldxx) + ist]), yy[(ip<<ldyy) + ist]);
+  }
+
+  lsum[(lip<<ldyy) + ist] = tmp;
+
+  barrier(CLK_LOCAL_MEM_FENCE);
+
+  if(lip == 0){
+    tmp = 0.0;
+    for(int ip = 0; ip < nlp; ip++) tmp += lsum[(ip<<ldyy) + ist];
+    dot[ist + (get_global_id(2)<<ldyy)] = tmp;
+  }
+}
+
+
+__kernel void ddot_matrix(const int np,
+			  __global double const * restrict xx, const int ldxx,
+			  __global double const * restrict yy, const int ldyy,
+			  __global double * restrict dot, const int lddot){
+  
+  int ist = get_global_id(0);
+  int jst = get_global_id(1);
+  double tmp;
+
+  if(ist >= lddot) return;
+
+  tmp = 0.0;
+  for(int ip = 0; ip < np; ip++){
+    tmp += xx[(ip<<ldxx) + ist]*yy[(ip<<ldyy) + jst];
+  }
+  dot[ist + lddot*jst] = tmp;
+}
+
+__kernel void zdot_matrix(const int np,
+			  __global double2 const * restrict xx, const int ldxx,
+			  __global double2 const * restrict yy, const int ldyy,
+			  __global double2 * restrict dot, const int lddot){
+  
+  int ist = get_global_id(0);
+  int jst = get_global_id(1);
+
+  if(ist >= lddot) return;
+		 
+  double2 tmp = (double2) (0.0);
+  for(int ip = 0; ip < np; ip++){
+    double2 a1 = xx[(ip<<ldxx) + ist];
+    double2 a2 = yy[(ip<<ldyy) + jst];
+    tmp += complex_mul(complex_conj(a1), a2);
+  }
+  dot[ist + lddot*jst] = tmp;
+}
+
+__kernel void zdot_matrix_spinors(const int np,
+				  __global double4 const * restrict xx, const int ldxx,
+				  __global double4 const * restrict yy, const int ldyy,
+				  __global double2 * restrict dot, const int lddot){
+  
+  int ist = get_global_id(0);
+  int jst = get_global_id(1);
+
+  if(ist >= lddot) return;
+
+  double2 tmp1 = (double2) (0.0);
+  double2 tmp2 = (double2) (0.0);
+  for(int ip = 0; ip < np; ip++){
+    double4 a1 = xx[(ip<<ldxx) + ist];
+    double4 a2 = yy[(ip<<ldyy) + jst];
+    tmp1 += complex_mul(complex_conj((double2)(a1.s0, a1.s1)), (double2)(a2.s0, a2.s1));
+    tmp2 += complex_mul(complex_conj((double2)(a1.s2, a1.s3)), (double2)(a2.s2, a2.s3));
+  }
+  dot[ist + lddot*jst] = tmp1 + tmp2;
+}
+
+
+__kernel void nrm2_vector(const int np,
+			  const __global double * xx, const int ldxx,
+			  __global double * nrm2){
+  
+  int ist = get_global_id(0);
+  double ssq, scale;
+
+  ssq = 1.0;
+  scale = 0.0;
+  for(int ip = 0; ip < np; ip++){
+    double a0 = xx[(ip<<ldxx) + ist];
+    if(a0 == 0.0) continue;
+    a0 = (a0 > 0.0)?a0:-a0;
+    if(scale < a0){
+      ssq = 1.0 + ssq*(scale/a0)*(scale/a0);
+      scale = a0;
+    } else {
+      ssq = ssq + (a0/scale)*(a0/scale);
+    }
+  }
+  nrm2[ist] = scale*scale*ssq;
+}
+
+/*
+ Local Variables:
+ mode: c
+ coding: utf-8
+ End:
+*/

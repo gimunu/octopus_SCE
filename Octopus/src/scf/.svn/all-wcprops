@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/octopus/!svn/ver/11240/trunk/src/scf
+END
+lcao_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/scf/lcao_inc.F90
+END
+ob_lippmann_schwinger.F90
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/src/scf/ob_lippmann_schwinger.F90
+END
+scf.F90
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/11240/trunk/src/scf/scf.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/scf/Makefile.am
+END
+rdmft.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/11091/trunk/src/scf/rdmft.F90
+END
+ground_state.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/11103/trunk/src/scf/ground_state.F90
+END
+lcao.F90
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/11188/trunk/src/scf/lcao.F90
+END

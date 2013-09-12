@@ -1,0 +1,17 @@
+K 10
+svn:ignore
+V 87
+*.o
+*.a
+*.mod
+*~
+Makefile
+Makefile.in
+.deps
+
+octopus
+oct-test
+octopus_mpi
+oct-test_mpi
+
+END

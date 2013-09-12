@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/11192/trunk/src/sternheimer
+END
+kdotp_calc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/11192/trunk/src/sternheimer/kdotp_calc.F90
+END
+em_resp_calc_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/10978/trunk/src/sternheimer/em_resp_calc_inc.F90
+END
+sternheimer.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/sternheimer/sternheimer.F90
+END
+em_resp.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11104/trunk/src/sternheimer/em_resp.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/sternheimer/Makefile.am
+END
+em_resp_calc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/sternheimer/em_resp_calc.F90
+END
+kdotp_calc_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/11192/trunk/src/sternheimer/kdotp_calc_inc.F90
+END
+sternheimer_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/11133/trunk/src/sternheimer/sternheimer_inc.F90
+END
+vdw.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11192/trunk/src/sternheimer/vdw.F90
+END
+kdotp.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11104/trunk/src/sternheimer/kdotp.F90
+END
+phonons_lr.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/11104/trunk/src/sternheimer/phonons_lr.F90
+END

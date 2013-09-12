@@ -1,0 +1,83 @@
+10
+
+dir
+11250
+http://www.tddft.org/svn/octopus/trunk/external_libs
+http://www.tddft.org/svn/octopus
+
+
+
+2013-08-30T23:45:56.217760Z
+11212
+xavier
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+53d8e6fd-f412-0410-a60b-8e56063eb7bf
+
+qshep
+dir
+
+spglib
+dir
+
+metis-5.1
+dir
+
+bpdn
+dir
+
+Makefile.am
+file
+
+
+
+
+2013-09-12T11:56:00.000000Z
+411eef563f1509c4c8923a3ca76eb01c
+2013-07-11T15:28:46.835198Z
+10978
+micael
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+956
+
+fortrancl
+dir
+
+slatec
+dir
+
+newuoa
+dir
+

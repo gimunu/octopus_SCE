@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/octopus/!svn/ver/11190/trunk/src/utils
+END
+harmonic_spectrum.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/utils/harmonic_spectrum.F90
+END
+propagation_spectrum.F90
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/10978/trunk/src/utils/propagation_spectrum.F90
+END
+casida_spectrum.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/10978/trunk/src/utils/casida_spectrum.F90
+END
+liquid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/utils/liquid.F90
+END
+photoelectron_spectrum.F90
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/10978/trunk/src/utils/photoelectron_spectrum.F90
+END
+centergeom.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/utils/centergeom.F90
+END
+help.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/utils/help.F90
+END
+oscillator_strength.F90
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/src/utils/oscillator_strength.F90
+END
+infrared.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/utils/infrared.F90
+END
+vibrational.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/utils/vibrational.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11190/trunk/src/utils/Makefile.am
+END
+dielectric_function.F90
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/src/utils/dielectric_function.F90
+END
+xyzanim.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/utils/xyzanim.F90
+END
+rotatory_strength.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/utils/rotatory_strength.F90
+END

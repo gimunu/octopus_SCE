@@ -1,0 +1,24 @@
+K 10
+svn:ignore
+V 196
+*.log
+config.status
+config.guess
+config.sub
+config.h
+stamp-h1
+aclocal.m4
+autom4te.cache
+autogen*
+Makefile
+.deps
+*.bak
+Makefile.in
+configure
+config.h.in
+build-aux
+build-stamp
+*.test
+semantic.cache
+
+END

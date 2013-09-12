@@ -1,0 +1,22 @@
+K 10
+svn:ignore
+V 178
+Makefile
+Makefile.in
+*.o
+*.a
+.deps
+*.mod
+funcs_mgga.c
+funcs_lda.c
+funcs_gga.c
+funcs_lca.c
+funcs_hyb_gga.c
+funcs_hyb_mgga.c
+xc_funcs.h
+libxc_funcs.f90
+libxc.f90
+.libs
+funcs_key.c
+
+END

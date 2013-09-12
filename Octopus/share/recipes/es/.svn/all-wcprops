@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/10978/trunk/share/recipes/es
+END
+pulpo_a_feira.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/2334/trunk/share/recipes/es/pulpo_a_feira.txt
+END
+pulpo_asado.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/9530/trunk/share/recipes/es/pulpo_asado.txt
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/share/recipes/es/Makefile.am
+END

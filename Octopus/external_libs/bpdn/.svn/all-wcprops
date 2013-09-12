@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10992/trunk/external_libs/bpdn
+END
+bpdn.f90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10992/trunk/external_libs/bpdn/bpdn.f90
+END
+heap.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/8346/trunk/external_libs/bpdn/heap.h
+END
+oneProjectorCore.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/8346/trunk/external_libs/bpdn/oneProjectorCore.c
+END
+expmm.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/9194/trunk/external_libs/bpdn/expmm.c
+END
+oneProjectorCore.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/8346/trunk/external_libs/bpdn/oneProjectorCore.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/external_libs/bpdn/Makefile.am
+END
+heap.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/8346/trunk/external_libs/bpdn/heap.c
+END
+spgl1_projector.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/8346/trunk/external_libs/bpdn/spgl1_projector.c
+END

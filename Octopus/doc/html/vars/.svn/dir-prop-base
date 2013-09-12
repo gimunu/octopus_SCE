@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 49
+Makefile
+Makefile.in
+*.html
+alpha.js
+sections.js
+
+END

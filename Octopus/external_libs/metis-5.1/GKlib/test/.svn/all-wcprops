@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/10609/trunk/external_libs/metis-5.1/GKlib/test
+END
+Makefile.in.old
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/GKlib/test/Makefile.in.old
+END
+fis.c
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/GKlib/test/fis.c
+END
+gkgraph.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/GKlib/test/gkgraph.c
+END
+rw.c
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/GKlib/test/rw.c
+END
+Makefile.old
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/GKlib/test/Makefile.old
+END
+gksort.c
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/GKlib/test/gksort.c
+END
+strings.c
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/GKlib/test/strings.c
+END

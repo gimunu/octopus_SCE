@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 63
+ltsugar.m4
+libtool.m4
+lt~obsolete.m4
+ltoptions.m4
+ltversion.m4
+
+END

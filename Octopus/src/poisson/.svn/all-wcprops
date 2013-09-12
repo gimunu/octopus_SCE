@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/octopus/!svn/ver/11236/trunk/src/poisson
+END
+poisson_libisf.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/poisson_libisf.F90
+END
+poisson_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/poisson_inc.F90
+END
+scaling_function.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/scaling_function.F90
+END
+solver_2d_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/solver_2d_inc.F90
+END
+poisson_fmm.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/poisson_fmm.F90
+END
+poisson_fft.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11236/trunk/src/poisson/poisson_fft.F90
+END
+solver_3d_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/11109/trunk/src/poisson/solver_3d_inc.F90
+END
+poisson.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11236/trunk/src/poisson/poisson.F90
+END
+poisson_isf.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/poisson_isf.F90
+END
+solver_1d_solve_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/11197/trunk/src/poisson/solver_1d_solve_inc.F90
+END
+lazy_8_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/7334/trunk/src/poisson/lazy_8_inc.F90
+END
+poisson_cutoff.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/poisson_cutoff.F90
+END
+poisson_cg.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/poisson_cg.F90
+END
+poisson_corrections.F90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/poisson_corrections.F90
+END
+poisson_cutoffs.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/7558/trunk/src/poisson/poisson_cutoffs.c
+END
+poisson_multigrid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/poisson_multigrid.F90
+END
+poisson_sete.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/poisson_sete.F90
+END
+solver_1d_init_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/solver_1d_init_inc.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/poisson/Makefile.am
+END

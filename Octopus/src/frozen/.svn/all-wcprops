@@ -1,0 +1,263 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/octopus/!svn/ver/11199/trunk/src/frozen
+END
+texternal_potential.F90
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/texternal_potential.F90
+END
+interpolation.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/interpolation.F90
+END
+fio_geometry.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11173/trunk/src/frozen/fio_geometry.F90
+END
+interface_xc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/interface_xc.F90
+END
+tgeo.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/tgeo.F90
+END
+igrid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/igrid.F90
+END
+gga.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/gga.F90
+END
+tlist.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11161/trunk/src/frozen/tlist.F90
+END
+basis.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/basis.F90
+END
+frozen_density.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/frozen_density.F90
+END
+template.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11135/trunk/src/frozen/template.h
+END
+storage.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/storage.F90
+END
+frozen_external.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/frozen_external.F90
+END
+frozen_simulation.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/frozen_simulation.F90
+END
+frozen_grid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/frozen_grid.F90
+END
+iatom.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11163/trunk/src/frozen/iatom.F90
+END
+fio_density.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/fio_density.F90
+END
+tionic_term.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/tionic_term.F90
+END
+frozen_tnadd.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/frozen_tnadd.F90
+END
+fio_external.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/fio_external.F90
+END
+fio_simulation.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/11180/trunk/src/frozen/fio_simulation.F90
+END
+fio_grid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11180/trunk/src/frozen/fio_grid.F90
+END
+tpotential.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/tpotential.F90
+END
+frozen_ionic.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/frozen_ionic.F90
+END
+simulation.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/simulation.F90
+END
+tcalc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/tcalc.F90
+END
+tstates.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/tstates.F90
+END
+thamiltonian.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/thamiltonian.F90
+END
+frozen_config.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/frozen_config.F90
+END
+fio_mesh.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11199/trunk/src/frozen/fio_mesh.F90
+END
+tterm.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/tterm.F90
+END
+twrap.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/twrap.F90
+END
+tbase_density.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/tbase_density.F90
+END
+fio_simul_box.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/11173/trunk/src/frozen/fio_simul_box.F90
+END
+lda.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/lda.F90
+END
+fio_config.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11136/trunk/src/frozen/fio_config.F90
+END
+functional.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/functional.F90
+END
+thash.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11161/trunk/src/frozen/thash.F90
+END
+domain.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11164/trunk/src/frozen/domain.F90
+END
+tsystem.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11148/trunk/src/frozen/tsystem.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11180/trunk/src/frozen/Makefile.am
+END
+frozen_geometry.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/11141/trunk/src/frozen/frozen_geometry.F90
+END
+tpair.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11161/trunk/src/frozen/tpair.F90
+END

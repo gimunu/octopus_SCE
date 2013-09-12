@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11113/trunk/testsuite/linear_response
+END
+02-h2o_pol_lr.02_h2o_dyn_pol.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/7242/trunk/testsuite/linear_response/02-h2o_pol_lr.02_h2o_dyn_pol.inp
+END
+01-casida.test
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/11016/trunk/testsuite/linear_response/01-casida.test
+END
+02-h2o_pol_lr.03_h2o_dyn_pol_cmplx.inp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/octopus/!svn/ver/7242/trunk/testsuite/linear_response/02-h2o_pol_lr.03_h2o_dyn_pol_cmplx.inp
+END
+02-h2o_pol_lr.01_h2o_gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/7532/trunk/testsuite/linear_response/02-h2o_pol_lr.01_h2o_gs.inp
+END
+03-vdw_sternheimer.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/octopus/!svn/ver/6532/trunk/testsuite/linear_response/03-vdw_sternheimer.01-ground_state.inp
+END
+04-vib_modes.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/8198/trunk/testsuite/linear_response/04-vib_modes.01-ground_state.inp
+END
+03-vdw_sternheimer.02-vdw.inp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/6532/trunk/testsuite/linear_response/03-vdw_sternheimer.02-vdw.inp
+END
+01-casida.03-casida.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/10197/trunk/testsuite/linear_response/01-casida.03-casida.inp
+END
+02-h2o_pol_lr.04_h2o_susc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/5846/trunk/testsuite/linear_response/02-h2o_pol_lr.04_h2o_susc.inp
+END
+05-polarizability.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/4264/trunk/testsuite/linear_response/05-polarizability.01-gs.inp
+END
+02-h2o_pol_lr.test
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9819/trunk/testsuite/linear_response/02-h2o_pol_lr.test
+END
+01-casida.012-vib_modes.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/10202/trunk/testsuite/linear_response/01-casida.012-vib_modes.inp
+END
+05-polarizability.test
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/10021/trunk/testsuite/linear_response/05-polarizability.test
+END
+01-casida.022-unocc_restart.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/11113/trunk/testsuite/linear_response/01-casida.022-unocc_restart.inp
+END
+04-vib_modes.02-vib_modes.inp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/8198/trunk/testsuite/linear_response/04-vib_modes.02-vib_modes.inp
+END
+03-vdw_sternheimer.test
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/10190/trunk/testsuite/linear_response/03-vdw_sternheimer.test
+END
+04-vib_modes.test
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/11063/trunk/testsuite/linear_response/04-vib_modes.test
+END
+05-polarizability.02-sternheimer.inp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/octopus/!svn/ver/4264/trunk/testsuite/linear_response/05-polarizability.02-sternheimer.inp
+END
+05-polarizability.03-finite-diff.inp
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/octopus/!svn/ver/9668/trunk/testsuite/linear_response/05-polarizability.03-finite-diff.inp
+END
+01-casida.04-spectrum.inp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/10182/trunk/testsuite/linear_response/01-casida.04-spectrum.inp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/10978/trunk/testsuite/linear_response/Makefile.am
+END
+01-casida.02-unocc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/11113/trunk/testsuite/linear_response/01-casida.02-unocc.inp
+END
+04-vib_modes.03-vib_modes_fd.inp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/octopus/!svn/ver/8198/trunk/testsuite/linear_response/04-vib_modes.03-vib_modes_fd.inp
+END
+01-casida.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/10386/trunk/testsuite/linear_response/01-casida.01-gs.inp
+END

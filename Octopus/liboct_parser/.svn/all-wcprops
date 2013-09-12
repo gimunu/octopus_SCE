@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser
+END
+string_f.h
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/string_f.h
+END
+parser_f.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/parser_f.c
+END
+gsl_userdef.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/gsl_userdef.c
+END
+grammar.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/7692/trunk/liboct_parser/grammar.c
+END
+parse_exp.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/parse_exp.c
+END
+gsl_userdef.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/gsl_userdef.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/Makefile.am
+END
+symbols.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/symbols.c
+END
+parse.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/parse.c
+END
+grammar.y
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/grammar.y
+END
+liboct_parser.h
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/liboct_parser.h
+END
+symbols.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/liboct_parser/symbols.h
+END

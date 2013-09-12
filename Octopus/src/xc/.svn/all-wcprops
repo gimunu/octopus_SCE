@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/octopus/!svn/ver/11231/trunk/src/xc
+END
+functionals.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/xc/functionals.F90
+END
+fxc_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/xc/fxc_inc.F90
+END
+vxc_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/11195/trunk/src/xc/vxc_inc.F90
+END
+xc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/octopus/!svn/ver/11231/trunk/src/xc/xc.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/xc/Makefile.am
+END
+kxc_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/xc/kxc_inc.F90
+END
+functionals_list.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10074/trunk/src/xc/functionals_list.F90
+END

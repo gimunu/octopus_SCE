@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/external_libs/slatec
+END
+j4save.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5797/trunk/external_libs/slatec/j4save.f90
+END
+dslucs.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5797/trunk/external_libs/slatec/dslucs.f90
+END
+d1mach.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5782/trunk/external_libs/slatec/d1mach.f90
+END
+xgetua.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5797/trunk/external_libs/slatec/xgetua.f90
+END
+dchkw.f90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/5782/trunk/external_libs/slatec/dchkw.f90
+END
+i1mach.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5797/trunk/external_libs/slatec/i1mach.f90
+END
+dslui2.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5782/trunk/external_libs/slatec/dslui2.f90
+END
+dsilus.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5782/trunk/external_libs/slatec/dsilus.f90
+END
+qs2i1d.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/6601/trunk/external_libs/slatec/qs2i1d.f90
+END
+xercnt.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5797/trunk/external_libs/slatec/xercnt.f90
+END
+xermsg.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5797/trunk/external_libs/slatec/xermsg.f90
+END
+xerhlt.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5782/trunk/external_libs/slatec/xerhlt.f90
+END
+dsmv.f90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/5782/trunk/external_libs/slatec/dsmv.f90
+END
+fdump.f90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/5782/trunk/external_libs/slatec/fdump.f90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/external_libs/slatec/Makefile.am
+END
+xersve.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5797/trunk/external_libs/slatec/xersve.f90
+END
+isdcgs.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5782/trunk/external_libs/slatec/isdcgs.f90
+END
+xerprn.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5797/trunk/external_libs/slatec/xerprn.f90
+END
+dcgs.f90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/5797/trunk/external_libs/slatec/dcgs.f90
+END
+dslui.f90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/5806/trunk/external_libs/slatec/dslui.f90
+END
+ds2y.f90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/5782/trunk/external_libs/slatec/ds2y.f90
+END

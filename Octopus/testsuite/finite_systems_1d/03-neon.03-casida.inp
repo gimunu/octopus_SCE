@@ -1,0 +1,20 @@
+# -*- coding: utf-8 mode: shell-script -*-
+# $Id: 03-neon.03-casida.inp 11219 2013-08-31 19:08:52Z dstrubbe $
+#
+
+FromScratch = yes
+CalculationMode = casida
+
+Dimensions = 1
+Spacing = 0.2
+Radius = 50.0
+
+%Species
+  "Neon1D" | 1 | spec_user_defined | 10 | "-10/sqrt(0.25 + x^2)"
+%
+
+%Coordinates
+  "Neon1D" | 0 
+%
+
+CasidaKohnShamStates = "2-10"

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/octopus/!svn/ver/10978/trunk/libxc/m4
+END
+ac_prog_sed.m4
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/9694/trunk/libxc/m4/ac_prog_sed.m4
+END
+fc_integer.m4
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/libxc/m4/fc_integer.m4
+END
+fcflags.m4
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/libxc/m4/fcflags.m4
+END
+ax_f90_module_extension.m4
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/6372/trunk/libxc/m4/ax_f90_module_extension.m4
+END
+fortran.m4
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/libxc/m4/fortran.m4
+END

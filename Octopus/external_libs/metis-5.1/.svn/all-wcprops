@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/external_libs/metis-5.1
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/LICENSE.txt
+END
+Install.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/Install.txt
+END
+Changelog
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/Changelog
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/10978/trunk/external_libs/metis-5.1/Makefile.am
+END
+BUILD.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/10603/trunk/external_libs/metis-5.1/BUILD.txt
+END

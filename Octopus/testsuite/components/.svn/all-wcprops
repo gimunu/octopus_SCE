@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/testsuite/components
+END
+06-hartree_3d_isf.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/9992/trunk/testsuite/components/06-hartree_3d_isf.test
+END
+13-hartree_3d_mg.01-multigrid.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/9992/trunk/testsuite/components/13-hartree_3d_mg.01-multigrid.inp
+END
+07-cholesky_serial.01-real.inp
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/octopus/!svn/ver/10546/trunk/testsuite/components/07-cholesky_serial.01-real.inp
+END
+01-derivatives_1d.01.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/10886/trunk/testsuite/components/01-derivatives_1d.01.inp
+END
+14-center-geom.01-run.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/10208/trunk/testsuite/components/14-center-geom.01-run.inp
+END
+09-qr.01-real.inp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/7689/trunk/testsuite/components/09-qr.01-real.inp
+END
+02-derivatives_2d.01.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/10886/trunk/testsuite/components/02-derivatives_2d.01.inp
+END
+03-derivatives_3d.01.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8136/trunk/testsuite/components/03-derivatives_3d.01.inp
+END
+04-hartree_3d_cg.01-cg_corrected.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/9992/trunk/testsuite/components/04-hartree_3d_cg.01-cg_corrected.inp
+END
+13-hartree_3d_mg.test
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/9992/trunk/testsuite/components/13-hartree_3d_mg.test
+END
+10-hartree_pfft.02-fft_corrected.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/8999/trunk/testsuite/components/10-hartree_pfft.02-fft_corrected.inp
+END
+14-center-geom.test
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/10614/trunk/testsuite/components/14-center-geom.test
+END
+11-hartree_cl.test
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/9896/trunk/testsuite/components/11-hartree_cl.test
+END
+01-derivatives_1d.02-fortran.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/10886/trunk/testsuite/components/01-derivatives_1d.02-fortran.inp
+END
+01-derivatives_1d.test
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/10876/trunk/testsuite/components/01-derivatives_1d.test
+END
+15-cholesky_parallel.01-real.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/10549/trunk/testsuite/components/15-cholesky_parallel.01-real.inp
+END
+02-derivatives_2d.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/9819/trunk/testsuite/components/02-derivatives_2d.test
+END
+11-hartree_cl.01-fft.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/9953/trunk/testsuite/components/11-hartree_cl.01-fft.inp
+END
+03-derivatives_3d.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/9819/trunk/testsuite/components/03-derivatives_3d.test
+END
+07-cholesky_serial.02-complex.inp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/octopus/!svn/ver/10546/trunk/testsuite/components/07-cholesky_serial.02-complex.inp
+END
+05-hartree_3d_fft.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/9992/trunk/testsuite/components/05-hartree_3d_fft.test
+END
+07-cholesky_serial.test
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/10546/trunk/testsuite/components/07-cholesky_serial.test
+END
+09-qr.02-complex.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/10548/trunk/testsuite/components/09-qr.02-complex.inp
+END
+05-hartree_3d_fft.01-fft.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9992/trunk/testsuite/components/05-hartree_3d_fft.01-fft.inp
+END
+08-mgs.02-complex.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/7349/trunk/testsuite/components/08-mgs.02-complex.inp
+END
+09-qr.test
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10548/trunk/testsuite/components/09-qr.test
+END
+06-hartree_3d_isf.01-isf.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/9992/trunk/testsuite/components/06-hartree_3d_isf.01-isf.inp
+END
+04-hartree_3d_cg.test
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/9992/trunk/testsuite/components/04-hartree_3d_cg.test
+END
+08-mgs.test
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/9819/trunk/testsuite/components/08-mgs.test
+END
+15-cholesky_parallel.02-complex.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/10549/trunk/testsuite/components/15-cholesky_parallel.02-complex.inp
+END
+15-cholesky_parallel.test
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/10549/trunk/testsuite/components/15-cholesky_parallel.test
+END
+12-hartree_direct_3d.01.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9944/trunk/testsuite/components/12-hartree_direct_3d.01.inp
+END
+08-mgs.01-real.inp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/7349/trunk/testsuite/components/08-mgs.01-real.inp
+END
+10-hartree_pfft.test
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/9896/trunk/testsuite/components/10-hartree_pfft.test
+END
+12-hartree_direct_3d.test
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9944/trunk/testsuite/components/12-hartree_direct_3d.test
+END
+10-hartree_pfft.01-fft.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/8999/trunk/testsuite/components/10-hartree_pfft.01-fft.inp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/testsuite/components/Makefile.am
+END
+05-hartree_3d_fft.02-fft_corrected.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/9992/trunk/testsuite/components/05-hartree_3d_fft.02-fft_corrected.inp
+END

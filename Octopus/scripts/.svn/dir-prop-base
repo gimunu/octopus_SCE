@@ -1,0 +1,10 @@
+K 10
+svn:ignore
+V 57
+Makefile
+Makefile.in
+
+oct-analyze_projections
+oct-vdW_c6
+
+END

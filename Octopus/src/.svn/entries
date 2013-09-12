@@ -1,0 +1,150 @@
+10
+
+dir
+11250
+http://www.tddft.org/svn/octopus/trunk/src
+http://www.tddft.org/svn/octopus
+
+
+
+2013-09-10T14:32:58.556501Z
+11250
+micael
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+53d8e6fd-f412-0410-a60b-8e56063eb7bf
+
+basic
+dir
+
+include
+dir
+
+main
+dir
+
+system
+dir
+
+sternheimer
+dir
+
+grid
+dir
+
+math
+dir
+
+poisson
+dir
+
+species
+dir
+
+common-rules.make
+file
+
+
+
+
+2013-09-12T11:55:58.000000Z
+855c7099a810f04c4a3b61e2689ef0f7
+2013-08-19T19:39:58.246870Z
+11142
+jrfsousa
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5954
+
+utils
+dir
+
+opt_control
+dir
+
+frozen
+dir
+
+hamiltonian
+dir
+
+states
+dir
+
+td
+dir
+
+ions
+dir
+
+Makefile.am
+file
+
+
+
+
+2013-09-12T11:55:58.000000Z
+0af432bb0188a2e5db1084b7ebab4fbe
+2013-08-19T19:39:58.246870Z
+11142
+jrfsousa
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1034
+
+xc
+dir
+
+scf
+dir
+

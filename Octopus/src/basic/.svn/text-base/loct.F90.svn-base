@@ -1,0 +1,242 @@
+!! Copyright (C) 2002-2006 M. Marques, A. Castro, A. Rubio, G. Bertsch, M. Oliveira
+!!
+!! This program is free software; you can redistribute it and/or modify
+!! it under the terms of the GNU General Public License as published by
+!! the Free Software Foundation; either version 2, or (at your option)
+!! any later version.
+!!
+!! This program is distributed in the hope that it will be useful,
+!! but WITHOUT ANY WARRANTY; without even the implied warranty of
+!! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!! GNU General Public License for more details.
+!!
+!! You should have received a copy of the GNU General Public License
+!! along with this program; if not, write to the Free Software
+!! Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+!! 02110-1301, USA.
+!!
+!! $Id$
+
+#include "global.h"
+
+module loct_m
+
+  implicit none
+
+  !> Define which routines can be seen from the outside
+  private
+  public ::                  &
+    loct_clock,              &
+    loct_gettimeofday,       &
+    loct_nanosleep,          &
+    loct_getcwd,             &
+    loct_sysname,            &
+    loct_search_file_lr,     &
+    loct_mkdir,              &
+    loct_stat,               &
+    loct_rm,                 &
+    loct_rm_status_files,    &
+    loct_number_of_lines,    &
+    loct_getenv,             &
+    loct_isinstringlist,     &
+    loct_progress_bar,       &
+    loct_printRecipe,        &
+    loct_strerror,           &
+    get_memory_usage,        &
+    loct_exit_failure
+
+#if defined(HAVE_GDLIB)
+  public ::                    &
+    loct_gdimage_create_from,  &
+    loct_gdimage_sx,           &
+    loct_gdimage_sy,           &
+    loct_gdimage_get_pixel_rgb
+#endif
+
+  ! ---------------------------------------------------------
+  !> System information (time, memory, sysname)
+
+  interface loct_strerror
+    subroutine oct_strerror(errno, res)
+      integer, intent(in) :: errno
+      character(len=*), intent(out)  :: res
+    end subroutine oct_strerror
+  end interface loct_strerror
+
+  interface loct_clock
+    function oct_clock()
+      real(8) :: oct_clock
+    end function oct_clock
+  end interface loct_clock
+
+  interface loct_gettimeofday
+    subroutine oct_gettimeofday(sec, usec)
+      integer, intent(out) :: sec, usec
+    end subroutine oct_gettimeofday
+  end interface loct_gettimeofday
+
+  interface loct_nanosleep
+    subroutine oct_nanosleep(sec, nsec)
+      integer, intent(in) :: sec  !< number of seconds
+      integer, intent(in) :: nsec !< + number of nanoseconds
+    end subroutine oct_nanosleep
+  end interface loct_nanosleep
+
+  interface loct_sysname
+    subroutine oct_sysname(name)
+      character(len=*), intent(out) :: name
+    end subroutine oct_sysname
+  end interface loct_sysname
+
+  interface loct_getcwd
+    subroutine oct_getcwd(name)
+      character(len=*), intent(out) :: name
+    end subroutine oct_getcwd
+  end interface loct_getcwd
+
+
+  ! ---------------------------------------------------------
+  !> File-handling
+  interface loct_mkdir
+    subroutine oct_mkdir(name)
+      character(len=*), intent(in) :: name
+    end subroutine oct_mkdir
+  end interface loct_mkdir
+
+  interface loct_stat
+    subroutine oct_stat(ierr, name)
+      integer,          intent(out) :: ierr
+      character(len=*), intent(in)  :: name
+    end subroutine oct_stat
+  end interface loct_stat
+
+  interface loct_rm
+    subroutine oct_rm(name)
+      character(len=*), intent(in) :: name
+    end subroutine oct_rm
+  end interface loct_rm
+
+  interface loct_number_of_lines
+    integer function number_of_lines(filename)
+      character(len=*), intent(in) :: filename
+    end function number_of_lines
+  end interface loct_number_of_lines
+
+  interface loct_search_file_lr
+    subroutine oct_search_file_lr(freq, tag, ierr, dirname)
+      REAL_DOUBLE,      intent(inout) :: freq
+      integer,          intent(in)    :: tag
+      integer,          intent(out)   :: ierr
+      character(len=*), intent(in)    :: dirname
+    end subroutine oct_search_file_lr
+  end interface loct_search_file_lr
+
+  ! ---------------------------------------------------------
+  !> Varia
+  interface loct_getenv
+    subroutine oct_getenv(var, val)
+      character(len=*), intent(in)  :: var
+      character(len=*), intent(out) :: val
+    end subroutine oct_getenv
+  end interface loct_getenv
+
+  interface loct_progress_bar
+    subroutine oct_progress_bar(a, maxcount)
+      integer, intent(in) :: a, maxcount
+    end subroutine oct_progress_bar
+  end interface loct_progress_bar
+
+  interface loct_printRecipe
+    subroutine oct_printRecipe(dir, filename)
+      character(len=*), intent(in)  :: dir
+      character(len=*), intent(out) :: filename
+    end subroutine oct_printRecipe
+  end interface loct_printRecipe
+
+  interface
+    subroutine loct_exit_failure()
+    end subroutine loct_exit_failure
+  end interface
+
+  interface loct_wfs_list
+    subroutine oct_wfs_list(str, l)
+      character(len=*), intent(in)  :: str
+      integer,          intent(out) :: l !< array
+    end subroutine oct_wfs_list
+  end interface loct_wfs_list
+
+  ! ---------------------------------------------------------
+  !> GD library
+#if defined(HAVE_GDLIB)
+  interface loct_gdimage_create_from
+    function oct_gdimage_create_from(filename)
+      use c_pointer_m
+      type(c_ptr) :: oct_gdimage_create_from
+      character(len=*), intent(in) :: filename
+    end function oct_gdimage_create_from
+  end interface loct_gdimage_create_from
+
+  interface loct_gdimage_sx
+    function oct_gdimage_sx(im)
+      use c_pointer_m
+      integer :: oct_gdimage_sx
+      type(c_ptr), intent(in) :: im
+    end function oct_gdimage_sx
+  end interface loct_gdimage_sx
+
+  interface loct_gdimage_sy
+    function oct_gdimage_sy(im)
+      use c_pointer_m
+      integer :: oct_gdimage_sy
+      type(c_ptr), intent(in) :: im
+    end function oct_gdimage_sy
+  end interface loct_gdimage_sy
+
+  interface loct_gdimage_get_pixel_rgb
+    subroutine oct_gdimage_get_pixel_rgb(im, x, y, r, g, b)
+      use c_pointer_m
+      type(c_ptr), intent(in)  :: im
+      integer,     intent(in)  :: x, y
+      integer,     intent(out) :: r, g, b
+    end subroutine oct_gdimage_get_pixel_rgb
+  end interface loct_gdimage_get_pixel_rgb
+#endif
+
+ interface
+   integer(SIZEOF_VOIDP) function get_memory_usage()
+   end function get_memory_usage
+ end interface
+
+contains
+
+  logical function loct_isinstringlist(a, s) result(inlist)
+    integer,          intent(in) :: a
+    character(len=*), intent(in) :: s
+
+    integer, allocatable :: list(:)
+
+    allocate(list(2**14))
+
+    call loct_wfs_list(s, list(1))
+    inlist = .false.
+    if (list(a) == 1) inlist = .true.
+
+    deallocate(list)
+
+  end function loct_isinstringlist
+
+  subroutine loct_rm_status_files(current_label)
+    character(len=*), intent(in) :: current_label
+
+    call loct_rm('exec/'//trim(current_label)//'oct-status-running')
+    call loct_rm('exec/'//trim(current_label)//'oct-status-finished')
+    call loct_rm('exec/'//trim(current_label)//'oct-status-aborted')
+
+  end subroutine loct_rm_status_files
+
+end module loct_m
+
+!! Local Variables:
+!! mode: f90
+!! coding: utf-8
+!! End:

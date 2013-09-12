@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11201/trunk/testsuite/complex_scaling
+END
+01-harmonic-oscillator.02-complex_lda.inp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/octopus/!svn/ver/10806/trunk/testsuite/complex_scaling/01-harmonic-oscillator.02-complex_lda.inp
+END
+01-harmonic-oscillator.test
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/11201/trunk/testsuite/complex_scaling/01-harmonic-oscillator.test
+END
+02-1dwell.test
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/11201/trunk/testsuite/complex_scaling/02-1dwell.test
+END
+01-harmonic-oscillator.01-independent.inp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/octopus/!svn/ver/10806/trunk/testsuite/complex_scaling/01-harmonic-oscillator.01-independent.inp
+END
+02-1dwell.01-lda.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/10806/trunk/testsuite/complex_scaling/02-1dwell.01-lda.inp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/10978/trunk/testsuite/complex_scaling/Makefile.am
+END

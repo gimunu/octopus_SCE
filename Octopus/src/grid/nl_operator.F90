@@ -1,0 +1,1155 @@
+!! Copyright (C) 2002-2006 M. Marques, A. Castro, A. Rubio, G. Bertsch
+!!
+!! This program is free software; you can redistribute it and/or modify
+!! it under the terms of the GNU General Public License as published by
+!! the Free Software Foundation; either version 2, or (at your option)
+!! any later version.
+!!
+!! This program is distributed in the hope that it will be useful,
+!! but WITHOUT ANY WARRANTY; without even the implied warranty of
+!! MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+!! GNU General Public License for more details.
+!!
+!! You should have received a copy of the GNU General Public License
+!! along with this program; if not, write to the Free Software
+!! Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+!! 02110-1301, USA.
+!!
+!! $Id: nl_operator.F90 11111 2013-08-13 15:40:24Z joseba $
+
+#include "global.h"
+
+module nl_operator_m
+  use batch_m
+  use boundaries_m
+#ifdef HAVE_OPENCL
+  use cl
+#endif
+  use c_pointer_m
+  use datasets_m
+  use global_m
+  use io_m
+  use loct_pointer_m
+  use math_m
+  use index_m
+  use mesh_m
+  use messages_m
+  use multicomm_m
+  use mpi_m
+  use octcl_kernel_m
+  use opencl_m
+  use operate_f_m
+  use par_vec_m
+  use parser_m
+  use partition_m
+  use profiling_m
+  use simul_box_m
+  use stencil_m
+  use types_m
+  use varinfo_m
+
+  implicit none
+
+  private
+  public ::                     &
+    nl_operator_t,              &
+    nl_operator_index_t,        &
+    nl_operator_global_init,    &
+    nl_operator_global_end,     &
+    nl_operator_init,           &
+    nl_operator_copy,           &
+    nl_operator_build,          &
+    nl_operator_transpose,      &
+    dnl_operator_operate,       &
+    znl_operator_operate,       &
+    dnl_operator_operate_batch, &
+    znl_operator_operate_batch, &
+    dnl_operator_operate_diag,  &
+    znl_operator_operate_diag,  &
+    nl_operator_end,            &
+    nl_operator_skewadjoint,    &
+    nl_operator_selfadjoint,    &
+    nl_operator_get_index,      &
+    nl_operator_update_weights, &
+    nl_operator_np_zero_bc,         &
+    nl_operator_compact_boundaries
+
+  type nl_operator_index_t
+    private
+    integer          :: nri
+    integer, pointer :: imin(:)
+    integer, pointer :: imax(:)
+    integer, pointer :: ri(:, :)
+  end type nl_operator_index_t
+
+  type nl_operator_t
+    type(stencil_t)       :: stencil
+    type(mesh_t), pointer :: mesh      !< pointer to the underlying mesh
+    integer, pointer      :: nn(:)     !< the size of the stencil at each point (for curvilinear coordinates)
+    integer               :: np        !< number of points in mesh
+    !> When running in parallel mode, the next three arrays are unique on each node.
+    integer, pointer  :: index(:,:)    !< index of the points. Unique on each parallel process.
+    FLOAT,   pointer  :: w_re(:,:)     !< weightsp, real part. Unique on each parallel process.
+    FLOAT,   pointer  :: w_im(:,:)     !< weightsp, imaginary part. Unique on each parallel process.
+
+    logical               :: const_w   !< are the weights independent of index i
+    logical               :: cmplx_op  !< .true. if we have also imaginary weights
+
+    character(len=40) :: label
+
+    !> the compressed index of grid points
+    integer :: nri
+    integer, pointer :: ri(:,:)
+    integer, pointer :: rimap(:)
+    integer, pointer :: rimap_inv(:)
+    
+    type(nl_operator_index_t) :: inner
+    type(nl_operator_index_t) :: outer
+
+#ifdef HAVE_OPENCL
+    type(octcl_kernel_t) :: kernel
+    type(opencl_mem_t) :: buff_imin
+    type(opencl_mem_t) :: buff_imax
+    type(opencl_mem_t) :: buff_ri
+    type(opencl_mem_t) :: buff_map
+    type(opencl_mem_t) :: buff_stencil
+    type(opencl_mem_t) :: buff_ip_to_xyz
+    type(opencl_mem_t) :: buff_xyz_to_ip
+#endif
+  end type nl_operator_t
+
+  integer, parameter :: &
+       OP_FORTRAN = 0,  &
+       OP_VEC     = 1,  &
+       OP_MIN     = OP_FORTRAN, &
+       OP_MAX     = OP_VEC
+
+#ifdef HAVE_OPENCL
+  integer, parameter ::     &
+    OP_INVMAP    = 1,       &
+    OP_MAP       = 2,       &
+    OP_NOMAP     = 3
+#endif
+
+  integer, public, parameter :: OP_ALL = 3, OP_INNER = 1, OP_OUTER = 2
+
+  logical :: initialized = .false.
+  logical :: compact_boundaries
+
+  interface
+    integer function op_is_available(opid, type)
+      integer, intent(in) :: opid, type
+    end function op_is_available
+  end interface
+
+  integer :: dfunction_global = -1
+  integer :: zfunction_global = -1
+#ifdef HAVE_OPENCL
+  integer :: function_opencl
+#endif
+
+  type(profile_t), save :: operate_batch_prof
+
+
+contains
+  
+  ! ---------------------------------------------------------
+  subroutine nl_operator_global_init()
+    integer :: default
+
+    PUSH_SUB(nl_operator_global_init)
+
+    !%Variable OperateDouble
+    !%Type integer
+    !%Section Execution::Optimization
+    !%Description
+    !% This variable selects the subroutine used to apply non-local
+    !% operators over the grid for real functions.
+    !% By default the optimized version is used (except in single-precision build).
+    !%Option fortran 0
+    !% The standard Fortran function.
+    !%Option optimized 1
+    !% This version is optimized using vector primitives (if available).
+    !%End
+
+    !%Variable OperateComplex
+    !%Type integer
+    !%Section Execution::Optimization
+    !%Description
+    !% This variable selects the subroutine used to apply non-local
+    !% operators over the grid for complex functions. 
+    !% By default the optimized version is used (except in single-precision build).
+    !%Option fortran 0
+    !% The standard Fortran function.
+    !%Option optimized 1
+    !% This version is optimized using vector primitives (if available).
+    !%End
+
+#ifndef SINGLE_PRECISION
+    default = OP_VEC
+#else
+    default = OP_FORTRAN
+#endif
+
+    call parse_integer(datasets_check('OperateDouble'),  default, dfunction_global)
+    if(.not.varinfo_valid_option('OperateDouble', dfunction_global)) call input_error('OperateDouble')
+
+    call parse_integer(datasets_check('OperateComplex'), default, zfunction_global)
+    if(.not.varinfo_valid_option('OperateComplex', dfunction_global)) call input_error('OperateComplex')
+
+#ifdef HAVE_OPENCL
+    if(opencl_is_enabled()) then
+
+      !%Variable OperateOpenCL
+      !%Type integer
+      !%Default map
+      !%Section Execution::Optimization
+      !%Description
+      !% This variable selects the subroutine used to apply non-local
+      !% operators over the grid when OpenCL is used. The default is map.
+      !%Option invmap 1
+      !% The standard implementation ported to OpenCL.
+      !%Option map 2
+      !% A different version, more suitable for GPUs.
+      !%Option nomap 3
+      !% (Experimental) This version does not use a map.
+      !%End
+      call parse_integer(datasets_check('OperateOpenCL'),  OP_MAP, function_opencl)
+
+    end if
+#endif
+
+    !%Variable NLOperatorCompactBoundaries
+    !%Type logical
+    !%Default no
+    !%Section Execution::Optimization
+    !%Description
+    !% (Experimental) When set to yes, for finite systems Octopus will
+    !% map boundary points for finite-differences operators to a few
+    !% memory locations. This increases performance, however it is
+    !% experimental and has not been thoroughly tested.
+    !%End
+
+    call parse_logical(datasets_check('NLOperatorCompactBoundaries'), .false., compact_boundaries)
+
+    if(compact_boundaries) then
+      call messages_experimental('NLOperatorCompactBoundaries')
+    end if
+      
+    POP_SUB(nl_operator_global_init)
+  end subroutine nl_operator_global_init
+
+  ! ---------------------------------------------------------
+
+  subroutine nl_operator_global_end()
+    PUSH_SUB(nl_operator_global_end)
+
+    POP_SUB(nl_operator_global_end)
+  end subroutine nl_operator_global_end
+
+  ! ---------------------------------------------------------
+
+  character(len=8) function op_function_name(id) result(str)
+    integer, intent(in) :: id
+
+    PUSH_SUB(op_function_name)
+    
+    str = 'unknown'
+    if(id == OP_FORTRAN) str = 'Fortran'
+    if(id == OP_VEC)     str = 'Vector'
+    
+    POP_SUB(op_function_name)
+  end function op_function_name
+
+
+  ! ---------------------------------------------------------
+  subroutine nl_operator_init(op, label)
+    type(nl_operator_t), intent(out) :: op
+    character(len=*),    intent(in)  :: label
+
+    PUSH_SUB(nl_operator_init)
+
+    nullify(op%mesh, op%index, op%w_re, op%w_im, op%ri, op%rimap, op%rimap_inv)
+    nullify(op%inner%imin, op%inner%imax, op%inner%ri)
+    nullify(op%outer%imin, op%outer%imax, op%outer%ri)
+    nullify(op%nn)
+
+    op%label = label
+
+    POP_SUB(nl_operator_init)
+  end subroutine nl_operator_init
+
+
+  ! ---------------------------------------------------------
+  subroutine nl_operator_copy(opo, opi)
+    type(nl_operator_t),         intent(out) :: opo
+    type(nl_operator_t), target, intent(in)  :: opi
+
+    PUSH_SUB(nl_operator_copy)
+
+    call nl_operator_init(opo, opi%label)
+
+    call stencil_copy(opi%stencil, opo%stencil)
+
+    opo%np           =  opi%np
+    opo%mesh         => opi%mesh
+
+    call loct_pointer_copy(opo%nn, opi%nn)
+    call loct_pointer_copy(opo%index, opi%index)
+    call loct_pointer_copy(opo%w_re, opi%w_re)
+    call loct_pointer_copy(opo%w_im, opi%w_im)
+
+    opo%const_w   = opi%const_w
+    opo%cmplx_op  = opi%cmplx_op
+
+    opo%nri       =  opi%nri
+    ASSERT(associated(opi%ri))
+
+    call loct_pointer_copy(opo%ri, opi%ri)
+    call loct_pointer_copy(opo%rimap, opi%rimap)
+    call loct_pointer_copy(opo%rimap_inv, opi%rimap_inv)
+    
+    if(opi%mesh%parallel_in_domains) then
+      opo%inner%nri = opi%inner%nri
+      call loct_pointer_copy(opo%inner%imin, opi%inner%imin)
+      call loct_pointer_copy(opo%inner%imax, opi%inner%imax)
+      call loct_pointer_copy(opo%inner%ri,   opi%inner%ri)      
+
+      opo%outer%nri = opi%outer%nri
+      call loct_pointer_copy(opo%outer%imin, opi%outer%imin)
+      call loct_pointer_copy(opo%outer%imax, opi%outer%imax)
+      call loct_pointer_copy(opo%outer%ri,   opi%outer%ri)
+    end if
+
+    POP_SUB(nl_operator_copy)
+  end subroutine nl_operator_copy
+
+
+  ! ---------------------------------------------------------
+  subroutine nl_operator_build(mesh, op, np, const_w, cmplx_op)
+    type(mesh_t), target, intent(in)    :: mesh
+    type(nl_operator_t),  intent(inout) :: op
+    integer,              intent(in)    :: np       !< Number of (local) points.
+    logical, optional,    intent(in)    :: const_w  !< are the weights constant (independent of the point)
+    logical, optional,    intent(in)    :: cmplx_op !< do we have complex weights?
+
+    integer :: ii, jj, p1(MAX_DIM), time, current, size
+    integer, allocatable :: st1(:), st2(:), st1r(:), stencil(:, :)
+    integer :: nn
+#ifdef HAVE_MPI
+    integer :: ir, maxp, iinner, iouter
+#endif
+    logical :: change, force_change
+    character(len=200) :: flags
+
+    PUSH_SUB(nl_operator_build)
+
+#ifdef HAVE_MPI
+    if(mesh%parallel_in_domains .and. .not. const_w) then
+      call messages_experimental('Domain parallelization with curvilinear coordinates')
+    end if
+#endif
+
+    ASSERT(np > 0)
+
+    ! store values in structure
+    op%np       = np
+    op%mesh     => mesh
+    op%const_w  = .false.
+    op%cmplx_op = .false.
+    if(present(const_w )) op%const_w  = const_w
+    if(present(cmplx_op)) op%cmplx_op = cmplx_op
+
+    ! allocate weights op%w
+    if(op%const_w) then
+      SAFE_ALLOCATE(op%w_re(1:op%stencil%size, 1:1))
+      if (op%cmplx_op) then
+        SAFE_ALLOCATE(op%w_im(1:op%stencil%size, 1:1))
+      end if
+      if(in_debug_mode) then
+        message(1) = 'Info: nl_operator_build: working with constant weights.'
+        call messages_info(1)
+      end if
+    else
+      SAFE_ALLOCATE(op%w_re(1:op%stencil%size, 1:op%np))
+      if (op%cmplx_op) then
+        SAFE_ALLOCATE(op%w_im(1:op%stencil%size, 1:op%np))
+      end if
+      if(in_debug_mode) then
+        message(1) = 'Info: nl_operator_build: working with non-constant weights.'
+        call messages_info(1)
+      end if
+    end if
+
+    ! set initially to zero
+    op%w_re = M_ZERO
+    if (op%cmplx_op) op%w_im = M_ZERO
+
+    ! Build lookup table
+    SAFE_ALLOCATE(st1(1:op%stencil%size))
+    SAFE_ALLOCATE(st1r(1:op%stencil%size))
+    SAFE_ALLOCATE(st2(1:op%stencil%size))
+
+    op%nri = 0
+    do time = 1, 2
+      st2 = 0
+      do ii = 1, np
+        p1 = 0
+        if(mesh%parallel_in_domains) then
+          ! When running in parallel, get global number of
+          ! point ii.
+          call index_to_coords(mesh%idx, mesh%sb%dim, &
+            mesh%vp%local(mesh%vp%xlocal + ii - 1), p1)
+        else
+          call index_to_coords(mesh%idx, mesh%sb%dim, ii, p1)
+        end if
+
+        do jj = 1, op%stencil%size
+          ! Get global index of p1 plus current stencil point.
+          if(mesh%sb%mr_flag) then
+            st1(jj) = index_from_coords(mesh%idx, mesh%sb%dim, &
+                 p1(1:MAX_DIM) + mesh%resolution(p1(1), p1(2), p1(3))*op%stencil%points(1:MAX_DIM, jj))
+          else
+            st1(jj) = index_from_coords(mesh%idx, mesh%sb%dim, p1(1:MAX_DIM) + op%stencil%points(1:MAX_DIM, jj))
+          end if
+#ifdef HAVE_MPI
+          if(mesh%parallel_in_domains) then
+            ! When running parallel, translate this global
+            ! number back to a local number.
+            st1(jj) = vec_global2local(mesh%vp, st1(jj), mesh%vp%partno)
+          end if
+#endif
+          ! if boundary conditions are zero, we can remap boundary
+          ! points to reduce memory accesses. We cannot do this for the
+          ! first point, since it is used to build the weights, so it
+          ! has to have the positions right
+          if(ii > 1 .and. compact_boundaries .and. mesh_compact_boundaries(mesh)) then
+            st1(jj) = min(st1(jj), mesh%np + 1)
+          end if
+          ASSERT(st1(jj) > 0)
+        end do
+
+        st1(1:op%stencil%size) = st1(1:op%stencil%size) - ii
+
+        change = any(st1 /= st2) 
+
+        !the next is to detect when we move from a point that does not
+        !have boundary points as neighbours to one that has
+        force_change = any(st1 + ii > mesh%np) .and. all(st2 + ii - 1 <= mesh%np) 
+
+        if(change .and. compact_boundaries .and. mesh_compact_boundaries(mesh)) then 
+          !try to repair it by changing the boundary points
+          do jj = 1, op%stencil%size
+            if(st1(jj) + ii > mesh%np .and. st2(jj) + ii - 1 > mesh%np .and. st2(jj) + ii <= mesh%np_part) then
+              st1r(jj) = st2(jj)
+            else
+              st1r(jj) = st1(jj)
+            end if
+          end do
+
+          change = any(st1r /= st2)
+
+          if(.not. change) st1 = st1r
+        end if
+
+        ! if the stencil changes
+        if (change .or. force_change) then 
+          !store it
+          st2 = st1
+
+          !first time, just count
+          if ( time == 1 ) op%nri = op%nri + 1
+
+          !second time, store
+          if( time == 2 ) then
+            current = current + 1
+            op%ri(1:op%stencil%size, current) = st1(1:op%stencil%size)
+          end if
+        end if
+
+        if(time == 2) op%rimap(ii) = current
+
+      end do
+
+      !after counting, allocate
+      if (time == 1 ) then 
+        SAFE_ALLOCATE(op%ri(1:op%stencil%size, 1:op%nri))
+        SAFE_ALLOCATE(op%rimap(1:op%np))
+        SAFE_ALLOCATE(op%rimap_inv(1:op%nri + 1))
+        op%ri        = 0
+        op%rimap     = 0
+        op%rimap_inv = 0
+        current      = 0
+
+        ! the sizes
+        if(mesh%use_curvilinear) then
+          SAFE_ALLOCATE(op%nn(1:op%nri))
+          ! for the moment all the sizes are the same
+          op%nn = op%stencil%size
+        end if
+      end if
+
+    end do
+
+    !the inverse mapping
+    op%rimap_inv(1) = 0
+    do jj = 1, op%np
+      op%rimap_inv(op%rimap(jj) + 1) = jj
+    end do
+    op%rimap_inv(op%nri + 1) = op%np
+
+    SAFE_DEALLOCATE_A(st1)
+    SAFE_DEALLOCATE_A(st1r)
+    SAFE_DEALLOCATE_A(st2)
+
+    do jj = 1, op%nri
+      nn = op%rimap_inv(jj + 1) - op%rimap_inv(jj)
+    end do
+
+
+#ifdef HAVE_MPI
+    if(op%mesh%parallel_in_domains) then
+      !now build the arrays required to apply the nl_operator by parts
+
+      !count points
+      op%inner%nri = 0
+      op%outer%nri = 0
+      do ir = 1, op%nri
+        maxp = op%rimap_inv(ir + 1) + maxval(op%ri(1:op%stencil%size, ir))
+        if (maxp <= np) then
+          !inner point
+          op%inner%nri = op%inner%nri + 1
+          ASSERT(op%inner%nri <= op%nri)
+        else
+          !outer point
+          op%outer%nri = op%outer%nri + 1
+          ASSERT(op%outer%nri <= op%nri)
+        end if
+      end do
+      
+      ASSERT(op%inner%nri + op%outer%nri == op%nri)
+      
+      SAFE_ALLOCATE(op%inner%imin(1:op%inner%nri + 1))
+      SAFE_ALLOCATE(op%inner%imax(1:op%inner%nri))
+      SAFE_ALLOCATE(op%inner%ri(1:op%stencil%size, 1:op%inner%nri))
+
+      SAFE_ALLOCATE(op%outer%imin(1:op%outer%nri + 1))
+      SAFE_ALLOCATE(op%outer%imax(1:op%outer%nri))
+      SAFE_ALLOCATE(op%outer%ri(1:op%stencil%size, 1:op%outer%nri))
+
+      !now populate the arrays
+      iinner = 0
+      iouter = 0
+      do ir = 1, op%nri
+        maxp = op%rimap_inv(ir + 1) + maxval(op%ri(1:op%stencil%size, ir))
+        if (maxp <= np) then
+          !inner point
+          iinner = iinner + 1
+          op%inner%imin(iinner) = op%rimap_inv(ir)
+          op%inner%imax(iinner) = op%rimap_inv(ir + 1)
+          op%inner%ri(1:op%stencil%size, iinner) = op%ri(1:op%stencil%size, ir)
+        else
+          !outer point
+          iouter = iouter + 1
+          op%outer%imin(iouter) = op%rimap_inv(ir)
+          op%outer%imax(iouter) = op%rimap_inv(ir + 1)
+          op%outer%ri(1:op%stencil%size, iouter) = op%ri(1:op%stencil%size, ir)
+        end if
+      end do
+      
+      !verify that all points in the inner operator are actually inner
+      do ir = 1, op%inner%nri
+        do ii = op%inner%imin(ir) + 1, op%inner%imax(ir)
+          ASSERT(all(ii + op%inner%ri(1:op%stencil%size, ir) <= mesh%np))
+        end do
+      end do
+      
+    end if
+#endif
+
+#ifdef HAVE_OPENCL
+    if(opencl_is_enabled() .and. op%const_w) then
+
+      write(flags, '(i5)') op%stencil%size
+      flags='-DNDIM=3 -DSTENCIL_SIZE='//trim(adjustl(flags))
+
+      select case(function_opencl)
+      case(OP_INVMAP)
+        call octcl_kernel_build(op%kernel, 'operate.cl', 'operate', flags)
+      case(OP_MAP)
+        call octcl_kernel_build(op%kernel, 'operate.cl', 'operate_map', flags)
+      case(OP_NOMAP)
+        call octcl_kernel_build(op%kernel, 'operate.cl', 'operate_nomap', flags)
+      end select
+
+      call opencl_create_buffer(op%buff_ri, CL_MEM_READ_ONLY, TYPE_INTEGER, op%nri*op%stencil%size)
+      call opencl_write_buffer(op%buff_ri, op%nri*op%stencil%size, op%ri)
+
+      select case(function_opencl)
+      case(OP_INVMAP)
+        call opencl_create_buffer(op%buff_imin, CL_MEM_READ_ONLY, TYPE_INTEGER, op%nri)
+        call opencl_write_buffer(op%buff_imin, op%nri, op%rimap_inv(1:))
+        call opencl_create_buffer(op%buff_imax, CL_MEM_READ_ONLY, TYPE_INTEGER, op%nri)
+        call opencl_write_buffer(op%buff_imax, op%nri, op%rimap_inv(2:))
+
+      case(OP_MAP)
+        call opencl_create_buffer(op%buff_map, CL_MEM_READ_ONLY, TYPE_INTEGER, pad(op%mesh%np, opencl_max_workgroup_size()))
+        call opencl_write_buffer(op%buff_map, op%mesh%np, (op%rimap - 1)*op%stencil%size)
+
+      case(OP_NOMAP)
+
+        ASSERT(op%mesh%sb%dim == 3)
+        ASSERT(.not. op%mesh%parallel_in_domains)
+
+        call opencl_create_buffer(op%buff_map, CL_MEM_READ_ONLY, TYPE_INTEGER, pad(op%mesh%np, opencl_max_workgroup_size()))
+        call opencl_write_buffer(op%buff_map, op%mesh%np, (op%rimap - 1)*op%stencil%size)
+        
+        SAFE_ALLOCATE(stencil(1:op%mesh%sb%dim, 1:op%stencil%size + 1))
+
+        stencil(1:op%mesh%sb%dim, 1:op%stencil%size) = op%stencil%points(1:op%mesh%sb%dim, 1:op%stencil%size)
+
+        stencil(1, op%stencil%size + 1) = 1
+        stencil(2, op%stencil%size + 1) = mesh%idx%nr(2, 1) - mesh%idx%nr(1, 1) + 1
+        stencil(3, op%stencil%size + 1) = stencil(2, op%stencil%size + 1)*(mesh%idx%nr(2, 2) - mesh%idx%nr(1, 2) + 1)
+
+        call opencl_create_buffer(op%buff_stencil, CL_MEM_READ_ONLY, TYPE_INTEGER, op%mesh%sb%dim*(op%stencil%size + 1))
+        call opencl_write_buffer(op%buff_stencil, op%mesh%sb%dim*(op%stencil%size + 1), stencil)
+        
+        SAFE_DEALLOCATE_A(stencil)
+
+        size = product(mesh%idx%nr(2, 1:op%mesh%sb%dim) - mesh%idx%nr(1, 1:op%mesh%sb%dim) + 1)
+
+        call opencl_create_buffer(op%buff_xyz_to_ip, CL_MEM_READ_ONLY, TYPE_INTEGER, size)
+        call opencl_write_buffer(op%buff_xyz_to_ip, size, op%mesh%idx%lxyz_inv - 1)
+
+        SAFE_ALLOCATE(stencil(1:op%mesh%sb%dim, 1:mesh%np_part))
+
+        do jj = 1, op%mesh%sb%dim
+          stencil(jj, 1:mesh%np_part) = op%mesh%idx%lxyz(1:mesh%np_part, jj) - mesh%idx%nr(1, jj)
+        end do
+
+        ASSERT(minval(stencil) == 0)
+
+        call opencl_create_buffer(op%buff_ip_to_xyz, CL_MEM_READ_ONLY, TYPE_INTEGER, op%mesh%np_part*op%mesh%sb%dim)
+        call opencl_write_buffer(op%buff_ip_to_xyz, op%mesh%np_part*op%mesh%sb%dim, stencil)
+
+        SAFE_DEALLOCATE_A(stencil)
+
+      end select
+    end if
+#endif
+
+    POP_SUB(nl_operator_build)
+
+  end subroutine nl_operator_build
+
+  ! ---------------------------------------------------------
+  subroutine nl_operator_update_weights(this)
+    type(nl_operator_t), intent(inout)  :: this
+
+    integer :: istencil, idir
+
+    PUSH_SUB(nl_operator_update_weights)
+
+    if(in_debug_mode) then
+
+      write(message(1), '(3a)') 'Debug info: Finite difference weights for ', trim(this%label), '.'
+      write(message(2), '(a)')  '            Spacing:'
+      do idir = 1, this%mesh%sb%dim
+        write(message(2), '(a,f16.8)') trim(message(2)), this%mesh%spacing(idir)
+      end do
+      call messages_info(2)
+      
+      do istencil = 1, this%stencil%size
+        write(message(1), '(a,i3,3i4,f16.10)') '      ', istencil, this%stencil%points(1:3, istencil), this%w_re(istencil, 1)
+        call messages_info(1)
+      end do
+      
+    end if
+
+    POP_SUB(nl_operator_update_weights)
+
+  end subroutine nl_operator_update_weights
+
+  ! ---------------------------------------------------------
+  subroutine nl_operator_transpose(op, opt)
+    type(nl_operator_t), intent(in)  :: op
+    type(nl_operator_t), intent(out) :: opt
+
+    integer :: ip, jp, kp, lp, index
+
+    PUSH_SUB(nl_operator_transpose)
+
+    call nl_operator_copy(opt, op)
+
+    opt%label = trim(op%label)//' transposed'
+    opt%w_re = M_ZERO
+    if (op%cmplx_op) opt%w_im = M_ZERO
+    do ip = 1, op%np
+      do jp = 1, op%stencil%size
+        index = nl_operator_get_index(op, jp, ip)
+        if(index <= op%np) then
+          do lp = 1, op%stencil%size
+            kp = nl_operator_get_index(op, lp, index)
+            if( kp == ip ) then
+              if(.not.op%const_w) then
+                opt%w_re(jp, ip) = op%w_re(lp, index)
+                if (op%cmplx_op) opt%w_im(jp, ip) = op%w_im(lp, index)
+              else
+                opt%w_re(jp, 1) = op%w_re(lp, 1)
+                if (op%cmplx_op) opt%w_im(jp, 1) = op%w_im(lp, 1)
+              end if
+            end if
+          end do
+        end if
+      end do
+    end do
+
+    POP_SUB(nl_operator_transpose)
+  end subroutine nl_operator_transpose
+
+  ! ---------------------------------------------------------
+  !> opt has to be initialised and built.
+  subroutine nl_operator_skewadjoint(op, opt, mesh)
+    type(nl_operator_t), target, intent(in)  :: op
+    type(nl_operator_t), target, intent(out) :: opt
+    type(mesh_t),        target, intent(in)  :: mesh
+
+    integer          :: ip, jp, kp, lp, index
+    FLOAT, pointer   :: vol_pp(:)
+
+    type(nl_operator_t), pointer :: opg, opgt
+
+    PUSH_SUB(nl_operator_skewadjoint)
+
+    call nl_operator_copy(opt, op)
+
+#if defined(HAVE_MPI)
+    if(mesh%parallel_in_domains) then
+      SAFE_ALLOCATE(opg)
+      SAFE_ALLOCATE(opgt)
+      call nl_operator_allgather(op, opg)
+      call nl_operator_init(opgt, op%label)
+      call nl_operator_copy(opgt, opg)
+      SAFE_ALLOCATE(vol_pp(1:mesh%np_global))
+      call dvec_allgather(mesh%vp, vol_pp, mesh%vol_pp)
+    else
+#endif
+      opg  => op
+      opgt => opt
+      vol_pp => mesh%vol_pp
+#if defined(HAVE_MPI)
+    end if
+#endif
+
+    opgt%w_re = M_ZERO
+    if (op%cmplx_op) opgt%w_im = M_ZERO
+    do ip = 1, mesh%np_global
+      do jp = 1, op%stencil%size
+        index = nl_operator_get_index(opg, jp, ip)
+        if(index <= mesh%np_global) then
+          do lp = 1, op%stencil%size
+            kp = nl_operator_get_index(opg, lp, index)
+            if( kp == ip ) then
+              if(.not.op%const_w) then
+                opgt%w_re(jp, ip) = M_HALF*opg%w_re(jp, ip) - M_HALF*(vol_pp(index)/vol_pp(ip))*opg%w_re(lp, index)
+                if (op%cmplx_op) &
+                   opgt%w_im(jp, ip) = M_HALF*opg%w_im(jp, ip) - M_HALF*(vol_pp(index)/vol_pp(ip))*opg%w_im(lp, index)
+              else
+                opgt%w_re(jp, 1) = opg%w_re(lp, 1)
+                if (op%cmplx_op) opgt%w_im(jp, 1) = opg%w_im(lp, 1)
+              end if
+            end if
+          end do
+        end if
+      end do
+    end do
+
+#if defined(HAVE_MPI)
+    if(mesh%parallel_in_domains) then
+      SAFE_DEALLOCATE_P(vol_pp)
+      do ip = 1, mesh%vp%np_local
+        opt%w_re(:, ip) = opgt%w_re(:, mesh%vp%local(mesh%vp%xlocal+ip-1))
+        if(opt%cmplx_op) then
+          opt%w_im(:, ip) = opgt%w_im(:, mesh%vp%local(mesh%vp%xlocal+ip-1))
+        end if
+      end do
+      call nl_operator_end(opg)
+      call nl_operator_end(opgt)
+      SAFE_DEALLOCATE_P(opg)
+      SAFE_DEALLOCATE_P(opgt)
+    end if
+#endif
+
+    POP_SUB(nl_operator_skewadjoint)
+  end subroutine nl_operator_skewadjoint
+
+
+  ! ---------------------------------------------------------
+  subroutine nl_operator_selfadjoint(op, opt, mesh)
+    type(nl_operator_t), target, intent(in)  :: op
+    type(nl_operator_t), target, intent(out) :: opt
+    type(mesh_t),        target, intent(in)  :: mesh
+
+    integer          :: ip, jp, kp, lp, index
+    FLOAT, pointer   :: vol_pp(:)
+
+    type(nl_operator_t), pointer :: opg, opgt
+
+    PUSH_SUB(nl_operator_selfadjoint)
+
+    call nl_operator_copy(opt, op)
+
+    if(mesh%parallel_in_domains) then
+#if defined(HAVE_MPI)
+      SAFE_ALLOCATE(opg)
+      SAFE_ALLOCATE(opgt)
+      call nl_operator_allgather(op, opg)
+      call nl_operator_init(opgt, op%label)
+      opgt = opg
+      SAFE_ALLOCATE(vol_pp(1:mesh%np_global))
+      call dvec_allgather(mesh%vp, vol_pp, mesh%vol_pp)
+#else
+      ASSERT(.false.)
+#endif
+    else      
+      opg  => op
+      opgt => opt
+      vol_pp => mesh%vol_pp
+    end if
+
+    opgt%w_re = M_ZERO
+    if (op%cmplx_op) opgt%w_im = M_ZERO
+    do ip = 1, mesh%np_global
+      do jp = 1, op%stencil%size
+        index = nl_operator_get_index(opg, jp, ip)
+
+        if(index <= mesh%np_global) then
+          do lp = 1, op%stencil%size
+            kp = nl_operator_get_index(opg, lp, index)
+            if( kp == ip ) then
+              if(.not.op%const_w) then
+                opgt%w_re(jp, ip) = M_HALF*opg%w_re(jp, ip) + M_HALF*(vol_pp(index)/vol_pp(ip))*opg%w_re(lp, index)
+                if (op%cmplx_op) &
+                  opgt%w_im(jp, ip) = M_HALF*opg%w_im(jp, ip) + M_HALF*(vol_pp(index)/vol_pp(ip))*opg%w_im(lp, index)
+              else
+                opgt%w_re(jp, 1) = opg%w_re(lp, 1)
+                if (op%cmplx_op) opgt%w_im(jp, 1) = opg%w_im(lp, 1)
+              end if
+            end if
+          end do
+        end if
+
+      end do
+    end do
+
+#if defined(HAVE_MPI)
+    if(mesh%parallel_in_domains) then
+      SAFE_DEALLOCATE_P(vol_pp)
+      do ip = 1, mesh%vp%np_local
+        opt%w_re(:, ip) = opgt%w_re(:, mesh%vp%local(mesh%vp%xlocal+ip-1))
+        if(opt%cmplx_op) then
+          opt%w_im(:, ip) = opgt%w_im(:, mesh%vp%local(mesh%vp%xlocal+ip-1))
+        end if
+      end do
+      call nl_operator_end(opg)
+      call nl_operator_end(opgt)
+      SAFE_DEALLOCATE_P(opg)
+      SAFE_DEALLOCATE_P(opgt)
+    end if
+#endif
+
+    POP_SUB(nl_operator_selfadjoint)
+  end subroutine nl_operator_selfadjoint
+
+
+#if defined(HAVE_MPI)
+
+  ! ---------------------------------------------------------
+  !> Like nl_operator_gather but opg is present on all nodes
+  !! (so do not forget to call nl_operator_end on all nodes
+  !! afterwards).
+  subroutine nl_operator_allgather(op, opg)
+    type(nl_operator_t), intent(in)  :: op
+    type(nl_operator_t), intent(out) :: opg
+
+    integer :: ip
+
+    PUSH_SUB(nl_operator_allgather)
+
+    ! Copy elements of op to opg that
+    ! are independent from the partitions, i.e. everything
+    ! except op%index and -- in the non-constant case -- op%w_re
+    ! op%w_im.
+    call nl_operator_common_copy(op, opg)
+
+    ! Gather op%index and -- if necessary -- op%w_re and op%w_im.
+    ! Collect for every point in the stencil in a single step.
+    ! This permits to use ivec_gather.
+    do ip = 1, op%stencil%size
+      call ivec_allgather(op%mesh%vp, opg%index(ip, :), op%index(ip, :))
+    end do
+    call nl_operator_translate_indices(opg)
+
+    ! Weights have to be collected only if they are not constant.
+    if(.not.op%const_w) then
+      do ip = 1, op%stencil%size
+        call dvec_allgather(op%mesh%vp, opg%w_re(ip, :), op%w_re(ip, :))
+        if(op%cmplx_op) call dvec_allgather(op%mesh%vp, opg%w_im(ip, :), op%w_im(ip, :))
+      end do
+    end if
+
+    POP_SUB(nl_operator_allgather)
+
+  end subroutine nl_operator_allgather
+
+  ! ---------------------------------------------------------
+  ! The following are private routines.
+  ! ---------------------------------------------------------
+
+  ! ---------------------------------------------------------
+  !> Copies all parts of op to opg that are independent of
+  !! the partitions, i.e. everything except op%index and -- in the
+  !! non-constant case -- op%w_re op%w_im.
+  !! This can be considered as nl_operator_copy and
+  !! reallocating w_re, w_im and i.
+  !! \warning: this should be replaced by a normal copy with a flag.
+  subroutine nl_operator_common_copy(op, opg)
+    type(nl_operator_t), target, intent(in)  :: op
+    type(nl_operator_t),         intent(out) :: opg
+
+    PUSH_SUB(nl_operator_common_copy)
+
+    call nl_operator_init(opg, op%label)
+
+    call stencil_copy(op%stencil, opg%stencil)
+
+    SAFE_ALLOCATE(opg%index(1:op%stencil%size, 1:op%mesh%np_global))
+    if(op%const_w) then
+      SAFE_ALLOCATE(opg%w_re(1:op%stencil%size, 1:1))
+      if(op%cmplx_op) then
+        SAFE_ALLOCATE(opg%w_im(1:op%stencil%size, 1:1))
+      end if
+    else
+      SAFE_ALLOCATE(opg%w_re(1:op%stencil%size, 1:op%mesh%np_global))
+      if(op%cmplx_op) then
+        SAFE_ALLOCATE(opg%w_im(1:op%stencil%size, 1:op%mesh%np_global))
+      end if
+    end if
+    opg%mesh     => op%mesh
+    opg%np       =  op%mesh%np_global
+    opg%cmplx_op =  op%cmplx_op
+    opg%const_w  =  op%const_w
+    opg%nri      =  op%nri
+    if(op%const_w) then
+      opg%w_re = op%w_re
+      if(op%cmplx_op) then
+        opg%w_im = op%w_im
+      end if
+    end if
+
+    POP_SUB(nl_operator_common_copy)
+
+  end subroutine nl_operator_common_copy
+
+
+  ! ---------------------------------------------------------
+  !> Translates indices in i from local point numbers to
+  !! global point numbers after gathering them.
+  subroutine nl_operator_translate_indices(opg)
+    type(nl_operator_t), intent(inout) :: opg
+
+    integer              :: ip, jp, il, ig, np_enl
+    integer, allocatable :: np_ghost_tmp(:), xbndry_tmp(:), xghost_tmp(:), part_vec(:), ip_v(:)
+    
+    PUSH_SUB(nl_operator_translate_indices)
+
+    ASSERT(associated(opg%index))
+
+    SAFE_ALLOCATE(np_ghost_tmp(1:opg%mesh%vp%npart))
+    call MPI_Allgather(opg%mesh%vp%np_ghost, 1, MPI_INTEGER, &
+         np_ghost_tmp(1), 1, MPI_INTEGER, &
+         opg%mesh%vp%comm, mpi_err)
+
+    SAFE_ALLOCATE(xbndry_tmp(1:opg%mesh%vp%npart))
+    call MPI_Allgather(opg%mesh%vp%xbndry, 1, MPI_INTEGER, &
+         xbndry_tmp(1), 1, MPI_INTEGER, &
+         opg%mesh%vp%comm, mpi_err)
+
+    SAFE_ALLOCATE(xghost_tmp(1:opg%mesh%vp%npart))
+    call MPI_Allgather(opg%mesh%vp%xghost, 1, MPI_INTEGER, &
+         xghost_tmp(1), 1, MPI_INTEGER, &
+         opg%mesh%vp%comm, mpi_err)
+    SAFE_ALLOCATE(part_vec(1:opg%mesh%np_part_global))
+    SAFE_ALLOCATE(ip_v(1:opg%mesh%np_part_global))
+    do ip = 1, opg%mesh%np_part_global 
+      ip_v(ip) = ip 
+    end do
+    np_enl = opg%mesh%np_part_global - opg%mesh%np_global
+    call partition_get_partition_number(opg%mesh%inner_partition, opg%mesh%np_global, ip_v, part_vec) 
+    call partition_get_partition_number(opg%mesh%bndry_partition, np_enl , &
+         ip_v(opg%mesh%np_global+1:np_enl), part_vec(opg%mesh%np_global+1:np_enl)) 
+        
+    do ip = 1, opg%stencil%size
+      do jp = 1, opg%mesh%np_global
+        il = opg%mesh%vp%np_local_vec(part_vec(jp))
+        ig = il + np_ghost_tmp(part_vec(jp))
+        ! opg%index(ip, jp) is a local point number, i.e. it can be
+        ! a real local point (i.e. the local point number
+        ! is less or equal than the number of local points of
+        ! the node which owns the point with global number jp):
+        if(opg%index(ip, jp) <= il) then
+          ! Write the global point number from the lookup
+          ! table in op_(ip, jp).
+          opg%index(ip, jp) = opg%mesh%vp%local(opg%mesh%vp%xlocal_vec(part_vec(jp)) &
+            + opg%index(ip, jp)-1)
+          ! Or a ghost point:
+        else if(opg%index(ip, jp) > il .and. opg%index(ip, jp) <= ig) then
+          opg%index(ip, jp) = opg%mesh%vp%ghost(xghost_tmp(part_vec(jp)) &
+            + opg%index(ip, jp)-1-il)
+          ! Or a boundary point:
+        else if(opg%index(ip, jp) > ig) then
+          opg%index(ip, jp) = opg%mesh%vp%bndry(xbndry_tmp(part_vec(jp)) &
+            + opg%index(ip, jp)-1-ig)
+        end if
+      end do
+    end do
+    SAFE_DEALLOCATE_A(np_ghost_tmp)
+    SAFE_DEALLOCATE_A(xbndry_tmp)
+    SAFE_DEALLOCATE_A(xghost_tmp)
+
+    POP_SUB(nl_operator_translate_indices)
+
+  end subroutine nl_operator_translate_indices
+
+  ! ---------------------------------------------------------
+  ! End of private routines.
+  ! ---------------------------------------------------------
+#endif
+
+
+  ! ---------------------------------------------------------
+  subroutine nl_operator_matrix_to_op(op_ref, op, aa, bb)
+    FLOAT, intent(in)                :: aa(:, :)
+    FLOAT, optional, intent(in)      :: bb(:, :)
+    type(nl_operator_t), intent(in)  :: op_ref
+    type(nl_operator_t), intent(out) :: op
+
+    integer :: ip, jp, index
+
+    PUSH_SUB(nl_operator_matrix_to_op)
+
+    ASSERT(associated(op_ref%index))
+
+    call nl_operator_copy(op, op_ref)
+    do ip = 1, op%np
+      do jp = 1, op%stencil%size
+        index = nl_operator_get_index(op, jp, ip)
+        if(index <= op%np) &
+          op%w_re(jp, ip) = aa(ip, index)
+        if (op%cmplx_op) op%w_im(jp, ip) = bb(ip, index)
+      end do
+    end do
+
+    POP_SUB(nl_operator_matrix_to_op)
+  end subroutine nl_operator_matrix_to_op
+
+
+  ! ---------------------------------------------------------
+  subroutine nl_operator_end(op)
+    type(nl_operator_t), intent(inout) :: op
+
+    PUSH_SUB(nl_operator_end)
+
+#ifdef HAVE_OPENCL
+    if(opencl_is_enabled() .and. op%const_w) then
+
+      call opencl_release_buffer(op%buff_ri)
+      select case(function_opencl)
+      case(OP_INVMAP)
+        call opencl_release_buffer(op%buff_imin)
+        call opencl_release_buffer(op%buff_imax)
+
+      case(OP_MAP)
+        call opencl_release_buffer(op%buff_map)
+
+      case(OP_NOMAP)
+        call opencl_release_buffer(op%buff_map)
+        call opencl_release_buffer(op%buff_stencil)
+        call opencl_release_buffer(op%buff_xyz_to_ip)
+        call opencl_release_buffer(op%buff_ip_to_xyz)
+      end select
+    end if
+#endif
+
+    if(op%mesh%parallel_in_domains) then
+      SAFE_DEALLOCATE_P(op%inner%imin)
+      SAFE_DEALLOCATE_P(op%inner%imax)
+      SAFE_DEALLOCATE_P(op%inner%ri)
+      SAFE_DEALLOCATE_P(op%outer%imin)
+      SAFE_DEALLOCATE_P(op%outer%imax)
+      SAFE_DEALLOCATE_P(op%outer%ri)
+    end if
+
+    SAFE_DEALLOCATE_P(op%index)
+    SAFE_DEALLOCATE_P(op%w_re)
+    SAFE_DEALLOCATE_P(op%w_im)
+
+    SAFE_DEALLOCATE_P(op%ri)
+    SAFE_DEALLOCATE_P(op%rimap)
+    SAFE_DEALLOCATE_P(op%rimap_inv)
+    SAFE_DEALLOCATE_P(op%nn)
+
+    call stencil_end(op%stencil)
+
+    POP_SUB(nl_operator_end)
+  end subroutine nl_operator_end
+
+
+  ! ---------------------------------------------------------
+  integer pure function nl_operator_get_index(op, is, ip) result(res)
+    type(nl_operator_t), intent(in)   :: op
+    integer,             intent(in)   :: is
+    integer,             intent(in)   :: ip
+    
+    res = ip + op%ri(is, op%rimap(ip))
+  end function nl_operator_get_index
+
+  ! ---------------------------------------------------------
+  
+  integer pure function nl_operator_np_zero_bc(op) result(np_bc)
+    type(nl_operator_t), intent(in)   :: op
+
+    integer :: jj, ii
+
+    np_bc = 0
+    do jj = 1, op%nri
+      ii = op%rimap_inv(jj + 1) + maxval(op%ri(1:op%stencil%size, jj))
+      np_bc = max(np_bc, ii)
+    end do
+
+  end function nl_operator_np_zero_bc
+
+  ! ------------------------------------------------------
+
+  logical pure function nl_operator_compact_boundaries(op)
+    type(nl_operator_t), intent(in)   :: op
+
+    nl_operator_compact_boundaries = compact_boundaries
+  end function nl_operator_compact_boundaries
+
+
+#include "undef.F90"
+#include "real.F90"
+#include "nl_operator_inc.F90"
+
+#include "undef.F90"
+#include "complex.F90"
+#include "nl_operator_inc.F90"
+
+end module nl_operator_m
+
+!! Local Variables:
+!! mode: f90
+!! coding: utf-8
+!! End:

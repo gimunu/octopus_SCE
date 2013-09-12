@@ -1,0 +1,173 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/octopus/!svn/ver/7841/trunk/jube
+END
+prace-functional-IBM-BGP-Jugene.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-functional-IBM-BGP-Jugene.xml
+END
+prace-scaling-Cray-XT5-Shanghai-Louhi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-scaling-Cray-XT5-Shanghai-Louhi.xml
+END
+nbench-IBM-BGP-Jugene.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/6698/trunk/jube/nbench-IBM-BGP-Jugene.xml
+END
+prace-scaling-Cray-XT5-Barcelona-Louhi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-scaling-Cray-XT5-Barcelona-Louhi.xml
+END
+prace-functional-IBM-SP6-Huygens.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-functional-IBM-SP6-Huygens.xml
+END
+verify-c240.pl
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/5756/trunk/jube/verify-c240.pl
+END
+prace-functional-IBM-Cell-MariCel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-functional-IBM-Cell-MariCel.xml
+END
+nbench-IBM-SP6-Huygens.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/6698/trunk/jube/nbench-IBM-SP6-Huygens.xml
+END
+compile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/6698/trunk/jube/compile.xml
+END
+nbench-IBM-Cell-MariCel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/6698/trunk/jube/nbench-IBM-Cell-MariCel.xml
+END
+analyse.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/5756/trunk/jube/analyse.xml
+END
+prace-functional-BULL-RS422-teraplus.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-functional-BULL-RS422-teraplus.xml
+END
+prace-scaling-IBM-BGP-Jugene.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-scaling-IBM-BGP-Jugene.xml
+END
+prepare.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/6698/trunk/jube/prepare.xml
+END
+nbench-BULL-RS422-teraplus.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/6698/trunk/jube/nbench-BULL-RS422-teraplus.xml
+END
+analyse-pattern-octopus.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/6698/trunk/jube/analyse-pattern-octopus.xml
+END
+execute.xml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/6698/trunk/jube/execute.xml
+END
+prace-functional-Cray-XT5-Shanghai-Louhi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-functional-Cray-XT5-Shanghai-Louhi.xml
+END
+prace-scaling-IBM-SP6-Huygens.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-scaling-IBM-SP6-Huygens.xml
+END
+prace-scaling-IBM-Cell-MariCel.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-scaling-IBM-Cell-MariCel.xml
+END
+verify.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/6698/trunk/jube/verify.xml
+END
+nbench-Cray-XT5-Shanghai-Louhi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/6698/trunk/jube/nbench-Cray-XT5-Shanghai-Louhi.xml
+END
+prace-functional-Cray-XT5-Barcelona-Louhi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-functional-Cray-XT5-Barcelona-Louhi.xml
+END
+nbench-Cray-XT5-Barcelona-Louhi.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/6698/trunk/jube/nbench-Cray-XT5-Barcelona-Louhi.xml
+END
+prace-scaling-BULL-RS422-teraplus.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/6698/trunk/jube/prace-scaling-BULL-RS422-teraplus.xml
+END
+verify-chlorophyll.pl
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/6698/trunk/jube/verify-chlorophyll.pl
+END
+result.xml
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/6698/trunk/jube/result.xml
+END
+HowtoGet.txt
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/6698/trunk/jube/HowtoGet.txt
+END

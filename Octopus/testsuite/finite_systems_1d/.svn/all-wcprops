@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/11221/trunk/testsuite/finite_systems_1d
+END
+02-neon_mpi.03-td_calc-kli_par_states.inp
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/octopus/!svn/ver/7850/trunk/testsuite/finite_systems_1d/02-neon_mpi.03-td_calc-kli_par_states.inp
+END
+09-morse.02-unocc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/11113/trunk/testsuite/finite_systems_1d/09-morse.02-unocc.inp
+END
+09-morse.03-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/11113/trunk/testsuite/finite_systems_1d/09-morse.03-td.inp
+END
+09-morse.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9012/trunk/testsuite/finite_systems_1d/09-morse.01-gs.inp
+END
+09-morse.test
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/9819/trunk/testsuite/finite_systems_1d/09-morse.test
+END
+03-neon.02-unocc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/11219/trunk/testsuite/finite_systems_1d/03-neon.02-unocc.inp
+END
+03-neon.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/11219/trunk/testsuite/finite_systems_1d/03-neon.01-gs.inp
+END
+03-neon.test
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/11221/trunk/testsuite/finite_systems_1d/03-neon.test
+END
+01-hydrogen.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/octopus/!svn/ver/11113/trunk/testsuite/finite_systems_1d/01-hydrogen.01-ground_state.inp
+END
+02-neon_mpi.test
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/11219/trunk/testsuite/finite_systems_1d/02-neon_mpi.test
+END
+02-neon_mpi.01-ground_state-IP_par_domains.inp
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/octopus/!svn/ver/11218/trunk/testsuite/finite_systems_1d/02-neon_mpi.01-ground_state-IP_par_domains.inp
+END
+03-neon.03-casida.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/11219/trunk/testsuite/finite_systems_1d/03-neon.03-casida.inp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/11219/trunk/testsuite/finite_systems_1d/Makefile.am
+END
+01-hydrogen.test
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/9820/trunk/testsuite/finite_systems_1d/01-hydrogen.test
+END
+02-neon_mpi.02-ground_state-kli_par_domains.inp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/octopus/!svn/ver/11218/trunk/testsuite/finite_systems_1d/02-neon_mpi.02-ground_state-kli_par_domains.inp
+END

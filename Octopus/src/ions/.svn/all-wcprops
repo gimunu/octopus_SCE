@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/octopus/!svn/ver/11177/trunk/src/ions
+END
+symmetries_finite.c
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/11177/trunk/src/ions/symmetries_finite.c
+END
+xyz_adjust.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/ions/xyz_adjust.F90
+END
+kpoints.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10980/trunk/src/ions/kpoints.F90
+END
+spglib_f.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/ions/spglib_f.c
+END
+xyz_file.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/ions/xyz_file.F90
+END
+geometry.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/ions/geometry.F90
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/ions/Makefile.am
+END
+ion_dynamics.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11070/trunk/src/ions/ion_dynamics.F90
+END
+solids.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/ions/solids.F90
+END
+atom.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/11163/trunk/src/ions/atom.F90
+END
+vibrations.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11057/trunk/src/ions/vibrations.F90
+END
+simul_box.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/ions/simul_box.F90
+END
+symmetries.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/ions/symmetries.F90
+END

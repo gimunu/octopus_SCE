@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10985/trunk/testsuite/photo_electron
+END
+05-pfft.02-mask.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/10965/trunk/testsuite/photo_electron/05-pfft.02-mask.inp
+END
+02-restart.test
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/9819/trunk/testsuite/photo_electron/02-restart.test
+END
+01-h1d_lin.02-ba.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/10985/trunk/testsuite/photo_electron/01-h1d_lin.02-ba.inp
+END
+02-restart.01-ba.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/10985/trunk/testsuite/photo_electron/02-restart.01-ba.inp
+END
+01-h1d_lin.01-mask.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/10985/trunk/testsuite/photo_electron/01-h1d_lin.01-mask.inp
+END
+05-pfft.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10965/trunk/testsuite/photo_electron/05-pfft.01-gs.inp
+END
+04-nfft.test
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/10714/trunk/testsuite/photo_electron/04-nfft.test
+END
+02-restart.02-restart_ba.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/10985/trunk/testsuite/photo_electron/02-restart.02-restart_ba.inp
+END
+03-h1d_ati.01.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10721/trunk/testsuite/photo_electron/03-h1d_ati.01.inp
+END
+04-nfft.02-ati.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/10721/trunk/testsuite/photo_electron/04-nfft.02-ati.inp
+END
+05-pfft.test
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/10965/trunk/testsuite/photo_electron/05-pfft.test
+END
+04-nfft.01-ba.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10985/trunk/testsuite/photo_electron/04-nfft.01-ba.inp
+END
+05-pfft.03-ba.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10965/trunk/testsuite/photo_electron/05-pfft.03-ba.inp
+END
+03-h1d_ati.test
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/9819/trunk/testsuite/photo_electron/03-h1d_ati.test
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/10978/trunk/testsuite/photo_electron/Makefile.am
+END
+01-h1d_lin.test
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/9819/trunk/testsuite/photo_electron/01-h1d_lin.test
+END

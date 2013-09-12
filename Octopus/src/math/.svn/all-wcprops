@@ -1,0 +1,329 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/octopus/!svn/ver/11090/trunk/src/math
+END
+checksum_interface.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/src/math/checksum_interface.F90
+END
+math_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/math/math_inc.F90
+END
+oct_gsl_f.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11073/trunk/src/math/oct_gsl_f.c
+END
+gauss_legendre.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/math/gauss_legendre.F90
+END
+math.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/math/math.F90
+END
+permutations.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/math/permutations.F90
+END
+lapack.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/math/lapack.F90
+END
+matrix_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/math/matrix_inc.F90
+END
+spline_filter.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/math/spline_filter.F90
+END
+young.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/math/young.F90
+END
+minimizer.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/math/minimizer.F90
+END
+matrix.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/math/matrix.F90
+END
+root_solver_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/octopus/!svn/ver/10978/trunk/src/math/root_solver_inc.F90
+END
+pnfft_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/math/pnfft_inc.F90
+END
+minimizer_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/math/minimizer_low.c
+END
+lalg_adv.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/math/lalg_adv.F90
+END
+lalg_basic_blas_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/math/lalg_basic_blas_inc.F90
+END
+metis_f.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/11026/trunk/src/math/metis_f.c
+END
+dablas.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/math/dablas.c
+END
+symm_op_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/math/symm_op_inc.F90
+END
+root_solver.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/math/root_solver.F90
+END
+pnfft.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/math/pnfft.F90
+END
+tdfunction.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/math/tdfunction.F90
+END
+lalg_basic.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/math/lalg_basic.F90
+END
+metis.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/math/metis.F90
+END
+scalapack.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/math/scalapack.F90
+END
+symm_op.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/math/symm_op.F90
+END
+ylm.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/octopus/!svn/ver/10978/trunk/src/math/ylm.c
+END
+nfft_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/math/nfft_inc.F90
+END
+nfft_f.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/math/nfft_f.c
+END
+checksum.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/math/checksum.c
+END
+mix_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/math/mix_inc.F90
+END
+solvers_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/math/solvers_inc.F90
+END
+sparskit_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/math/sparskit_inc.F90
+END
+compressed_sensing.F90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10688/trunk/src/math/compressed_sensing.F90
+END
+ode_solver_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/math/ode_solver_inc.F90
+END
+nfft.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/math/nfft.F90
+END
+mix.F90
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/10978/trunk/src/math/mix.F90
+END
+solvers.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/math/solvers.F90
+END
+pfft.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/math/pfft.F90
+END
+sparskit.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/math/sparskit.F90
+END
+pblas.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/math/pblas.F90
+END
+ode_solver.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/math/ode_solver.F90
+END
+lalg_adv_scalapack_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/10978/trunk/src/math/lalg_adv_scalapack_inc.F90
+END
+fftw.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/math/fftw.F90
+END
+fft_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/math/fft_inc.F90
+END
+sgfft.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10901/trunk/src/math/sgfft.F90
+END
+loct_math.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/11090/trunk/src/math/loct_math.F90
+END
+fftw_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/math/fftw_low.c
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/math/Makefile.am
+END
+splines.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/math/splines.F90
+END
+lalg_adv_lapack_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10978/trunk/src/math/lalg_adv_lapack_inc.F90
+END
+fft.F90
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/10978/trunk/src/math/fft.F90
+END
+blas.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/math/blas.F90
+END

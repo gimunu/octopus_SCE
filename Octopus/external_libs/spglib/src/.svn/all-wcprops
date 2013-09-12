@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/8260/trunk/external_libs/spglib/src
+END
+symmetry.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/symmetry.h
+END
+spacegroup_database.h
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/spacegroup_database.h
+END
+spacegroup_data.c
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/spacegroup_data.c
+END
+bravais_art.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/bravais_art.h
+END
+mathfunc.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/mathfunc.c
+END
+spacegroup_data.h
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/spacegroup_data.h
+END
+ChangeLog
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/ChangeLog
+END
+pointgroup.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/pointgroup.c
+END
+spacegroup.c
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/7821/trunk/external_libs/spglib/src/spacegroup.c
+END
+primitive.c
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/primitive.c
+END
+mathfunc.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/mathfunc.h
+END
+pointgroup.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/pointgroup.h
+END
+spacegroup.h
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/spacegroup.h
+END
+primitive.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/primitive.h
+END
+cell.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/cell.c
+END
+spglib.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/7820/trunk/external_libs/spglib/src/spglib.c
+END
+cell.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/cell.h
+END
+spglib.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/spglib.h
+END
+debug.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/debug.c
+END
+bravais.c
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/8260/trunk/external_libs/spglib/src/bravais.c
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/octopus/!svn/ver/5054/trunk/external_libs/spglib/src/Makefile.am
+END
+symmetry.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/symmetry.c
+END
+debug.h
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/debug.h
+END
+spacegroup_database.c
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/spacegroup_database.c
+END
+bravais.h
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/bravais.h
+END
+bravais_art.c
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/5025/trunk/external_libs/spglib/src/bravais_art.c
+END

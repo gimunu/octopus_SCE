@@ -1,0 +1,401 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/11113/trunk/testsuite/real_time
+END
+13-absorption-spin.04-spectrum.inp
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/octopus/!svn/ver/8337/trunk/testsuite/real_time/13-absorption-spin.04-spectrum.inp
+END
+05-cpmd.03-vel_verlet.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/8290/trunk/testsuite/real_time/05-cpmd.03-vel_verlet.inp
+END
+02-aetrs.04-kick.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/02-aetrs.04-kick.inp
+END
+05-cpmd.04-xyz-anim.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/10210/trunk/testsuite/real_time/05-cpmd.04-xyz-anim.inp
+END
+12-absorption.03-td-restart.inp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/8335/trunk/testsuite/real_time/12-absorption.03-td-restart.inp
+END
+01-etrs.03-td_lanczos.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6815/trunk/testsuite/real_time/01-etrs.03-td_lanczos.inp
+END
+16-sparskit.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/10464/trunk/testsuite/real_time/16-sparskit.01-gs.inp
+END
+14-absorption-spinors.04-spectrum.inp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/octopus/!svn/ver/9775/trunk/testsuite/real_time/14-absorption-spinors.04-spectrum.inp
+END
+01-etrs.02-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/6815/trunk/testsuite/real_time/01-etrs.02-td.inp
+END
+02-aetrs.05-spectrum.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/02-aetrs.05-spectrum.inp
+END
+01-etrs.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/6532/trunk/testsuite/real_time/01-etrs.01-gs.inp
+END
+14-absorption-spinors.02-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9775/trunk/testsuite/real_time/14-absorption-spinors.02-td.inp
+END
+16-sparskit.02-kick.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/16-sparskit.02-kick.inp
+END
+14-absorption-spinors.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/9775/trunk/testsuite/real_time/14-absorption-spinors.01-gs.inp
+END
+08-laser.test
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/9819/trunk/testsuite/real_time/08-laser.test
+END
+10-bomd.02-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/6532/trunk/testsuite/real_time/10-bomd.02-td.inp
+END
+01-etrs.test
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/9819/trunk/testsuite/real_time/01-etrs.test
+END
+11-tdmagnetic.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/11113/trunk/testsuite/real_time/11-tdmagnetic.01-gs.inp
+END
+10-bomd.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/6532/trunk/testsuite/real_time/10-bomd.01-gs.inp
+END
+09-angular_momentum.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/6490/trunk/testsuite/real_time/09-angular_momentum.01-gs.inp
+END
+04-etrs_single.test
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/9819/trunk/testsuite/real_time/04-etrs_single.test
+END
+10-bomd.test
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/9819/trunk/testsuite/real_time/10-bomd.test
+END
+10-bomd.03-td_restart.inp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/6532/trunk/testsuite/real_time/10-bomd.03-td_restart.inp
+END
+03-exp_mid.02-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/10464/trunk/testsuite/real_time/03-exp_mid.02-td.inp
+END
+03-exp_mid.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/octopus/!svn/ver/6532/trunk/testsuite/real_time/03-exp_mid.01-gs.inp
+END
+05-cpmd.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/6532/trunk/testsuite/real_time/05-cpmd.01-gs.inp
+END
+12-absorption.05-spectrum_compressed_sensing.inp
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/octopus/!svn/ver/9163/trunk/testsuite/real_time/12-absorption.05-spectrum_compressed_sensing.inp
+END
+13-absorption-spin.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/9819/trunk/testsuite/real_time/13-absorption-spin.test
+END
+14-absorption-spinors.03-td-restart.inp
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/octopus/!svn/ver/9775/trunk/testsuite/real_time/14-absorption-spinors.03-td-restart.inp
+END
+06-caetrs.03-kick-tp1.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/06-caetrs.03-kick-tp1.inp
+END
+15-crank_nicolson.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/10460/trunk/testsuite/real_time/15-crank_nicolson.01-gs.inp
+END
+09-angular_momentum.04-rotatory_strength.inp
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/octopus/!svn/ver/8330/trunk/testsuite/real_time/09-angular_momentum.04-rotatory_strength.inp
+END
+12-absorption.04-spectrum.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/8335/trunk/testsuite/real_time/12-absorption.04-spectrum.inp
+END
+11-tdmagnetic.02-unocc.inp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/octopus/!svn/ver/11113/trunk/testsuite/real_time/11-tdmagnetic.02-unocc.inp
+END
+02-aetrs.test
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/9819/trunk/testsuite/real_time/02-aetrs.test
+END
+11-tdmagnetic.test
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/9819/trunk/testsuite/real_time/11-tdmagnetic.test
+END
+06-caetrs.test
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/11027/trunk/testsuite/real_time/06-caetrs.test
+END
+13-absorption-spin.02-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8337/trunk/testsuite/real_time/13-absorption-spin.02-td.inp
+END
+13-absorption-spin.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/8337/trunk/testsuite/real_time/13-absorption-spin.01-gs.inp
+END
+08-laser.02-length_gauge.inp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/08-laser.02-length_gauge.inp
+END
+08-laser.01-ground_state.inp
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/octopus/!svn/ver/9012/trunk/testsuite/real_time/08-laser.01-ground_state.inp
+END
+06-caetrs.04-kick-tp2.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/06-caetrs.04-kick-tp2.inp
+END
+09-angular_momentum.03-td_icl.inp
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/octopus/!svn/ver/7841/trunk/testsuite/real_time/09-angular_momentum.03-td_icl.inp
+END
+13-absorption-spin.03-td-restart.inp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/octopus/!svn/ver/8337/trunk/testsuite/real_time/13-absorption-spin.03-td-restart.inp
+END
+14-absorption-spinors.test
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/9819/trunk/testsuite/real_time/14-absorption-spinors.test
+END
+12-absorption.test
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/9993/trunk/testsuite/real_time/12-absorption.test
+END
+06-caetrs.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/octopus/!svn/ver/6852/trunk/testsuite/real_time/06-caetrs.01-gs.inp
+END
+14-absorption-spinors.05-spectrum_compressed_sensing.inp
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/octopus/!svn/ver/9775/trunk/testsuite/real_time/14-absorption-spinors.05-spectrum_compressed_sensing.inp
+END
+03-exp_mid.test
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/9819/trunk/testsuite/real_time/03-exp_mid.test
+END
+05-cpmd.test
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10209/trunk/testsuite/real_time/05-cpmd.test
+END
+06-caetrs.02-kick.inp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/06-caetrs.02-kick.inp
+END
+13-absorption-spin.05-spectrum_compressed_sensing.inp
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/octopus/!svn/ver/9163/trunk/testsuite/real_time/13-absorption-spin.05-spectrum_compressed_sensing.inp
+END
+02-aetrs.03-td_lanczos.inp
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/octopus/!svn/ver/7841/trunk/testsuite/real_time/02-aetrs.03-td_lanczos.inp
+END
+09-angular_momentum.02-td_gipaw.inp
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/octopus/!svn/ver/10355/trunk/testsuite/real_time/09-angular_momentum.02-td_gipaw.inp
+END
+16-sparskit.test
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/octopus/!svn/ver/10480/trunk/testsuite/real_time/16-sparskit.test
+END
+15-crank_nicolson.test
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/10460/trunk/testsuite/real_time/15-crank_nicolson.test
+END
+08-laser.03-velocity_gauge.inp
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/08-laser.03-velocity_gauge.inp
+END
+02-aetrs.02-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/7841/trunk/testsuite/real_time/02-aetrs.02-td.inp
+END
+02-aetrs.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/octopus/!svn/ver/6532/trunk/testsuite/real_time/02-aetrs.01-gs.inp
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/testsuite/real_time/Makefile.am
+END
+11-tdmagnetic.03-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/11-tdmagnetic.03-td.inp
+END
+05-cpmd.02-verlet.inp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/octopus/!svn/ver/8290/trunk/testsuite/real_time/05-cpmd.02-verlet.inp
+END
+15-crank_nicolson.02-kick.inp
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/octopus/!svn/ver/10985/trunk/testsuite/real_time/15-crank_nicolson.02-kick.inp
+END
+12-absorption.02-td.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/8335/trunk/testsuite/real_time/12-absorption.02-td.inp
+END
+12-absorption.01-gs.inp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/octopus/!svn/ver/8335/trunk/testsuite/real_time/12-absorption.01-gs.inp
+END
+09-angular_momentum.test
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/octopus/!svn/ver/10352/trunk/testsuite/real_time/09-angular_momentum.test
+END

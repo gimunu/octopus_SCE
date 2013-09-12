@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/external_libs/qshep
+END
+qshep2d.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/1922/trunk/external_libs/qshep/qshep2d.f90
+END
+qshep3d.f90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/1922/trunk/external_libs/qshep/qshep3d.f90
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/1870/trunk/external_libs/qshep/COPYING
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/10978/trunk/external_libs/qshep/Makefile.am
+END
+qshepmod.f90
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/3643/trunk/external_libs/qshep/qshepmod.f90
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/octopus/!svn/ver/11250/trunk/src
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/11142/trunk/src/Makefile.am
+END
+common-rules.make
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11142/trunk/src/common-rules.make
+END

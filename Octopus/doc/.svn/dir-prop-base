@@ -1,0 +1,28 @@
+K 10
+svn:ignore
+V 203
+*.log
+config.status
+config.guess
+config.sub
+config.h
+stamp-h1
+aclocal.m4
+autom4te.cache
+autogen*
+Makefile
+.deps
+*.bak
+
+Makefile.in
+configure
+config.h.in
+build-aux
+texinfo.tex
+*.1
+
+variables.texi
+*.info
+
+
+END

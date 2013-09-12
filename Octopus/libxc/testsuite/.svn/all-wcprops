@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/octopus/!svn/ver/11066/trunk/libxc/testsuite
+END
+xc-reference.pl
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/8123/trunk/libxc/testsuite/xc-reference.pl
+END
+xc-get_data.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/11066/trunk/libxc/testsuite/xc-get_data.c
+END
+xc-run_testsuite
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/octopus/!svn/ver/8933/trunk/libxc/testsuite/xc-run_testsuite
+END
+xc-reset-regression
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/octopus/!svn/ver/8933/trunk/libxc/testsuite/xc-reset-regression
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/libxc/testsuite/Makefile.am
+END
+xc-regression.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/9661/trunk/libxc/testsuite/xc-regression.c
+END
+xc-consistency.c
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/octopus/!svn/ver/10928/trunk/libxc/testsuite/xc-consistency.c
+END

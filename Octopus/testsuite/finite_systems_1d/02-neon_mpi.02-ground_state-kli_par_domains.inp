@@ -1,0 +1,29 @@
+# -*- coding: utf-8 mode: shell-script -*-
+# $Id: 02-neon_mpi.02-ground_state-kli_par_domains.inp 11218 2013-08-31 18:05:32Z dstrubbe $
+#
+
+CalculationMode = gs
+
+ParallelizationStrategy = par_domains
+
+Dimensions = 1
+Spacing = 0.2
+Radius = 50.0
+ExtraStates = 1
+
+XCFunctional = oep_x
+OEPLevel = oep_kli
+
+%Species
+  "Neon1D" | 1 | spec_user_defined | 10 | "-10/sqrt(0.25 + x^2)"
+%
+
+%Coordinates
+  "Neon1D" | 0 
+%
+
+Mixing = 0.1
+EigensolverMaxIter = 100
+ConvEigenError = true
+Preconditioner = no
+ConvRelDens = 1e-7

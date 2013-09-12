@@ -1,0 +1,377 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/octopus/!svn/ver/11232/trunk/src/basic
+END
+mpi_debug_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/octopus/!svn/ver/10978/trunk/src/basic/mpi_debug_inc.F90
+END
+ialist.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/basic/ialist.F90
+END
+command_line.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/11024/trunk/src/basic/command_line.F90
+END
+mpi.F90
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/basic/mpi.F90
+END
+io_csv_f.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/basic/io_csv_f.F90
+END
+profiling.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11232/trunk/src/basic/profiling.F90
+END
+loct_pointer_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/octopus/!svn/ver/10978/trunk/src/basic/loct_pointer_inc.F90
+END
+mpi_debug.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/basic/mpi_debug.F90
+END
+openscad.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/basic/openscad.F90
+END
+papi_f.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/basic/papi_f.F90
+END
+global.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10992/trunk/src/basic/global.F90
+END
+loct.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/basic/loct.F90
+END
+loct_pointer.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/basic/loct_pointer.F90
+END
+octcl_kernel.F90
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/basic/octcl_kernel.F90
+END
+mpi_lib_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/basic/mpi_lib_inc.F90
+END
+messages.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10992/trunk/src/basic/messages.F90
+END
+lookup.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/basic/lookup.F90
+END
+json.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/11160/trunk/src/basic/json.F90
+END
+opencl_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/basic/opencl_inc.F90
+END
+mpi_lib.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/basic/mpi_lib.F90
+END
+topology.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/basic/topology.F90
+END
+write_iter.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/basic/write_iter.F90
+END
+recipes.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/basic/recipes.c
+END
+oct_f.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/basic/oct_f.c
+END
+opencl.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/basic/opencl.F90
+END
+distributed.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/basic/distributed.F90
+END
+c_pointer.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/basic/c_pointer.F90
+END
+write_iter_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/octopus/!svn/ver/10978/trunk/src/basic/write_iter_low.c
+END
+unit_system.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/basic/unit_system.F90
+END
+polyhedron.F90
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/octopus/!svn/ver/10978/trunk/src/basic/polyhedron.F90
+END
+signals.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/basic/signals.c
+END
+blacs.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/basic/blacs.F90
+END
+comm_inc.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/basic/comm_inc.F90
+END
+json_parser.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/11160/trunk/src/basic/json_parser.F90
+END
+varia.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/basic/varia.c
+END
+varia.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/octopus/!svn/ver/10978/trunk/src/basic/varia.h
+END
+space.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/11150/trunk/src/basic/space.F90
+END
+comm.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/basic/comm.F90
+END
+getopt_f.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11024/trunk/src/basic/getopt_f.c
+END
+parser.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/11108/trunk/src/basic/parser.F90
+END
+hardware.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/basic/hardware.F90
+END
+io_binary.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/basic/io_binary.c
+END
+utils.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/11024/trunk/src/basic/utils.F90
+END
+varinfo.F90
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/basic/varinfo.F90
+END
+types.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/10978/trunk/src/basic/types.F90
+END
+io_binary.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/10978/trunk/src/basic/io_binary.h
+END
+iihash.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/basic/iihash.F90
+END
+multicomm.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/basic/multicomm.F90
+END
+calc_mode.F90
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/basic/calc_mode.F90
+END
+io_csv.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/basic/io_csv.c
+END
+string.F90
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/octopus/!svn/ver/10978/trunk/src/basic/string.F90
+END
+io.F90
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/10978/trunk/src/basic/io.F90
+END
+kinds.F90
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/octopus/!svn/ver/11160/trunk/src/basic/kinds.F90
+END
+datasets.F90
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/octopus/!svn/ver/10978/trunk/src/basic/datasets.F90
+END
+varinfo_low.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/11187/trunk/src/basic/varinfo_low.c
+END
+io_csv.h
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/basic/io_csv.h
+END
+Makefile.am
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/octopus/!svn/ver/11160/trunk/src/basic/Makefile.am
+END
+blacs_proc_grid.F90
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/octopus/!svn/ver/10978/trunk/src/basic/blacs_proc_grid.F90
+END
+papi.c
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/octopus/!svn/ver/10978/trunk/src/basic/papi.c
+END
+unit.F90
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/octopus/!svn/ver/10978/trunk/src/basic/unit.F90
+END
+oct_gdlib_f.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/octopus/!svn/ver/10978/trunk/src/basic/oct_gdlib_f.c
+END
+io_binary_f.F90
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/octopus/!svn/ver/10978/trunk/src/basic/io_binary_f.F90
+END
