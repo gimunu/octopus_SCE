@@ -14,3 +14,4 @@ Makefile
 Makefile.in
 config*
 aclocal.m4
+.tm_properties
