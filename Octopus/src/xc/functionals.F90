@@ -118,6 +118,8 @@ contains
           functl%family = XC_FAMILY_LDA
         else if (functl%id == XC_RDMFT_XC_M) then
           functl%family = XC_FAMILY_RDMFT  
+        else if (functl%id == XC_SCE_1D) then
+          functl%family = XC_FAMILY_LDA    
         else
           call input_error('XCFunctional')
         end if
@@ -135,6 +137,10 @@ contains
 
     else if(functl%id == XC_HALF_HARTREE) then
       functl%type = XC_EXCHANGE_CORRELATION
+
+    else if (functl%id == XC_SCE_1D) then
+      functl%type  = XC_EXCHANGE_CORRELATION 
+      functl%flags = XC_FLAGS_1D 
 
     else if(functl%family  ==  XC_FAMILY_NONE) then
       functl%type = -1
@@ -286,6 +292,12 @@ contains
     else if(functl%id == XC_HALF_HARTREE) then
       write(message(1), '(2x,a)') 'Exchange-Correlation:'
       write(message(2), '(4x,a)') 'Half-Hartree two-electron exchange'
+      write(message(3), '(4x,a)') 'WARNING: under development'
+      call messages_info(3, iunit)
+    
+    else if(functl%id == XC_SCE_1D) then
+      write(message(1), '(2x,a)') 'Exchange-Correlation:'
+      write(message(2), '(4x,a)') 'Strictly correlated electrons (1D)'
       write(message(3), '(4x,a)') 'WARNING: under development'
       call messages_info(3, iunit)
       
