@@ -197,8 +197,13 @@ subroutine xc_get_vxc(der, xcs, st, rho, ispin, ioniz_pot, qtot, vxc, ex, ec, de
 
         select case(functl(ixc)%family)
         case(XC_FAMILY_LDA)
-          call XC_F90(lda_vxc)(functl(ixc)%conf, n_block, l_dens(1,1), l_dedd(1,1))
-
+          if(functl(ixc)%id == XC_SCE_1D) then
+            !sce_1d functional            
+            call xc_sce_1d_calc(der, n_block, l_dens, l_dedd)
+          else
+            call XC_F90(lda_vxc)(functl(ixc)%conf, n_block, l_dens(1,1), l_dedd(1,1))
+          end if
+          
         case(XC_FAMILY_GGA, XC_FAMILY_HYB_GGA)
           l_vsigma = M_ZERO
 
@@ -693,6 +698,25 @@ contains
   end subroutine mgga_process
 
 end subroutine xc_get_vxc
+
+
+! -----------------------------------------------------
+subroutine xc_sce_1d_calc(der, n_block, density, vxc)
+  type(derivatives_t), intent(in)    :: der
+  integer,             intent(in)    :: n_block
+  FLOAT,               intent(in)    :: density(:, :)
+  FLOAT,               intent(inout) :: vxc(:, :)
+  
+  PUSH_SUB(xc_sce_1d_calc)
+
+  vxc = M_ZERO ! well set the potential to zero
+  
+  !For Andre: fill with something smarter!!
+  
+  
+  
+  POP_SUB(xc_sce_1d_calc)
+end subroutine xc_sce_1d_calc
 
 ! -----------------------------------------------------
 
