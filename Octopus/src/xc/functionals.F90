@@ -243,7 +243,8 @@ contains
 
     if(functl%family /= XC_FAMILY_NONE .and. functl%family /= XC_FAMILY_OEP .and. &
       functl%family /= XC_FAMILY_KS_INVERSION .and. &
-      functl%id /= XC_LDA_XC_CMPLX .and. functl%id /= XC_HALF_HARTREE) then
+      functl%id /= XC_LDA_XC_CMPLX .and. functl%id /= XC_HALF_HARTREE &
+      .and. functl%id /= XC_SCE_1D) then
       call XC_F90(func_end)(functl%conf)
     end if
 
