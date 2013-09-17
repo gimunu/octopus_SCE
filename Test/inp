@@ -17,7 +17,7 @@ ExperimentalFeatures = YES
 omega = 1.0
 
 %Species
-'Harmonic1D' | 1.00 | spec_user_defined | 1 | ' 0.5 * (omega*x)^2 '
+'Harmonic1D' | 1.00 | spec_user_defined | 2 | ' 0.5 * (omega*x)^2 '
 %
 
 BoxShape = sphere
@@ -37,4 +37,5 @@ XCFunctional = sce_xc_1d
 Output = wfs + density + potential
 
 OutputHow = axis_x
+MaximumIter = 1
 
