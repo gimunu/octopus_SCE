@@ -198,8 +198,8 @@ subroutine xc_get_vxc(der, xcs, st, rho, ispin, ioniz_pot, qtot, vxc, ex, ec, de
         select case(functl(ixc)%family)
         case(XC_FAMILY_LDA)
           if(functl(ixc)%id == XC_SCE_1D) then
-            !sce_1d functional            
-            call xc_sce_1d_calc(der, n_block, l_dens, l_dedd)
+            !sce_1d functional
+            ! do nothing in the spatial loop and work on the global density          
           else
             call XC_F90(lda_vxc)(functl(ixc)%conf, n_block, l_dens(1,1), l_dedd(1,1))
           end if
@@ -317,6 +317,12 @@ subroutine xc_get_vxc(der, xcs, st, rho, ispin, ioniz_pot, qtot, vxc, ex, ec, de
       end do
     end if
   end if
+
+  if(functl(ixc)%id == XC_SCE_1D) then
+    !sce_1d functional
+    call xc_sce_1d_calc(der, qtot, dens, dedd)
+  end if
+
 
   ! this has to be done in inverse order
   if(mgga) call mgga_process()
@@ -701,21 +707,258 @@ end subroutine xc_get_vxc
 
 
 ! -----------------------------------------------------
-subroutine xc_sce_1d_calc(der, n_block, density, vxc)
+subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   type(derivatives_t), intent(in)    :: der
-  integer,             intent(in)    :: n_block
+  FLOAT,               intent(in)    :: qtot 
   FLOAT,               intent(in)    :: density(:, :)
   FLOAT,               intent(inout) :: vxc(:, :)
+
+  integer :: np, ncomf, ip, ii, sgn, nspin
+  FLOAT, allocatable :: Ne(:)
+  FLOAT, allocatable :: comf(:,:)   !comotion functions
+  FLOAT, allocatable :: vscetab(:), v_h(:,:), rho(:,:)
+
+  FLOAT :: shftne, tm, tm2, npart, signvsoftcprim, t, vsoftcprim, asoftc
+  FLOAT :: dx, diff_vsce
+  FLOAT, pointer :: xtab(:)
+  
+
+  
+  !Spline 
+  FLOAT, allocatable ::sply2tab(:), u(:)
   
   PUSH_SUB(xc_sce_1d_calc)
 
-  vxc = M_ZERO ! well set the potential to zero
+  np = der%mesh%np
+  nspin = size( density, dim = 2)
   
-  !For Andre: fill with something smarter!!
+  ncomf = int(qtot - M_EPSILON)
+  npart = qtot
+  asoftc = M_HALF
+  
+  dx = der%mesh%spacing(1)
+  xtab => der%mesh%x(:,1)
+
+  
+  SAFE_ALLOCATE(Ne(1:np))
+
+  SAFE_ALLOCATE(sply2tab(1:np))
+  SAFE_ALLOCATE(u(1:np))
   
   
+  call calc_Ne()
+  
+  !calculate comotion functions
+  !initialize spline 2nd derivative for Ne^-1 interpolation
+  call spline(Ne, xtab, np, 1.d31, 1.d31, sply2tab)
+  
+!   !calculate shell boundaries
+!   do i = 1, ncomf
+!      tm = float(i)
+!      call splint(Ne, xtab, sply2tab, np, tm, shai(i))
+!   end do
+! 
+!   do i = ncomf, 1, -2
+!      call splint(Ne, xtab, sply2tab, np, float(i)-sigma+shftne, shas(i))
+!   end do
+! 
+!   do i = ncomf-2, 0, -2
+!      call splint(ne,xtab,sply2tab,np+1,i+sigma,shas(i+1))
+!   end do
+  
+  SAFE_ALLOCATE(comf(1:np,1:ncomf))
+  
+  comf = M_HUGE
+  tm2 = M_TWO * ncomf + M_TWO * shftne
+
+  do ii = 1, ncomf
+
+     tm = M_TWO * ii + shftne
+
+     do ip = 1, np
+
+        if ( abs( tm - ne(ip)) .lt. npart) then
+
+           call splint(ne, xtab, sply2tab, np, &
+                abs(tm-ne(ip)), comf(ip,ii))
+           if ( tm - ne(ip) .gt. M_ZERO) &
+                comf(ip,ii) = ( - M_ONE) * comf(ip,ii)
+
+        elseif( tm2 - tm + M_TWO + ne(ip) .lt. npart) then
+
+           call splint(ne, xtab, sply2tab, np, &
+                tm2 - tm + M_TWO + ne(ip), comf(ip,ii))             
+
+        end if
+
+     end do
+  end do
+  
+
+  SAFE_ALLOCATE(vscetab(1:np))
+  !calculate SCE potential - soft Coulomb
+  do ip = 2, np
+
+     signvsoftcprim = M_ZERO
+
+     do ii = 1, ncomf
+
+        t = abs( xtab(ip) - comf(ip,ii)) 
+        vsoftcprim = -t*(t*t + asoftc*asoftc)**(-CNST(1.5))
+        sgn = sign( 1, nint(xtab(ip) - comf(ip,ii) + M_HALF))
+        signvsoftcprim = signvsoftcprim + sgn * vsoftcprim
+
+     enddo
+
+     vscetab(ip) = vscetab(ip-1) + signvsoftcprim * dx
+
+  end do
+  
+  !vsce has to go to 0 like (N-1)/x for large x. 
+  !we calculate the shifting constant                             
+  diff_vsce = ncomf/xtab(np) - vscetab(np)
+  
+  
+
+  SAFE_ALLOCATE(v_h(1:np, 1:nspin))
+  SAFE_ALLOCATE(rho(1:np, 1:nspin))
+  rho = density
+!   print * ,"ubrho = ", ubound(rho, dim = 1)
+!   print * ,"der%mesh%np = ", der%mesh%np
+!   print * ,"np = ", np, "nspin = ", nspin
+
+  do ii =1, nspin
+    call dpoisson_solve(psolver, v_h(:,ii), rho(:,ii))
+    vxc(:,ii) = vscetab(:) + diff_vsce - v_h(:,ii)! well set the potential to zero
+  end do
+  SAFE_DEALLOCATE_A(v_h)
+  SAFE_DEALLOCATE_A(rho)
+  
+  
+  
+  
+  SAFE_DEALLOCATE_A(Ne)
+
+  SAFE_DEALLOCATE_A(sply2tab)
+  SAFE_DEALLOCATE_A(u)
+  
+  SAFE_DEALLOCATE_A(comf)
+  SAFE_DEALLOCATE_A(vscetab)
   
   POP_SUB(xc_sce_1d_calc)
+  
+  contains
+  
+
+  ! -----------------------------------------------------
+  ! Calculate cumulant
+  ! -----------------------------------------------------
+  subroutine calc_Ne    
+
+    integer :: ip
+
+    PUSH_SUB(calc_Ne)  
+
+    !calculate cumulant
+    Ne = M_ZERO
+    shftne = M_ZERO
+
+    do ip = 2, der%mesh%np
+
+      Ne(ip) = ne(ip-1) + ( sum(density(ip-1,:) + density(ip, :))) * dx * M_HALF
+
+      if ((( sum(density(ip-1,:) + density(ip,:))) * dx * M_HALF) .lt. M_EPSILON) then 
+         Ne(ip) = Ne(ip) + M_EPSILON
+         shftne = shftne + M_EPSILON
+      end if
+
+    end do
+    
+    POP_SUB(calc_Ne)    
+  end subroutine calc_Ne  
+
+
+  !Interpolation soubroutines
+  !initialize second derivative
+  subroutine splint(xa,ya,y2a,n,x,y)
+
+    implicit double precision(a-h,o-z)
+
+    integer n
+    double precision x,y,xa(n),y2a(n),ya(n)
+    integer k,khi,klo
+    double precision a,b,h
+
+    klo=1
+    khi=n
+
+1   if (khi-klo.gt.1) then
+       k=(khi+klo)/2
+       if(xa(k).gt.x)then
+          khi=k
+       else
+          klo=k
+       endif
+       goto 1
+    endif
+
+    h=xa(khi)-xa(klo)
+    if (h.eq.0.) stop 
+    a=(xa(khi)-x)/h
+    b=(x-xa(klo))/h
+    y=a*ya(klo)+b*ya(khi)+((a**3-a)*y2a(klo)+ &
+         & (b**3-b)*y2a(khi))*(h**2)/6.d0
+
+    return
+
+  end subroutine splint
+
+  !interpolation
+  subroutine spline(x,y,n,yp1,ypn,y2)
+
+    implicit double precision(a-h,o-z)
+
+    integer n!,NMAX
+    double precision yp1,ypn,x(n),y(n),y2(n)
+    !    parameter (NMAX=8500)
+    integer i,k
+    double precision p,qn,sig,un!,u(NMAX) => now a global variable
+
+    if (yp1.gt..99d30) then
+       y2(1)=0.d0
+       u(1)=0.d0
+    else
+       y2(1)=-0.5d0
+       u(1)=(3.d0/(x(2)-x(1)))*((y(2)-y(1))/(x(2)-x(1))-yp1)
+    endif
+
+    do i=2,n-1
+       sig=(x(i)-x(i-1))/(x(i+1)-x(i-1))
+       p=sig*y2(i-1)+2.d0
+       y2(i)=(sig-1.d0)/p
+       u(i)=(6.d0*((y(i+1)-y(i))/(x(i+1)-x(i))- &
+            & (y(i)-y(i-1))/(x(i)-x(i-1)))/(x(i+1)- &
+            & x(i-1))-sig*u(i-1))/p
+    end do
+
+    if (ypn.gt..99d30) then
+       qn=0.d0
+       un=0.d0
+    else
+       qn=0.5d0
+       un=(3.d0/(x(n)-x(n-1)))*(ypn-(y(n)-y(n-1))/(x(n)-x(n-1)))
+    endif
+    y2(n)=(un-qn*u(n-1))/(qn*y2(n-1)+1.d0)
+
+    do k=n-1,1,-1
+       y2(k)=y2(k)*y2(k+1)+u(k)
+    end do
+
+    return
+
+  end subroutine spline
+
+     
 end subroutine xc_sce_1d_calc
 
 ! -----------------------------------------------------
