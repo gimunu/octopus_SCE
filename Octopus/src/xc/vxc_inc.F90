@@ -738,7 +738,9 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   
   ncomf = int(qtot - EPS)
   npart = qtot
+
   asoftc = M_ONE
+  call parse_float(datasets_check('Interaction1DScreening'), M_ONE, asoftc)
   
   dx = der%mesh%spacing(1)
   xtab => der%mesh%x(:,1)
