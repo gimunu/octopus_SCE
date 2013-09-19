@@ -723,10 +723,11 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   FLOAT, pointer :: xtab(:)
   
 
-  
   !Spline 
   FLOAT, allocatable ::sply2tab(:), u(:)
   
+
+
   PUSH_SUB(xc_sce_1d_calc)
 
   np = der%mesh%np
@@ -734,7 +735,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   
   ncomf = int(qtot - M_EPSILON)
   npart = qtot
-  asoftc = M_HALF
+  asoftc = M_ONE
   
   dx = der%mesh%spacing(1)
   xtab => der%mesh%x(:,1)
@@ -746,8 +747,10 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   SAFE_ALLOCATE(u(1:np))
   
   
+  !calculate cumulant
   call calc_Ne()
-  
+  Ne = qtot / Ne(np) * Ne 
+
   !calculate comotion functions
   !initialize spline 2nd derivative for Ne^-1 interpolation
   call spline(Ne, xtab, np, 1.d31, 1.d31, sply2tab)
@@ -769,25 +772,23 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   SAFE_ALLOCATE(comf(1:np,1:ncomf))
   
   comf = M_HUGE
-  tm2 = M_TWO * ncomf + M_TWO * shftne
+  tm2 = ncomf 
 
   do ii = 1, ncomf
 
-     tm = M_TWO * ii + shftne
+     tm = ii
 
      do ip = 1, np
 
-        if ( abs( tm - ne(ip)) .lt. npart) then
+        if ( tm + ne(ip) .lt. npart) then
+
+           call splint( ne, xtab, sply2tab, np, &
+                tm + ne(ip), comf(ip,ii))
+
+        elseif( abs(- tm2 + tm - M_ONE + ne(ip)) .lt. npart) then
 
            call splint(ne, xtab, sply2tab, np, &
-                abs(tm-ne(ip)), comf(ip,ii))
-           if ( tm - ne(ip) .gt. M_ZERO) &
-                comf(ip,ii) = ( - M_ONE) * comf(ip,ii)
-
-        elseif( tm2 - tm + M_TWO + ne(ip) .lt. npart) then
-
-           call splint(ne, xtab, sply2tab, np, &
-                tm2 - tm + M_TWO + ne(ip), comf(ip,ii))             
+                abs(- tm2 + tm - M_ONE + ne(ip)), comf(ip,ii))             
 
         end if
 
@@ -796,7 +797,11 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   
 
   SAFE_ALLOCATE(vscetab(1:np))
+  vscetab = M_ZERO
   !calculate SCE potential - soft Coulomb
+
+!  print *, xtab(1), 2*density(1,1), vscetab(1)
+
   do ip = 2, np
 
      signvsoftcprim = M_ZERO
@@ -811,14 +816,13 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
      enddo
 
      vscetab(ip) = vscetab(ip-1) + signvsoftcprim * dx
+     print *, xtab(ip), 2 * density(ip,1), vscetab(ip)
 
   end do
   
   !vsce has to go to 0 like (N-1)/x for large x. 
-  !we calculate the shifting constant                             
-  diff_vsce = ncomf/xtab(np) - vscetab(np)
-  
-  
+  !we calculate vsce at the boundary from this
+  vscetab = vscetab - vscetab(np) + ncomf / abs(xtab(np))
 
   SAFE_ALLOCATE(v_h(1:np, 1:nspin))
   SAFE_ALLOCATE(rho(1:np, 1:nspin))
@@ -829,13 +833,11 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   do ii =1, nspin
     call dpoisson_solve(psolver, v_h(:,ii), rho(:,ii))
-    vxc(:,ii) = vscetab(:) + diff_vsce - v_h(:,ii)! well set the potential to zero
+    vxc(:,ii) = vscetab(:) + diff_vsce - v_h(:,ii)
   end do
+
   SAFE_DEALLOCATE_A(v_h)
   SAFE_DEALLOCATE_A(rho)
-  
-  
-  
   
   SAFE_DEALLOCATE_A(Ne)
 
@@ -875,6 +877,9 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
     end do
     
     POP_SUB(calc_Ne)    
+
+    return
+
   end subroutine calc_Ne  
 
 

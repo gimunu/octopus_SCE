@@ -1,0 +1,24 @@
+$KSSCE
+	hpot = .true.,
+	omg = 1.0d0,
+	npart = 2.0d0,
+	lsce = .true.,
+	maxcycl = 1,
+	lsoftcoul = .true.,
+	asoftc = 1.d0,
+	updens = 0.01d0,
+	readidens = .true.,
+	fname_dens = dens.inp,
+#	lcvsc = .true.,
+#	kstol = 0.000001,
+$numerov
+	etol = 0.000001,
+	dtol = 0.000001,
+	outwrt = 1000,
+	maxits=1000,
+	udpe = 1.
+$grid
+	xmax = 10,	
+	dx = 0.2,
+#	loggrid = .true.,
+$end
