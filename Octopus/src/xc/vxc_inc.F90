@@ -719,21 +719,24 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   FLOAT, allocatable :: vscetab(:), v_h(:,:), rho(:,:)
 
   FLOAT :: shftne, tm, tm2, npart, signvsoftcprim, t, vsoftcprim, asoftc
-  FLOAT :: dx, diff_vsce
+  FLOAT :: dx
   FLOAT, pointer :: xtab(:)
   
 
   !Spline 
   FLOAT, allocatable ::sply2tab(:), u(:)
+  FLOAT :: EPS
   
 
 
   PUSH_SUB(xc_sce_1d_calc)
 
+  EPS = CNST(1.0E-12)
+
   np = der%mesh%np
   nspin = size( density, dim = 2)
   
-  ncomf = int(qtot - M_EPSILON)
+  ncomf = int(qtot - EPS)
   npart = qtot
   asoftc = M_ONE
   
@@ -810,19 +813,20 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
         t = abs( xtab(ip) - comf(ip,ii)) 
         vsoftcprim = -t*(t*t + asoftc*asoftc)**(-CNST(1.5))
-        sgn = sign( 1, nint(xtab(ip) - comf(ip,ii) + M_HALF))
+!         sgn = sign( 1, nint(xtab(ip) - comf(ip,ii) + M_HALF))
+        sgn = (xtab(ip) - comf(ip,ii)) / abs(xtab(ip) - comf(ip,ii))
         signvsoftcprim = signvsoftcprim + sgn * vsoftcprim
 
      enddo
 
      vscetab(ip) = vscetab(ip-1) + signvsoftcprim * dx
-     print *, xtab(ip), 2 * density(ip,1), vscetab(ip)
 
   end do
   
   !vsce has to go to 0 like (N-1)/x for large x. 
   !we calculate vsce at the boundary from this
   vscetab = vscetab - vscetab(np) + ncomf / abs(xtab(np))
+  
 
   SAFE_ALLOCATE(v_h(1:np, 1:nspin))
   SAFE_ALLOCATE(rho(1:np, 1:nspin))
@@ -833,8 +837,13 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   do ii =1, nspin
     call dpoisson_solve(psolver, v_h(:,ii), rho(:,ii))
-    vxc(:,ii) = vscetab(:) + diff_vsce - v_h(:,ii)
+    vxc(:,ii) = vscetab(:) - v_h(:,ii)
   end do
+
+!   do ip = 1, np
+!     print *, xtab(ip), 2 * density(ip,1), vscetab(ip), vxc(ip,1),  v_h(ip,1)
+!   end do
+
 
   SAFE_DEALLOCATE_A(v_h)
   SAFE_DEALLOCATE_A(rho)
@@ -869,9 +878,9 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
       Ne(ip) = ne(ip-1) + ( sum(density(ip-1,:) + density(ip, :))) * dx * M_HALF
 
-      if ((( sum(density(ip-1,:) + density(ip,:))) * dx * M_HALF) .lt. M_EPSILON) then 
-         Ne(ip) = Ne(ip) + M_EPSILON
-         shftne = shftne + M_EPSILON
+      if ((( sum(density(ip-1,:) + density(ip,:))) * dx * M_HALF) .lt. EPS) then 
+         Ne(ip) = Ne(ip) + EPS
+         shftne = shftne + EPS
       end if
 
     end do
