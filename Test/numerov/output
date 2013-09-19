@@ -1,0 +1,214 @@
+ 
+ ========================================
+ 
+ =====   welcome to Kohn-Sham SCE   =====
+ 
+ ========================================
+ 
+                 reading input .....done
+             allocating memory
+ integer particle number detected
+ .....done
+                 creating grid
+ number grid points:          50
+ .....done
+          initializing denisty .....done
+ Initial density normalized to :    2.00000000000000     
+     calculating external potential .....done
+  starting self-consistent porcedure ... 
+ ========================================
+ 
+ KS cycle:            1
+ dflag   :  F
+ rmserr =     0.0000
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.28882086
+        sum state energies is:          1.28882086
+            processing density .....done
+ 
+ ========================================
+ 
+ KS cycle:            2
+ dflag   :  F
+ rmserr =     0.3864
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.28453017
+        sum state energies is:          1.28453017
+            processing density .....done
+ 
+ ========================================
+ 
+ KS cycle:            3
+ dflag   :  F
+ rmserr =     0.3752
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.29048603
+        sum state energies is:          1.29048603
+            processing density .....done
+ 
+ ========================================
+ 
+ KS cycle:            4
+ dflag   :  F
+ rmserr =     0.3824
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.27319878
+        sum state energies is:          1.27319878
+            processing density .....done
+ 
+ ========================================
+ 
+ KS cycle:            5
+ dflag   :  F
+ rmserr =     0.3483
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.25990311
+        sum state energies is:          1.25990311
+            processing density .....done
+ 
+ ========================================
+ 
+ KS cycle:            6
+ dflag   :  F
+ rmserr =     0.3206
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.26166174
+        sum state energies is:          1.26166174
+            processing density .....done
+ 
+ ========================================
+ 
+ KS cycle:            7
+ dflag   :  F
+ rmserr =     0.3215
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.24709419
+        sum state energies is:          1.24709419
+            processing density .....done
+ 
+ ========================================
+ 
+ KS cycle:            8
+ dflag   :  F
+ rmserr =     0.2910
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.24990048
+        sum state energies is:          1.24990048
+            processing density .....done
+ 
+ ========================================
+ 
+ KS cycle:            9
+ dflag   :  F
+ rmserr =     0.2944
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.25271402
+        sum state energies is:          1.25271402
+            processing density .....done
+ 
+ ========================================
+ 
+ KS cycle:           10
+ dflag   :  F
+ rmserr =     0.2977
+ 
+         calculating potential
+ .....done
+  performing numerov for state    0 .....done
+ .....done
+           energy of state is:          1.23857103
+        sum state energies is:          1.23857103
+            processing density .....done
+ 
+ =========    maximum number of   =========
+ =========   iterations reached   =========
+ 
+ =======   terminating  Kohn-Sahm   =======
+ 
+         writing restart input .....done
+          calculating energies
+                kinetic energy .....done
+                  state energy .....done
+        SCE interaction energy .....done
+                  v_SCE energy .....done
+               external energy .....done
+ .....done
+  calculating density normalization .....done
+ 
+ numerov converged    : T
+ KSSCE converged      : F
+   density difference   :         0.26832
+   energy difference    :      0.01414299
+ 
+ ==========================================
+ 
+         Number of electrons :      2.00000000
+       density normalization :      2.00000000
+       wire effective length :      2.00
+       wire thickness (b)    :      0.00
+ 
+ ==========================================
+ 
+ eigenvalues :
+ 
+   state, energy :    0          1.23857103
+ 
+ ==========================================
+ 
+ kinetic energy     :      0.339022851076
+ energy of states   :      2.477142067312
+ interaction energy :      0.430986681474
+ v_SCE energy       :      1.668593266017
+ external energy    :      0.508057636614
+ ------------------------------------------
+ total energy v1    :      1.278067169165
+ (e_kin + e_ext + e_int)
+ total energy v2    :      1.239535482769
+ (- e_vsce + e_int + e_states)
+ ------------------------------------------
+ diff e_tot         :      0.038531686395
+ 
+ ==========================================
+          writing output files .....done
+           deallocating memory .....done
+ 
+ 
+ =======    press "RETURN" to     =======
+ =======    terminate  program    =======
+ 

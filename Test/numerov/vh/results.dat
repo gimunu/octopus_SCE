@@ -1,0 +1,36 @@
+ 
+ numerov converged    : F
+ KSSCE converged      : F
+   density difference   :         1.89024
+   energy difference    :     25.29413463
+ 
+ ==========================================
+ 
+         Number of electrons :      2.00000000
+       density normalization :      1.98774915
+       wire effective length :      2.00
+       wire thickness (b)    :      0.00
+ 
+ ==========================================
+ 
+ eigenvalues :
+ 
+   state, energy :    0         25.29413463
+ 
+ ==========================================
+ 
+ kinetic energy     :      0.000000000000
+ energy of states   :     50.588269258278
+ v_Hartree energy   :      0.697999298314
+ XC energy          :     -0.473968997441
+ v_LDA energy       :     -0.664859679306
+ external energy    :     23.951516709821
+ ------------------------------------------
+ total energy v1    :     24.175547010694
+ (e_kin + e_ext + e_vHart + e_XC)
+ total energy v2    :     50.081160641829
+ (- e_vXC - e_vHart + e_XC + e_states)
+ ------------------------------------------
+ diff e_tot         :    -25.905613631135
+ 
+ ==========================================

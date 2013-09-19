@@ -37,5 +37,5 @@ TheoryLevel = independent_particles
 Output = wfs + density + potential
 
 OutputHow = axis_x
-MaximumIter = 1
+MaximumIter = 0
 
