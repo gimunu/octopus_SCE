@@ -1,0 +1,64 @@
+CalculationMode = td
+
+Dimensions = 1
+
+FromScratch = YES
+
+ExperimentalFeatures = YES
+
+#############################
+# GS
+#############################
+
+%Coordinates
+"Be2+" | 0.0
+%
+
+sofa = 1.0
+
+%Species
+'Be2+' | 1.00 | spec_user_defined | 2 | ' - 4.0 / sqrt(sofa^2+x^2) '
+%
+
+BoxShape = sphere
+Radius = 150 
+Spacing = 0.1
+
+Extrastates = 10 
+
+Interaction1DScreening = sofa
+XCFunctional = sce_xc_1d
+
+
+#############################
+# TD
+#############################
+
+dt = 0.01
+T  = 1000
+TDTimeStep    = dt
+TDMaximumIter = T/dt
+
+TDDeltaStrength                 = 0.001
+TDPolarizationDirection         = 1
+
+
+AbsorbingBoundaries = mask
+ABWidth = 50 
+
+#############################
+# OUTPUT
+#############################
+
+TDOutput = multipoles + energy
+
+Output = wfs + density + potential
+
+OutputHow = axis_x
+MaximumIter = 1000
+
+OutputInterval = 1000
+
+PropagationSpectrumMaxEnergy = 5 
+PropagationSpectrumDampFactor = 0.6
+PropagationSpectrumEnergyStep = 0.01
