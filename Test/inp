@@ -17,7 +17,7 @@ ExperimentalFeatures = YES
 omega = 1.0
 
 %Species
-'Harmonic1D' | 1.00 | spec_user_defined | 2 | ' 0.5 * (omega*x)^2 '
+'Harmonic1D' | 1.00 | spec_user_defined | 1 | ' 0.5 * (omega*x)^2 '
 %
 
 BoxShape = sphere
@@ -28,7 +28,7 @@ Spacing = 0.2
 XCFunctional = sce_xc_1d
 #XCFunctional = none
 
-#TheoryLevel = independent_particles
+TheoryLevel = independent_particles
 
 #############################
 # OUTPUT
