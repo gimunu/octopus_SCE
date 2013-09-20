@@ -718,7 +718,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   FLOAT, allocatable :: comf(:,:)   !comotion functions
   FLOAT, allocatable :: vscetab(:), v_h(:,:), rho(:,:)
 
-  FLOAT :: shftne, tm, tm2, npart, signvsoftcprim, t, vsoftcprim, asoftc
+  FLOAT :: shftne, tm, tm2, npart, signvsoftcprim, t, vsoftcprim, asoftc, svscpo
   FLOAT :: dx
   FLOAT, pointer :: xtab(:)
   
@@ -731,7 +731,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   PUSH_SUB(xc_sce_1d_calc)
 
-  EPS = CNST(1.0E-12)
+  EPS = CNST(1.0E-13)
 
   np = der%mesh%np
   nspin = size( density, dim = 2)
@@ -754,7 +754,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   
   !calculate cumulant
   call calc_Ne()
-  Ne = qtot / Ne(np) * Ne 
+!  Ne = qtot / Ne(np) * Ne 
 
   !calculate comotion functions
   !initialize spline 2nd derivative for Ne^-1 interpolation
@@ -806,6 +806,16 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   !calculate SCE potential - soft Coulomb
 
 !  print *, xtab(1), 2*density(1,1), vscetab(1)
+  svscpo = M_ZERO
+
+  do ii = 1, ncomf
+     
+     t = abs( xtab(1) - comf(1,ii)) 
+     vsoftcprim = -t*(t*t + asoftc*asoftc)**(-CNST(1.5))
+     sgn = (xtab(1) - comf(1,ii)) / abs(xtab(1) - comf(1,ii))
+     svscpo = svscpo + sgn * vsoftcprim
+     
+  enddo
 
   do ip = 2, np
 
@@ -815,13 +825,13 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
         t = abs( xtab(ip) - comf(ip,ii)) 
         vsoftcprim = -t*(t*t + asoftc*asoftc)**(-CNST(1.5))
-!         sgn = sign( 1, nint(xtab(ip) - comf(ip,ii) + M_HALF))
         sgn = (xtab(ip) - comf(ip,ii)) / abs(xtab(ip) - comf(ip,ii))
         signvsoftcprim = signvsoftcprim + sgn * vsoftcprim
 
      enddo
 
-     vscetab(ip) = vscetab(ip-1) + signvsoftcprim * dx
+     vscetab(ip) = vscetab(ip-1) + ( signvsoftcprim + svscpo) * dx * M_HALF
+     svscpo = signvsoftcprim
 
   end do
   
