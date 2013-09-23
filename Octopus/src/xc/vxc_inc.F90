@@ -732,16 +732,19 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   PUSH_SUB(xc_sce_1d_calc)
 
   EPS = CNST(1.0E-13)
+!   EPS = CNST(1.0E-12)
 
   np = der%mesh%np
   nspin = size( density, dim = 2)
+
+!   ncomf = int(qtot - EPS)
   
-  ncomf = int(qtot - EPS)
+  ncomf = int(qtot - 1)
   npart = qtot
 
   asoftc = M_ONE
   call parse_float(datasets_check('Interaction1DScreening'), M_ONE, asoftc)
-  
+!   print *, "0_0"
   dx = der%mesh%spacing(1)
   xtab => der%mesh%x(:,1)
 
@@ -754,7 +757,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   
   !calculate cumulant
   call calc_Ne()
-!  Ne = qtot / Ne(np) * Ne 
+!   Ne = qtot / Ne(np) * Ne 
 
   !calculate comotion functions
   !initialize spline 2nd derivative for Ne^-1 interpolation
@@ -806,6 +809,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   !calculate SCE potential - soft Coulomb
 
 !  print *, xtab(1), 2*density(1,1), vscetab(1)
+
   svscpo = M_ZERO
 
   do ii = 1, ncomf
@@ -831,6 +835,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
      enddo
 
      vscetab(ip) = vscetab(ip-1) + ( signvsoftcprim + svscpo) * dx * M_HALF
+!      vscetab(ip) = vscetab(ip-1) + ( signvsoftcprim) * dx 
      svscpo = signvsoftcprim
 
   end do
@@ -851,6 +856,15 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
     call dpoisson_solve(psolver, v_h(:,ii), rho(:,ii))
     vxc(:,ii) = vscetab(:) - v_h(:,ii)
   end do
+  
+  do ii = 1,int(np/2)
+    vxc(ii,:) = (vxc(np-ii,:) + vxc(ii,:)) * M_HALF 
+  end do
+
+  do ii = int(np/2+1), np
+    vxc(ii,:) = vxc(np-ii+1,:) 
+  end do
+
 
 !   do ip = 1, np
 !     print *, xtab(ip), 2 * density(ip,1), vscetab(ip), vxc(ip,1),  v_h(ip,1)
