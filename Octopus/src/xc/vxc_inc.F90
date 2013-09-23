@@ -713,7 +713,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   FLOAT,               intent(in)    :: density(:, :)
   FLOAT,               intent(inout) :: vxc(:, :)
 
-  integer :: np, ncomf, ip, ii, sgn, nspin
+  integer :: np, ncomf, ip, ii, sgn, nspin, igrid
   FLOAT, allocatable :: Ne(:)
   FLOAT, allocatable :: comf(:,:)   !comotion functions
   FLOAT, allocatable :: vscetab(:), v_h(:,:), rho(:,:)
@@ -775,8 +775,8 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 ! 
 !   do i = ncomf-2, 0, -2
 !      call splint(ne,xtab,sply2tab,np+1,i+sigma,shas(i+1))
-!   end do
-  
+!   end do  
+
   SAFE_ALLOCATE(comf(1:np,1:ncomf))
   
   comf = M_HUGE
@@ -801,8 +801,25 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
         end if
 
      end do
+  end do  
+
+  !put the comotion functions back on the grid
+  do ii = 1, ncomf
+
+     do ip = 1, np
+
+        igrid = nint( comf(ip,ii) / dx)
+
+        if ( igrid .gt. nint(xtab(np)/dx) &
+             & .or. igrid .lt. nint(xtab(1)/dx)) then
+           comf(ip,ii) = M_HUGE
+        else
+           comf(ip,ii) = igrid * dx
+        end if
+        
+     end do
+     
   end do
-  
 
   SAFE_ALLOCATE(vscetab(1:np))
   vscetab = M_ZERO
@@ -842,9 +859,12 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   
   !vsce has to go to 0 like (N-1)/x for large x. 
   !we calculate vsce at the boundary from this
-  vscetab = vscetab - vscetab(np) + ncomf / abs(xtab(np))
+  if ( abs( xtab(1)) .gt. abs( xtab(np))) then
+     vscetab = vscetab - vscetab(1) + ncomf / abs(xtab(1))
+  else
+     vscetab = vscetab - vscetab(np) + ncomf / abs(xtab(np))
+  end if
   
-
   SAFE_ALLOCATE(v_h(1:np, 1:nspin))
   SAFE_ALLOCATE(rho(1:np, 1:nspin))
   rho = density
@@ -864,11 +884,6 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   do ii = int(np/2+1), np
     vxc(ii,:) = vxc(np-ii+1,:) 
   end do
-
-
-!   do ip = 1, np
-!     print *, xtab(ip), 2 * density(ip,1), vscetab(ip), vxc(ip,1),  v_h(ip,1)
-!   end do
 
 
   SAFE_DEALLOCATE_A(v_h)
