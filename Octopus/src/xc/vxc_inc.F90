@@ -877,13 +877,13 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
     vxc(:,ii) = vscetab(:) - v_h(:,ii)
   end do
   
-  do ii = 1,int(np/2)
-    vxc(ii,:) = (vxc(np-ii,:) + vxc(ii,:)) * M_HALF 
-  end do
-
-  do ii = int(np/2+1), np
-    vxc(ii,:) = vxc(np-ii+1,:) 
-  end do
+!   do ii = 1,int(np/2)
+!     vxc(ii,:) = (vxc(np-ii,:) + vxc(ii,:)) * M_HALF 
+!   end do
+! 
+!   do ii = int(np/2+1), np
+!     vxc(ii,:) = vxc(np-ii+1,:) 
+!   end do
 
 
   SAFE_DEALLOCATE_A(v_h)
