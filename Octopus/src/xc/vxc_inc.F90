@@ -762,9 +762,11 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   
 !!$  density = density * 2.0 * dsqrt( 0.01 / m_pi) 
 
+!  density = 2.0d0 / 300.0d0
+
   !calculate cumulant
   call calc_Ne()
-!   Ne = qtot / Ne(np) * Ne 
+  if ( ne(np) .lt qtot) Ne = qtot / Ne(np) * Ne 
 
   !calculate comotion functions
   !initialize spline 2nd derivative for Ne^-1 interpolation
@@ -906,6 +908,12 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 !!$     vxc(ip,:) = vxc(np-ip+1,:) 
 !!$     v_h(ip,:) = v_h(np-ip+1,:) 
 !!$  end do
+
+  do ip = 1, np
+     print *, xtab(ip), density(ip,1), vxc(ip,1)
+  end do
+
+  print *, ne(np)
 
   SAFE_DEALLOCATE_A(v_h)
   SAFE_DEALLOCATE_A(rho)
