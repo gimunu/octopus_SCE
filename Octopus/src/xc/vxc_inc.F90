@@ -710,7 +710,7 @@ end subroutine xc_get_vxc
 subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   type(derivatives_t), intent(in)    :: der
   FLOAT,               intent(in)    :: qtot 
-  FLOAT,               intent(inout)    :: density(:, :)
+  FLOAT,               intent(inout) :: density(:, :)
   FLOAT,               intent(inout) :: vxc(:, :)
 
   integer :: np, ncomf, ip, ii, sgn, nspin, igrid
@@ -754,6 +754,17 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   SAFE_ALLOCATE(sply2tab(1:np))
   SAFE_ALLOCATE(u(1:np))
 
+
+  do ip = 1,int(np/2)
+     density(ip,:) = (density(np-ip+1,:) + density(ip,:)) * M_HALF 
+  end do
+ 
+  do ip = int(np/2+1), np
+     density(ip,:) = density(np-ip+1,:) 
+  end do
+
+
+
 !!$  do ip = 1, np
 !!$
 !!$     density(ip,:) = DEXP( - 0.01 * xtab(ip) * xtab(ip))
@@ -766,7 +777,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   !calculate cumulant
   call calc_Ne()
-  if ( ne(np) .lt qtot) Ne = qtot / Ne(np) * Ne 
+  if ( ne(np) < qtot) Ne = qtot / Ne(np) * Ne 
 
   !calculate comotion functions
   !initialize spline 2nd derivative for Ne^-1 interpolation
@@ -899,21 +910,21 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
     vxc(:,ii) = vscetab(:) - v_h(:,ii)
   end do
   
-!!$  do ip = 1,int(np/2)
-!!$     vxc(ip,:) = (vxc(np-ip+1,:) + vxc(ip,:)) * M_HALF 
-!!$     v_h(ip,:) = (v_h(np-ip+1,:) + v_h(ip,:)) * M_HALF 
-!!$  end do
-!!$ 
-!!$  do ii = int(np/2+1), np
-!!$     vxc(ip,:) = vxc(np-ip+1,:) 
-!!$     v_h(ip,:) = v_h(np-ip+1,:) 
-!!$  end do
-
-  do ip = 1, np
-     print *, xtab(ip), density(ip,1), vxc(ip,1)
+  do ip = 1,int(np/2)
+     vxc(ip,:) = (vxc(np-ip+1,:) + vxc(ip,:)) * M_HALF 
+     v_h(ip,:) = (v_h(np-ip+1,:) + v_h(ip,:)) * M_HALF 
+  end do
+ 
+  do ip = int(np/2+1), np
+     vxc(ip,:) = vxc(np-ip+1,:) 
+     v_h(ip,:) = v_h(np-ip+1,:) 
   end do
 
-  print *, ne(np)
+!   do ip = 1, np
+!      print *, xtab(ip), density(ip,1), vxc(ip,1)
+!   end do
+! 
+!   print *, ne(np)
 
   SAFE_DEALLOCATE_A(v_h)
   SAFE_DEALLOCATE_A(rho)
