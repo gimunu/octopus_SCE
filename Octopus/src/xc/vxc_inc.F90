@@ -788,17 +788,21 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
         if ( tm + ne(ip) .lt. npart) then
 
            call splint( ne, xtab, sply2tab, np, &
-                tm + ne(ip), comf(ip,ii))
+                tm + ne(ip) + shftne * M_HALF, comf(ip,ii))
 
         elseif( abs(- tm2 + tm - M_ONE + ne(ip)) .lt. npart) then
 
            call splint(ne, xtab, sply2tab, np, &
-                abs(- tm2 + tm - M_ONE + ne(ip)), comf(ip,ii))             
+                abs(- tm2 + tm - M_ONE + ne(ip)) + shftne * M_HALF, comf(ip,ii))             
 
         end if
 
+!        print *, xtab(ip), comf(ip,ii)
+
      end do
   end do  
+
+!  stop
 
   !put the comotion functions back on the grid
   do ii = 1, ncomf
@@ -814,9 +818,13 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
            comf(ip,ii) = igrid * dx
         end if
         
+!        print *, xtab(ip), comf(ip,ii)
+
      end do
      
   end do
+
+!  stop
 
   SAFE_ALLOCATE(vscetab(1:np))
   vscetab = M_ZERO
@@ -851,8 +859,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   end do
   
-  !vsce has to go to 0 like (N-1)/x for large x. 
-  !we calculate vsce at the boundary from this
+  !vsce goes like (N-1)/x for large x
   if ( abs( xtab(1)) .gt. abs( xtab(np))) then
      vscetab = vscetab - vscetab(1) + ncomf / abs(xtab(1))
   else
@@ -861,6 +868,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   
   SAFE_ALLOCATE(v_h(1:np, 1:nspin))
   SAFE_ALLOCATE(rho(1:np, 1:nspin))
+
   rho = density
 !   print * ,"ubrho = ", ubound(rho, dim = 1)
 !   print * ,"der%mesh%np = ", der%mesh%np
