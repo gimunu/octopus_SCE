@@ -710,7 +710,7 @@ end subroutine xc_get_vxc
 subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   type(derivatives_t), intent(in)    :: der
   FLOAT,               intent(in)    :: qtot 
-  FLOAT,               intent(in)    :: density(:, :)
+  FLOAT,               intent(inout)    :: density(:, :)
   FLOAT,               intent(inout) :: vxc(:, :)
 
   integer :: np, ncomf, ip, ii, sgn, nspin, igrid
@@ -753,8 +753,15 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   SAFE_ALLOCATE(sply2tab(1:np))
   SAFE_ALLOCATE(u(1:np))
+
+!!$  do ip = 1, np
+!!$
+!!$     density(ip,:) = DEXP( - 0.01 * xtab(ip) * xtab(ip))
+!!$
+!!$  end do
   
-  
+!!$  density = density * 2.0 * dsqrt( 0.01 / m_pi) 
+
   !calculate cumulant
   call calc_Ne()
 !   Ne = qtot / Ne(np) * Ne 
@@ -842,7 +849,8 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
      t = abs( xtab(1) - comf(1,ii)) 
      vsoftcprim = -t*(t*t + asoftc*asoftc)**(-CNST(1.5))
      sgn = (xtab(1) - comf(1,ii)) / abs(xtab(1) - comf(1,ii))
-     svscpo = svscpo + sgn * vsoftcprim
+!     vscetab(1) = sgn * vsoftcprim
+     svscpo = sgn * vsoftcprim
      
   enddo
 
@@ -859,11 +867,15 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
      enddo
 
-     vscetab(ip) = vscetab(ip-1) + ( signvsoftcprim + svscpo) * dx * M_HALF
-!      vscetab(ip) = vscetab(ip-1) + ( signvsoftcprim) * dx 
+     sgn = signvsoftcprim / abs(signvsoftcprim) * svscpo / abs(svscpo)
+     vscetab(ip) = vscetab(ip-1) + ( sgn * signvsoftcprim + svscpo) * dx * M_HALF
+!     vscetab(ip) = vscetab(ip-1) + signvsoftcprim * dx 
      svscpo = signvsoftcprim
+!     print *, xtab(ip), vscetab(ip), signvsoftcprim
 
   end do
+
+!  stop
   
   !vsce goes like (N-1)/x for large x
   if ( abs( xtab(1)) .gt. abs( xtab(np))) then
@@ -885,14 +897,15 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
     vxc(:,ii) = vscetab(:) - v_h(:,ii)
   end do
   
-!   do ii = 1,int(np/2)
-!     vxc(ii,:) = (vxc(np-ii,:) + vxc(ii,:)) * M_HALF 
-!   end do
-! 
-!   do ii = int(np/2+1), np
-!     vxc(ii,:) = vxc(np-ii+1,:) 
-!   end do
-
+!!$  do ip = 1,int(np/2)
+!!$     vxc(ip,:) = (vxc(np-ip+1,:) + vxc(ip,:)) * M_HALF 
+!!$     v_h(ip,:) = (v_h(np-ip+1,:) + v_h(ip,:)) * M_HALF 
+!!$  end do
+!!$ 
+!!$  do ii = int(np/2+1), np
+!!$     vxc(ip,:) = vxc(np-ip+1,:) 
+!!$     v_h(ip,:) = v_h(np-ip+1,:) 
+!!$  end do
 
   SAFE_DEALLOCATE_A(v_h)
   SAFE_DEALLOCATE_A(rho)
