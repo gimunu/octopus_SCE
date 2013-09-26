@@ -744,7 +744,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   asoftc = M_ONE
   call parse_float(datasets_check('Interaction1DScreening'), M_ONE, asoftc)
-!   print *, "0_0"
+!  print *, "0_0"
   dx = der%mesh%spacing(1)
   xtab => der%mesh%x(:,1)
 
@@ -754,19 +754,36 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   SAFE_ALLOCATE(sply2tab(1:np))
   SAFE_ALLOCATE(u(1:np))
 
+!some trail densities for testing
+!gaussian
 !!$  do ip = 1, np
 !!$
 !!$     density(ip,:) = DEXP( - 0.01 * xtab(ip) * xtab(ip))
 !!$
 !!$  end do
-  
+!!$
 !!$  density = density * 2.0 * dsqrt( 0.01 / m_pi) 
+!!$
+!uniform
+!!$  density = 2.0d0 / 300.0d0
 
-!  density = 2.0d0 / 300.0d0
+  !symmetrization of the density
+  do ip = 1,int(np/2)
+     density(ip,:) = (density(np-ip+1,:) + density(ip,:)) * M_HALF 
+  end do
+ 
+  do ii = int(np/2+1), np
+     density(ip,:) = density(np-ip+1,:) 
+  end do
 
   !calculate cumulant
   call calc_Ne()
-  if ( ne(np) .lt qtot) Ne = qtot / Ne(np) * Ne 
+!  print *, Ne(np), shftne
+  if ( Ne(np) .lt. qtot) then
+     Ne = ( qtot + eps) / Ne(np) * Ne 
+     shftne = eps
+  end if
+  
 
   !calculate comotion functions
   !initialize spline 2nd derivative for Ne^-1 interpolation
@@ -873,10 +890,13 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
      vscetab(ip) = vscetab(ip-1) + ( sgn * signvsoftcprim + svscpo) * dx * M_HALF
 !     vscetab(ip) = vscetab(ip-1) + signvsoftcprim * dx 
      svscpo = signvsoftcprim
-!     print *, xtab(ip), vscetab(ip), signvsoftcprim
 
   end do
 
+!!$  do ip = 1, np
+!!$     print *, xtab(ip), density(ip,1), vscetab(ip)
+!!$  end do
+  
 !  stop
   
   !vsce goes like (N-1)/x for large x
@@ -899,21 +919,21 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
     vxc(:,ii) = vscetab(:) - v_h(:,ii)
   end do
   
-!!$  do ip = 1,int(np/2)
-!!$     vxc(ip,:) = (vxc(np-ip+1,:) + vxc(ip,:)) * M_HALF 
-!!$     v_h(ip,:) = (v_h(np-ip+1,:) + v_h(ip,:)) * M_HALF 
-!!$  end do
-!!$ 
-!!$  do ii = int(np/2+1), np
-!!$     vxc(ip,:) = vxc(np-ip+1,:) 
-!!$     v_h(ip,:) = v_h(np-ip+1,:) 
-!!$  end do
-
-  do ip = 1, np
-     print *, xtab(ip), density(ip,1), vxc(ip,1)
+  do ip = 1,int(np/2)
+     vxc(ip,:) = (vxc(np-ip+1,:) + vxc(ip,:)) * M_HALF 
+     v_h(ip,:) = (v_h(np-ip+1,:) + v_h(ip,:)) * M_HALF 
+  end do
+ 
+  do ip = int(np/2+1), np
+     vxc(ip,:) = vxc(np-ip+1,:) 
+     v_h(ip,:) = v_h(np-ip+1,:) 
   end do
 
-  print *, ne(np)
+!!$  do ip = 1, np
+!!$     print *, xtab(ip), density(ip,1), vxc(ip,1), v_h(ip,1)
+!!$  end do
+!!$
+!!$  print *, ne(np)
 
   SAFE_DEALLOCATE_A(v_h)
   SAFE_DEALLOCATE_A(rho)
