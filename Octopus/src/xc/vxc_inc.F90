@@ -710,7 +710,7 @@ end subroutine xc_get_vxc
 subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   type(derivatives_t), intent(in)    :: der
   FLOAT,               intent(in)    :: qtot 
-  FLOAT,               intent(inout)    :: density(:, :)
+  FLOAT,               intent(inout) :: density(:, :)
   FLOAT,               intent(inout) :: vxc(:, :)
 
   integer :: np, ncomf, ip, ii, sgn, nspin, igrid
@@ -784,7 +784,6 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
      shftne = eps
   end if
   
-
   !calculate comotion functions
   !initialize spline 2nd derivative for Ne^-1 interpolation
   call spline(Ne, xtab, np, 1.d31, 1.d31, sply2tab)
