@@ -708,6 +708,7 @@ end subroutine xc_get_vxc
 
 ! -----------------------------------------------------
 subroutine xc_sce_1d_calc(der, qtot, density, vxc)
+
   type(derivatives_t), intent(in)    :: der
   FLOAT,               intent(in)    :: qtot 
   FLOAT,               intent(inout) :: density(:, :)
@@ -716,9 +717,9 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   integer :: np, ncomf, ip, ii, sgn, nspin, igrid
   FLOAT, allocatable :: Ne(:)
   FLOAT, allocatable :: comf(:,:)   !comotion functions
-  FLOAT, allocatable :: vscetab(:), v_h(:,:), rho(:,:)
+  FLOAT, allocatable :: vscetab(:,:), v_h(:,:), rho(:,:)
 
-  FLOAT :: shftne, tm, tm2, npart, signvsoftcprim, t, vsoftcprim, asoftc, svscpo
+  FLOAT :: shftne, npart, signvsoftcprim, t, vsoftcprim, asoftc
   FLOAT :: dx
   FLOAT, pointer :: xtab(:)
   
@@ -737,9 +738,8 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   np = der%mesh%np
   nspin = size( density, dim = 2)
 
-!   ncomf = int(qtot - EPS)
+  ncomf = int(qtot - EPS)
   
-  ncomf = int(qtot - 1)
   npart = qtot
 
   asoftc = M_ONE
@@ -767,110 +767,62 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 !uniform
 !!$  density = 2.0d0 / 300.0d0
 
+  SAFE_ALLOCATE(rho(1:np, 1:nspin))
+  rho = density
   !symmetrization of the density
-  do ip = 1,int(np/2)
-     density(ip,:) = (density(np-ip+1,:) + density(ip,:)) * M_HALF 
-  end do
- 
-  do ii = int(np/2+1), np
-     density(ip,:) = density(np-ip+1,:) 
-  end do
+!!$  do ip = 1,int(np/2)
+!!$     density(ip,:) = (density(np-ip+1,:) + density(ip,:)) * M_HALF 
+!!$  end do
+!!$ 
+!!$  do ip = int(np/2)+1, np
+!!$     density(ip,:) = density(np-ip+1,:) 
+!!$  end do
 
+  !integration from left to right
   !calculate cumulant
   call calc_Ne()
-!  print *, Ne(np), shftne
-  if ( Ne(np) .lt. qtot) then
-     Ne = ( qtot + eps) / Ne(np) * Ne 
-     shftne = eps
-  end if
+!  print *, Ne(np), shftne, qtot
+!  if ( Ne(np) .lt. qtot) then
+     Ne =  qtot / Ne(np) * Ne 
+!     shftne = eps
+!  end if
   
   !calculate comotion functions
   !initialize spline 2nd derivative for Ne^-1 interpolation
   call spline(Ne, xtab, np, 1.d31, 1.d31, sply2tab)
   
-!   !calculate shell boundaries
-!   do i = 1, ncomf
-!      tm = float(i)
-!      call splint(Ne, xtab, sply2tab, np, tm, shai(i))
-!   end do
-! 
-!   do i = ncomf, 1, -2
-!      call splint(Ne, xtab, sply2tab, np, float(i)-sigma+shftne, shas(i))
-!   end do
-! 
-!   do i = ncomf-2, 0, -2
-!      call splint(ne,xtab,sply2tab,np+1,i+sigma,shas(i+1))
-!   end do  
-
   SAFE_ALLOCATE(comf(1:np,1:ncomf))
   
   comf = M_HUGE
-  tm2 = ncomf 
 
   do ii = 1, ncomf
 
-     tm = ii
-
      do ip = 1, np
 
-        if ( tm + ne(ip) .lt. npart) then
+        if ( ( ne(ip) + ii) .lt. npart) then
 
            call splint( ne, xtab, sply2tab, np, &
-                tm + ne(ip) + shftne * M_HALF, comf(ip,ii))
+                ii + ne(ip), comf(ip,ii))
+!!$           call splint( ne, xtab, sply2tab(:,1), np, &
+!!$                ii + ne(ip) - shftne * M_HALF, comf(ip,ii))
 
-        elseif( abs(- tm2 + tm - M_ONE + ne(ip)) .lt. npart) then
+        elseif( ( ne(ip) - ncomf - M_ONE + ii) .lt. npart) then
 
            call splint(ne, xtab, sply2tab, np, &
-                abs(- tm2 + tm - M_ONE + ne(ip)) + shftne * M_HALF, comf(ip,ii))             
+                ne(ip) - ncomf - M_ONE + ii, comf(ip,ii))             
+!!$           call splint(ne, xtab, sply2tab(:,1), np, &
+!!$                ne(ip) - ncomf - M_ONE + ii - shftne * M_HALF, comf(ip,ii))             
 
         end if
 
-!        print *, xtab(ip), comf(ip,ii)
+!     print *, xtab(ip), comf(ip,ii)
 
      end do
   end do  
 
-!  stop
-
-  !put the comotion functions back on the grid
-  do ii = 1, ncomf
-
-     do ip = 1, np
-
-        igrid = nint( comf(ip,ii) / dx)
-
-        if ( igrid .gt. nint(xtab(np)/dx) &
-             & .or. igrid .lt. nint(xtab(1)/dx)) then
-           comf(ip,ii) = M_HUGE
-        else
-           comf(ip,ii) = igrid * dx
-        end if
-        
-!        print *, xtab(ip), comf(ip,ii)
-
-     end do
-     
-  end do
-
-!  stop
-
-  SAFE_ALLOCATE(vscetab(1:np))
-  vscetab = M_ZERO
   !calculate SCE potential - soft Coulomb
-
-!  print *, xtab(1), 2*density(1,1), vscetab(1)
-
-  svscpo = M_ZERO
-
-  do ii = 1, ncomf
-     
-     t = abs( xtab(1) - comf(1,ii)) 
-     vsoftcprim = -t*(t*t + asoftc*asoftc)**(-CNST(1.5))
-     sgn = (xtab(1) - comf(1,ii)) / abs(xtab(1) - comf(1,ii))
-!     vscetab(1) = sgn * vsoftcprim
-     svscpo = sgn * vsoftcprim
-     
-  enddo
+  SAFE_ALLOCATE(vscetab(1:np,2))
+  vscetab = M_ZERO
 
   do ip = 2, np
 
@@ -885,28 +837,129 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
      enddo
 
-     sgn = signvsoftcprim / abs(signvsoftcprim) * svscpo / abs(svscpo)
-     vscetab(ip) = vscetab(ip-1) + ( sgn * signvsoftcprim + svscpo) * dx * M_HALF
-!     vscetab(ip) = vscetab(ip-1) + signvsoftcprim * dx 
-     svscpo = signvsoftcprim
+     vscetab(ip,1) = vscetab(ip-1,1) + signvsoftcprim * dx 
 
   end do
+
+  !vsce goes like (N-1)/x for large x
+  if ( abs( xtab(1)) .gt. abs( xtab(np))) then
+     vscetab(:,1) = vscetab(:,1) - vscetab(1,1) + ncomf / abs(xtab(1))
+  else
+     vscetab(:,1) = vscetab(:,1) - vscetab(np,1) + ncomf / abs(xtab(np))
+  end if
+  
+!!$  do ip = 1, np
+!!$     print *, xtab(ip), density(ip,1), vscetab(ip)
+!!$  end do
+!!$  
+!!$  stop
+  
+  !integration from right to left
+  !calculate cumulant
+  call calc_Ne2()
+!  print *, Ne(1), shftne
+!  if ( Ne(np) .lt. qtot) then
+     Ne = qtot / Ne(1) * Ne 
+!     shftne = eps
+!  end if
+  
+  !calculate comotion functions
+  !initialize spline 2nd derivative for Ne^-1 interpolation
+
+!  vscetab(:,2) = comf(:,1)
+  sply2tab = M_ZERO
+  u = M_ZERO
+  
+  Ne = Ne(np:1:-1)
+  xtab = xtab(np:1:-1)
+
+  call spline(Ne, xtab, np, 1.d31, 1.d31, sply2tab)
+
+  comf = M_HUGE
+!  t = M_ZERO
+
+  do ii = 1, ncomf
+     do ip = 1, np
+
+        if ( ( npart - ii - ne(ip)) .gt. 0.0d0) then
+           
+           call splint( ne, xtab, sply2tab, np, &
+                qtot - ( ii + ne(ip)), comf(ip,ii))
+!!$           call splint( ne, xtab, sply2tab(:,2), np, &
+!!$                ii + ne(ip) - shftne * M_HALF, comf(ip,ii))
+
+
+        elseif( ( npart - ne(ip) + ncomf + M_ONE - ii) .gt. 0.0d0) then
+
+           call splint(ne, xtab, sply2tab, np, &
+                qtot - ( ne(ip) - ncomf - M_ONE + ii), comf(ip,ii))             
+!!$           call splint(ne, xtab, sply2tab(:,2), np, &
+!!$                ne(ip) - ncomf - M_ONE + ii - shftne * M_HALF, comf(ip,ii))             
+!
+        end if
+
+!        print *, xtab(ip), comf(ip,ii), vscetab(np-ip,2)
+
+!!$        if ( abs( comf(ip,ii)) .lt. xtab(np)) then
+!!$           t = t + abs( comf(ip,ii) - vscetab(ip,2))
+!!$        end if
+        
+     end do
+  end do  
+  
+!  print *, "diff comf", t
+
+  !calculate SCE potential - soft Coulomb v2
+  !integration from right to left
+  vscetab(:,2) = M_ZERO
+
+  do ip = np - 1, 1, -1
+
+     signvsoftcprim = M_ZERO
+
+     do ii = 1, ncomf
+
+        t = abs( xtab(ip) - comf(ip,ii)) 
+        vsoftcprim = -t*(t*t + asoftc*asoftc)**(-CNST(1.5))
+        sgn = ( xtab(ip) - comf(ip,ii)) / abs(xtab(ip) - comf(ip,ii))
+        signvsoftcprim = signvsoftcprim + sgn * vsoftcprim
+
+     enddo
+
+     vscetab(ip,2) = vscetab(ip+1,2) + signvsoftcprim * dx 
+
+  end do
+
+  vscetab(:,2) = vscetab(np:1:-1,2)
 
 !!$  do ip = 1, np
 !!$     print *, xtab(ip), density(ip,1), vscetab(ip)
 !!$  end do
-  
-!  stop
+!!$  
+!!$  stop
   
   !vsce goes like (N-1)/x for large x
-  if ( abs( xtab(1)) .gt. abs( xtab(np))) then
-     vscetab = vscetab - vscetab(1) + ncomf / abs(xtab(1))
+  if ( abs( xtab(1)) .lt. abs( xtab(np))) then
+     vscetab(:,2) = vscetab(:,2) - vscetab(np,2) + ncomf / abs(xtab(np))
   else
-     vscetab = vscetab - vscetab(np) + ncomf / abs(xtab(np))
+     vscetab(:,2) = vscetab(:,2) - vscetab(1,2) + ncomf / abs(xtab(1))
   end if
-  
+
+  !compute difference of vsce
+  shftne = M_ZERO
+
+  xtab = xtab(np:1:-1)
+
+!!$  do ip = 2, np-1     
+!!$!     print *, "vsce", xtab(ip), vscetab(ip,1), vscetab(ip,2)
+!!$     shftne = shftne + abs( vscetab(ip,1) - vscetab(ip,2)) 
+!!$  enddo
+!!$
+!!$  print *, "diff vsce", shftne
+
+  !vxc calculation
   SAFE_ALLOCATE(v_h(1:np, 1:nspin))
-  SAFE_ALLOCATE(rho(1:np, 1:nspin))
+!  SAFE_ALLOCATE(rho(1:np, 1:nspin))
 
   rho = density
 !   print * ,"ubrho = ", ubound(rho, dim = 1)
@@ -915,24 +968,27 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   do ii =1, nspin
     call dpoisson_solve(psolver, v_h(:,ii), rho(:,ii))
-    vxc(:,ii) = vscetab(:) - v_h(:,ii)
+    vxc(:,ii) = ( vscetab(:,1) + vscetab(:,2)) * 0.5d0 - v_h(:,ii)
   end do
   
-  do ip = 1,int(np/2)
-     vxc(ip,:) = (vxc(np-ip+1,:) + vxc(ip,:)) * M_HALF 
-     v_h(ip,:) = (v_h(np-ip+1,:) + v_h(ip,:)) * M_HALF 
-  end do
- 
-  do ip = int(np/2+1), np
-     vxc(ip,:) = vxc(np-ip+1,:) 
-     v_h(ip,:) = v_h(np-ip+1,:) 
-  end do
-
-!!$  do ip = 1, np
-!!$     print *, xtab(ip), density(ip,1), vxc(ip,1), v_h(ip,1)
+  !symmetrize potentials
+!!$  do ip = 1,int(np/2)
+!!$     vscetab(ip) = (vscetab(np-ip+1) + vscetab(ip)) * M_HALF 
+!!$     vxc(ip,:) = (vxc(np-ip+1,:) + vxc(ip,:)) * M_HALF 
+!!$     v_h(ip,:) = (v_h(np-ip+1,:) + v_h(ip,:)) * M_HALF 
 !!$  end do
-!!$
-!!$  print *, ne(np)
+!!$ 
+!!$  do ip = int(np/2)+1, np
+!!$     vscetab(ip) = vscetab(np-ip+1) 
+!!$     vxc(ip,:) = vxc(np-ip+1,:) 
+!!$     v_h(ip,:) = v_h(np-ip+1,:) 
+!!$  end do
+
+  !write out
+!  do ip = 1, np
+!!$     print *, xtab(ip), density(ip,1), vxc(ip,1), v_h(ip,1)
+ !   print *, vscetab(ip,1) - vscetab(ip,2), vscetab(ip,1), vscetab(ip,2)
+!  end do
 
   SAFE_DEALLOCATE_A(v_h)
   SAFE_DEALLOCATE_A(rho)
@@ -946,7 +1002,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   SAFE_DEALLOCATE_A(vscetab)
   
   POP_SUB(xc_sce_1d_calc)
-  
+
   contains
   
 
@@ -960,6 +1016,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
     PUSH_SUB(calc_Ne)  
 
     !calculate cumulant
+    !by integration from the left boundary
     Ne = M_ZERO
     shftne = M_ZERO
 
@@ -980,9 +1037,37 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   end subroutine calc_Ne  
 
+  subroutine calc_Ne2
+
+    integer :: ip
+
+    PUSH_SUB(calc_Ne2)  
+
+    !calculate cumulant
+    !by integration form the right boundary
+    Ne = M_ZERO
+    shftne = M_ZERO
+
+    do ip = der%mesh%np - 1, 1, -1
+
+      Ne(ip) = ne(ip+1) + ( sum(density(ip+1,:) + density(ip, :))) * dx * M_HALF
+
+      if ((( sum(density(ip+1,:) + density(ip,:))) * dx * M_HALF) .lt. EPS) then 
+         Ne(ip) = Ne(ip) + EPS
+         shftne = shftne + EPS
+      end if
+
+    end do
+    
+    POP_SUB(calc_Ne2)    
+
+    return
+
+  end subroutine calc_Ne2
+
 
   !Interpolation soubroutines
-  !initialize second derivative
+  !interpolation
   subroutine splint(xa,ya,y2a,n,x,y)
 
     implicit double precision(a-h,o-z)
@@ -1016,7 +1101,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   end subroutine splint
 
-  !interpolation
+  !initialize second derivative
   subroutine spline(x,y,n,yp1,ypn,y2)
 
     implicit double precision(a-h,o-z)
@@ -1060,7 +1145,6 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
     return
 
   end subroutine spline
-
      
 end subroutine xc_sce_1d_calc
 
