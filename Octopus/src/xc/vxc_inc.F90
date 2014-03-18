@@ -763,7 +763,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 !!$  end do
 !!$
 !!$  density = density * 2.0 * dsqrt( 0.01 / m_pi) 
-!!$
+
 !uniform
 !!$  density = 2.0d0 / 300.0d0
 
@@ -842,11 +842,11 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
   end do
 
   !vsce goes like (N-1)/x for large x
-  if ( abs( xtab(1)) .gt. abs( xtab(np))) then
-     vscetab(:,1) = vscetab(:,1) - vscetab(1,1) + ncomf / abs(xtab(1))
-  else
-     vscetab(:,1) = vscetab(:,1) - vscetab(np,1) + ncomf / abs(xtab(np))
-  end if
+!!$  if ( vscetab(1,1) .gt. vscetab(np,1))) then
+!!$     vscetab(:,1) = vscetab(:,1) - vscetab(1,1) + ncomf / abs(xtab(1))
+!!$  else
+!!$     vscetab(:,1) = vscetab(:,1) - vscetab(np,1) + ncomf / abs(xtab(np))
+!!$  end if
   
 !!$  do ip = 1, np
 !!$     print *, xtab(ip), density(ip,1), vscetab(ip)
@@ -919,9 +919,9 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
      do ii = 1, ncomf
 
-        t = abs( xtab(ip) - comf(ip,ii)) 
+        t = abs( xtab(ip) + comf(ip,ii)) 
         vsoftcprim = -t*(t*t + asoftc*asoftc)**(-CNST(1.5))
-        sgn = ( xtab(ip) - comf(ip,ii)) / abs(xtab(ip) - comf(ip,ii))
+        sgn = ( xtab(ip) + comf(ip,ii)) / t
         signvsoftcprim = signvsoftcprim + sgn * vsoftcprim
 
      enddo
@@ -930,7 +930,10 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   end do
 
-  vscetab(:,2) = vscetab(np:1:-1,2)
+  xtab = xtab(np:1:-1)
+!  vscetab(:,2) = vscetab(np:1:-1,2)
+  vscetab(:,1) = ( vscetab(:,1) + vscetab(:,2)) * 0.5d0
+!  vscetab(:,1) = vscetab(:,2)
 
 !!$  do ip = 1, np
 !!$     print *, xtab(ip), density(ip,1), vscetab(ip)
@@ -939,16 +942,14 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 !!$  stop
   
   !vsce goes like (N-1)/x for large x
-  if ( abs( xtab(1)) .lt. abs( xtab(np))) then
-     vscetab(:,2) = vscetab(:,2) - vscetab(np,2) + ncomf / abs(xtab(np))
+  if ( vscetab(1,1) .gt. vscetab(np,1)) then
+     vscetab(:,1) = vscetab(:,1) - vscetab(1,1) + ncomf / abs(xtab(1))
   else
-     vscetab(:,2) = vscetab(:,2) - vscetab(1,2) + ncomf / abs(xtab(1))
+     vscetab(:,1) = vscetab(:,1) - vscetab(np,1) + ncomf / abs(xtab(np))
   end if
 
   !compute difference of vsce
-  shftne = M_ZERO
-
-  xtab = xtab(np:1:-1)
+!  shftne = M_ZERO
 
 !!$  do ip = 2, np-1     
 !!$!     print *, "vsce", xtab(ip), vscetab(ip,1), vscetab(ip,2)
@@ -968,7 +969,7 @@ subroutine xc_sce_1d_calc(der, qtot, density, vxc)
 
   do ii =1, nspin
     call dpoisson_solve(psolver, v_h(:,ii), rho(:,ii))
-    vxc(:,ii) = ( vscetab(:,1) + vscetab(:,2)) * 0.5d0 - v_h(:,ii)
+    vxc(:,ii) = vscetab(:,1) - v_h(:,ii)
   end do
   
   !symmetrize potentials
